@@ -1,0 +1,11 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["styles/MameStyled/core/display", "styles/MameStyled/config/"],
+    "includePattern": ".(jsx|js|ts|tsx)$"
+  },
+  "sourceType": "module"
+}

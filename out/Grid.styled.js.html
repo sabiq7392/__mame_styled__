@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Grid.styled.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Grid.styled.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>// @ts-check 
+'use strict'
+
+import styled from 'styled-components';
+import debug from '../../config/debug.styled';
+import { getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl } from '../../config/getCss.styled';
+import screen from '../../config/screen.config';
+
+/**
+ * Set Grid Template
+ * @param {*} props props
+ * @param {'rows'|'cols'|'areas'} direction rows or cols
+ * @param {'xs'|'sm'|'md'|'lg'|'xl'|'xxl'} size value of size screens
+ * @returns {*}
+ */
+const setGridTemplate = (props, direction, size) => {
+  if (props[direction]) {
+    if (props[direction][size]) {
+      return typeof props[direction][size] === 'number' ? `repeat(${props[direction][size]}, 1fr)` : props[direction].xs;
+    } else {
+      return typeof props[direction] === 'number' ? `repeat(${props[direction]}, 1fr)` : props[direction];
+    }
+  }
+
+  return false;
+};
+
+const getMediaScreen = (config) => {
+  let screens = {};
+  for (const [key, value] of Object.entries(config)) {
+    screens[`@media (${screen[key]})`] = { fontSize: `${value}px` }
+  }
+  return screens;
+};
+
+/**
+ * @example 
+ * // Grid - container | !item
+ * &lt;Grid container placeItems="center">&lt;/Grid>
+ * &lt;Grid container alignItems="center">&lt;/Grid>
+ * &lt;Grid container justifyContent="center">&lt;/Grid>
+ * &lt;Grid container gap={15}>&lt;/Grid>
+ * &lt;Grid container areas="
+ *  'documentation learn'
+ *  'examples deploy'
+ * ">
+ * &lt;/Grid>
+ * &lt;Grid container areas={{ xs: {name-area}, sm: ..., md: ..., lg: ..., xl: ..., xxl: ... }}>&lt;/Grid>
+ * &lt;Grid item cols={number}>&lt;/Grid>
+ * &lt;Grid item cols={{ xs: {number}, sm: ..., md: ..., lg: ..., xl: ..., xxl: ... }}>&lt;/Grid>
+ * &lt;Grid item rows={number}>&lt;/Grid>
+ * &lt;Grid item rows={{ xs: {number}, sm: ..., md: ..., lg: ..., xl: ..., xxl: ... }}>&lt;/Grid>
+ * 
+ * // Grid - item
+ * &lt;Grid item colPosition={number}>&lt;/Grid>
+ * &lt;Grid item rowPosition={number}>&lt;/Grid>
+ * &lt;Grid item area="name-area | {string}">&lt;/Grid>
+ */
+export const Grid = styled.div(
+  /** @param {*} props  */
+  props => (
+    props.container || !props.item ? 
+    {
+      display: 'grid',
+      placeItems: props.center ? 'center' : props.placeItems,
+      alignItems: props.vCenter ? 'center' : props.alignItems,
+      justifyContent: props.hCenter ? 'center' : props.justifyContent,
+      gap: props.gap + 'px',
+      [`@media (${screen.xs})`]: { 
+        gridTemplateColumns: setGridTemplate(props, 'cols', 'xs'),
+        gridTemplateRows: setGridTemplate(props, 'rows', 'xs'),
+        gridTemplateAreas: setGridTemplate(props, 'areas', 'xs'),
+      },
+      [`@media (${screen.sm})`]: { 
+        gridTemplateColumns: setGridTemplate(props, 'cols', 'sm'),
+        gridTemplateRows: setGridTemplate(props, 'rows', 'sm'),
+        gridTemplateAreas: setGridTemplate(props, 'areas', 'sm'),
+      },
+      [`@media (${screen.md})`]: { 
+        gridTemplateColumns: setGridTemplate(props, 'cols', 'md'),
+        gridTemplateRows: setGridTemplate(props, 'rows', 'md'),
+        gridTemplateAreas: setGridTemplate(props, 'areas', 'md'),
+      },
+      [`@media (${screen.lg})`]: { 
+        gridTemplateColumns: setGridTemplate(props, 'cols', 'lg'),
+        gridTemplateRows: setGridTemplate(props, 'rows', 'lg'),
+        gridTemplateAreas: setGridTemplate(props, 'areas', 'lg'),
+      },
+      [`@media (${screen.xl})`]: { 
+        gridTemplateColumns: setGridTemplate(props, 'cols', 'xl'),
+        gridTemplateRows: setGridTemplate(props, 'rows', 'xl'),
+        gridTemplateAreas: setGridTemplate(props, 'areas', 'xl'),
+      },
+      [`@media (${screen.xxl})`]: { 
+        gridTemplateColumns: setGridTemplate(props, 'cols', 'xxl'),
+        gridTemplateRows: setGridTemplate(props, 'rows', 'xxl'),
+        gridTemplateAreas: setGridTemplate(props, 'areas', 'xxl'),
+      },
+    }
+    :
+    {
+      gridColumn: props.colPosition,
+      gridRow: props.rowPosition,
+      gridArea: props.area,
+    }
+  ),
+  debug, getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl,
+);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#Grid">Grid</a></li><li><a href="global.html#setGridTemplate">setGridTemplate</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.10</a> on Sat Mar 19 2022 00:45:44 GMT+0700 (Western Indonesia Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

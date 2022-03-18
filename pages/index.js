@@ -4,10 +4,6 @@ import styles from '../styles/Home.module.css'
 import { Grid } from '../styles/MameStyled/Mame.styled'
 
 export default function Home() {
-  // while (true) {
-  //   let isLoyo = true;
-
-  // }
   return (
     <div className={styles.container}>
       <Head>
@@ -57,6 +53,7 @@ export default function Home() {
             </a>
           </Grid>
         </Grid>
+        <a href="/out/index.html">Documentation</a>
       </main>
 
       <footer className={styles.footer}>

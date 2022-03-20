@@ -1,4 +1,4 @@
-import screen from './screen.config';
+import screen from '../../config/screen.config';
 
 export const getCss = props => props.css;
 export const getCssSm = props => ({ 

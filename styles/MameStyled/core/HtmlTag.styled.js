@@ -1,13 +1,5 @@
 import styled from 'styled-components';
-import { getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl } from '../config/getCss.styled';
-import { getHover, getHoverSm, getHoverMd, getHoverLg, getHoverXl, getHoverXxl } from '../config/getHover.styled';
-import debug from '../config/debug.styled';
-
-const attributes = [
-  debug, 
-  getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl, 
-  getHover, getHoverSm, getHoverMd, getHoverLg, getHoverXl, getHoverXxl
-];
+import attributes from '../utils/constants/attributes';
 
 export const Div = styled.div(...attributes);
 export const Article = styled.article(...attributes);

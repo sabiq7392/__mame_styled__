@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import screen from '../config/screen.config';
 import typographyConfig from '../config/typography.config.styled';
-import debug from '../config/debug.styled';
-import { getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl } from '../config/getCss.styled';
+import attributes from '../utils/constants/attributes';
 
 const getMediaScreen = (config) => {
   let screens = {};
@@ -55,7 +54,7 @@ export const Typography = styled.p(
     fontVariant: props.fontVariant,
     color: props.color ??= 'white',
   }),
-  debug, getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl
+  ...attributes,
 );
 
 // import styled from 'styled-components';

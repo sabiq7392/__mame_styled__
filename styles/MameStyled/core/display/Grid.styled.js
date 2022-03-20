@@ -1,10 +1,7 @@
 // @ts-check 
-
 import styled from 'styled-components';
-import debug from '../../config/debug.styled';
-import { getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl } from '../../config/getCss.styled';
-import { getHover, getHoverLg, getHoverMd, getHoverSm, getHoverXl, getHoverXxl } from '../../config/getHover.styled';
 import screen from '../../config/screen.config';
+import attributes from '../../utils/constants/attributes';
 
 /**
  * Set Grid Template
@@ -101,7 +98,5 @@ export const Grid = styled.div(
       gridArea: props.area,
     }
   ),
-  debug, 
-  getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl,
-  getHover, getHoverSm, getHoverMd, getHoverLg, getHoverXl, getHoverXxl,
+  ...attributes
 );

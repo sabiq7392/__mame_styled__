@@ -1,25 +1,27 @@
+// @ts-check
+
 import styled from 'styled-components';
 import debug from '../../config/debug.styled';
 import { getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl } from '../../config/getCss.styled';
-import screen from '../../config/screen.config';
+import { getHover, getHoverLg, getHoverMd, getHoverSm, getHoverXl, getHoverXxl } from '../../config/getHover.styled';
+// import screen from '../../config/screen.config';
 
 export const Flex = styled.div(
-  props => (`
-    display: flex;
-    ${props.center ? `
-      align-items: center;
-      justify-content: center;
-    ` : props.vCenter ? `
-      align-items: center;
-    ` : props.hCenter ? `
-      justify-content: center;
-    ` : ''}
-  
-    gap: ${props.gap + 'px'};
-    justify-content: ${props.justifyContent};
-    align-items: ${props.alignItems};
-    border: ${props.border ? '1px solid red' : ''};
-    flex-direction: ${props.direction};
-  `),
-  debug, getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl,
+  /** @param {*} props */
+  props => (
+    props.container || !props.item ? {
+      display: 'flex',
+      alignItems: props.vCenter ? 'center' : props.center ? 'center' : props.alignItems,
+      justifyContent: props.hCenter ? 'center' : props.center ? 'center' : props.justifyContent,
+      gap: props.gap ?? props.gap + 'px',
+      flexDirection: props.flexDirection,
+    }
+    : 
+    {
+      
+    }
+  ),
+  debug, 
+  getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl,
+  getHover, getHoverSm, getHoverMd, getHoverLg, getHoverXl, getHoverXxl,
 );

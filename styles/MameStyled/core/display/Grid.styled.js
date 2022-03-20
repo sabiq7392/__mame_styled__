@@ -1,13 +1,14 @@
 // @ts-check 
-'use strict'
 
 import styled from 'styled-components';
 import debug from '../../config/debug.styled';
 import { getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl } from '../../config/getCss.styled';
+import { getHover, getHoverLg, getHoverMd, getHoverSm, getHoverXl, getHoverXxl } from '../../config/getHover.styled';
 import screen from '../../config/screen.config';
 
 /**
  * Set Grid Template
+ * @category Display
  * @param {*} props props
  * @param {'rows'|'cols'|'areas'} direction rows or cols
  * @param {'xs'|'sm'|'md'|'lg'|'xl'|'xxl'} size value of size screens
@@ -16,7 +17,7 @@ import screen from '../../config/screen.config';
 const setGridTemplate = (props, direction, size) => {
   if (props[direction]) {
     if (props[direction][size]) {
-      return typeof props[direction][size] === 'number' ? `repeat(${props[direction][size]}, 1fr)` : props[direction].xs;
+      return typeof props[direction][size] === 'number' ? `repeat(${props[direction][size]}, 1fr)` : props[direction][size];
     } else {
       return typeof props[direction] === 'number' ? `repeat(${props[direction]}, 1fr)` : props[direction];
     }
@@ -25,27 +26,23 @@ const setGridTemplate = (props, direction, size) => {
   return false;
 };
 
-const getMediaScreen = (config) => {
-  let screens = {};
-  for (const [key, value] of Object.entries(config)) {
-    screens[`@media (${screen[key]})`] = { fontSize: `${value}px` }
-  }
-  return screens;
-};
-
 /**
+ * @category Display
  * @example 
  * // Grid - container | !item
- * <Grid container placeItems="center"></Grid>
- * <Grid container alignItems="center"></Grid>
- * <Grid container justifyContent="center"></Grid>
- * <Grid container gap={15}></Grid>
+ * <Grid container center></Grid>
+ * <Grid container vCenter></Grid>
+ * <Grid container hCenter></Grid>
+ * <Grid container placeItems="center"></Grid> {cssValue}
+ * <Grid container alignItems="center"></Grid> {cssValue}
+ * <Grid container justifyContent="center"></Grid> {cssValue}
+ * <Grid container gap={15}></Grid> {number}
  * <Grid container areas="
  *  'documentation learn'
  *  'examples deploy'
- * ">
- * </Grid>
- * <Grid container areas={{ xs: {name-area}, sm: ..., md: ..., lg: ..., xl: ..., xxl: ... }}></Grid>
+ * "> 
+ * </Grid> {cssValue}
+ * <Grid container areas={{ xs: , sm: ..., md: ..., lg: ..., xl: ..., xxl: ... }}></Grid>
  * <Grid item cols={number}></Grid>
  * <Grid item cols={{ xs: {number}, sm: ..., md: ..., lg: ..., xl: ..., xxl: ... }}></Grid>
  * <Grid item rows={number}></Grid>
@@ -57,7 +54,7 @@ const getMediaScreen = (config) => {
  * <Grid item area="name-area | {string}"></Grid>
  */
 export const Grid = styled.div(
-  /** @param {*} props  */
+  /** @param {*} props */
   props => (
     props.container || !props.item ? 
     {
@@ -65,7 +62,7 @@ export const Grid = styled.div(
       placeItems: props.center ? 'center' : props.placeItems,
       alignItems: props.vCenter ? 'center' : props.alignItems,
       justifyContent: props.hCenter ? 'center' : props.justifyContent,
-      gap: props.gap + 'px',
+      gap: props.gap ?? props.gap + 'px',
       [`@media (${screen.xs})`]: { 
         gridTemplateColumns: setGridTemplate(props, 'cols', 'xs'),
         gridTemplateRows: setGridTemplate(props, 'rows', 'xs'),
@@ -104,5 +101,7 @@ export const Grid = styled.div(
       gridArea: props.area,
     }
   ),
-  debug, getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl,
+  debug, 
+  getCss, getCssSm, getCssMd, getCssLg, getCssXl, getCssXxl,
+  getHover, getHoverSm, getHoverMd, getHoverLg, getHoverXl, getHoverXxl,
 );

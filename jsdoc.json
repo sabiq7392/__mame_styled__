@@ -1,14 +1,26 @@
 {
   "tags": {
-    "allowUnknownTags": true,
+    "allowUnknownTags": ["component", "category"],
     "dictionaries": ["jsdoc", "closure"]
   },
   "source": {
-    "include": ["styles/MameStyled/core/display", "styles/MameStyled/config/"],
+    "include": [
+      "styles/MameStyled/core/display/Grid.styled.js", 
+      "styles/MameStyled/core/display/Flex.styled.js"
+    ],
     "includePattern": ".(jsx|js|ts|tsx)$"
   },
+  "plugins": [
+    "plugins/markdown", 
+    "node_modules/better-docs/component",
+    "node_modules/better-docs/category"
+  ],
   "opts": {
-    "destination": "./public/out/"
+    "encoding": "utf8",
+    "recurse": true,
+    "verbose": true,
+    "destination": "./public/docs/",
+    "template": "node_modules/better-docs"
   },
   "sourceType": "module"
 }

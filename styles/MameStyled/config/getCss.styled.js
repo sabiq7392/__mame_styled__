@@ -20,3 +20,4 @@ export const getCssXl = props => ({
 export const getCssXxl = props => ({
   [`@media (${screen.xxl})`]: props.cssXxl,
 });
+

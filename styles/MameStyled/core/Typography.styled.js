@@ -11,22 +11,35 @@ const getMediaScreen = (config) => {
   return screens;
 };
 
+/**
+ * Set Font Size
+ * @category Font
+ * @param {*} props props
+ * @param {'xs'|'sm'|'md'|'lg'|'xl'|'xxl'} size value of size screens
+ * @returns {*}
+ */
+const setFontSize = (props, screen) => {
+  if (screen) {
+    return { fontSize: props.fontSize[screen] }
+  }
+
+  return false;
+};
+
 export const Typography = styled.p(
   props => (
-    props.xsmall ? getMediaScreen(typographyConfig.xsmall)
-    : props.small ? getMediaScreen(typographyConfig.small)
-    : props.medium ? getMediaScreen(typographyConfig.medium)
-    : props.large ? getMediaScreen(typographyConfig.large)
-    : props.xlarge ? getMediaScreen(typographyConfig.xlarge)
-    : props.xxlarge ? getMediaScreen(typographyConfig.xxlarge)
-    : ({
-      [`@media (${screen.xs})`]: { fontSize: props.xs },
-      [`@media (${screen.sm})`]: { fontSize: props.sm },
-      [`@media (${screen.md})`]: { fontSize: props.md },
-      [`@media (${screen.lg})`]: { fontSize: props.lg },
-      [`@media (${screen.xl})`]: { fontSize: props.xl },
-      [`@media (${screen.xxl})`]: { fontSize: props.xxl },
-    })   
+    typeof props.size === 'number' ? {
+      [`@media (${screen.xs})`]: { fontSize: props.size, }
+    }
+    : 
+    {
+      [`@media (${screen.xs})`]: { fontSize: props.size.xs },
+      [`@media (${screen.sm})`]: { fontSize: props.size.sm },
+      [`@media (${screen.md})`]: { fontSize: props.size.md },
+      [`@media (${screen.lg})`]: { fontSize: props.size.lg },
+      [`@media (${screen.xl})`]: { fontSize: props.size.xl },
+      [`@media (${screen.xxl})`]: { fontSize: props.size.xxl },
+    }
   ),
   props => ({
     fontWeight: (
@@ -51,7 +64,7 @@ export const Typography = styled.p(
       : 'normal'
     ),
     lineHeight: props.lineHeight,
-    fontVariant: props.fontVariant,
+    fontVariant: props.variant,
     color: props.color ??= 'white',
   }),
   ...attributes,

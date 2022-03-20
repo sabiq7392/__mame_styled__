@@ -1,14 +1,13 @@
-import { Article, Section, Grid, Div,  } from "../../../styles/MameStyled/Mame.styled";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { Article, Section, Grid, Div, Typography  } from '../../../styles/MameStyled/Mame.styled';
 import { ItemExample, Heading } from '../_partials/_partials';
+import CodePreview from '../_partials/CodePreview';
 
 export default function GridTemplateColumns() {
   return (
     <Article>
       <h3>Grid Template Columns</h3>
       <ResultPreview />
-      <CodePreview />
+      <ResultCodePreview />
     </Article>
   );
 }
@@ -87,29 +86,26 @@ function ResultPreview() {
   );
 }
 
-function CodePreview() {
+function ResultCodePreview({  }) {
   return (
-    <Section>
-      <Heading as="h4" member="Grid Template Columns" title="Code Preview"  />
-      <SyntaxHighlighter language="html" style={vscDarkPlus}>
-        {`
-          // no Media Screen
-          <Grid container cols={4}>
-            <Grid item />
-            <Grid item />
-            <Grid item />
-            <Grid item />
-          </Grid>
+    <CodePreview heading="h4" title="Result Code Preview" member="Grid Template Columns">
+      {`
+        // no Media Screen
+        <Grid container cols={4}>
+          <Grid item />
+          <Grid item />
+          <Grid item />
+          <Grid item />
+        </Grid>
 
-          // With Media Screen
-          <Grid container cols={{ xs: 1, md: 2, lg: 4 }}>
-            <Grid item />
-            <Grid item />
-            <Grid item />
-            <Grid item />
-          </Grid>
-        `}
-      </SyntaxHighlighter>
-    </Section>
-  );
+        // With Media Screen
+        <Grid container cols={{ xs: 1, md: 2, lg: 4 }}>
+          <Grid item />
+          <Grid item />
+          <Grid item />
+          <Grid item />
+        </Grid>
+      `}
+    </CodePreview>
+  )
 }

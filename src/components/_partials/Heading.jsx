@@ -6,7 +6,7 @@ export default function Heading({ as = 'h1', member, title, ...props }) {
     as, 
     props, 
     [
-      React.createElement('span', {style: { color: '#aaa', fontSize: 10, marginRight: 10 }}, member),
+      React.createElement('span', {style: { color: '#aaa', fontSize: 10, marginRight: 10, fontWeight: 400 }}, member),
       title
     ],
   );

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 export default function Appeal({ text, css, as }) {
   const { color } = stylesConfig;
   const cssDefault = { 
-    color: color.danger, 
+    color: color.warning, 
     fontSize: 12,
     fontWeight: 600,
   }

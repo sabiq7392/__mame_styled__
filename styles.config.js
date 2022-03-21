@@ -6,6 +6,7 @@ const stylesConfig = {
     light: 'rgba(255, 255, 255, 0.6)',
     dark: '#1A1A40',
     muted: 'rgba(255, 255, 255, 0.1)',
+    warning: '#C6DE41',
     danger: '#A0204C',
     base: {
       primary: 'rgb(0, 30, 60)',

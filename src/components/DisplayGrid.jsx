@@ -5,8 +5,6 @@ import stylesConfig from '../../styles.config';
 import Heading from './_partials/Heading';
 
 export default function DisplayGrid() {
-  const { color } = stylesConfig;
-
   return (
     <Container as="article">
       <Heading as="h2" title="Display Grid" />

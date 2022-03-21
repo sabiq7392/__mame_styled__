@@ -44,7 +44,9 @@ function Attributes() {
               {`size={{ xs: {number}, sm:..., md:..., lg:..., xl:..., xxl:... }}`}
             </Td>
             <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
-              number || number{`{}`}
+              number 
+              <br /> 
+              number{`{ xs, sm, md, lg, xl, xxl }`}
             </Td>
             <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
               xs, md, ... is size of screen. 

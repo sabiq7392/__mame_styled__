@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Main } from '../../styles/MameStyled/core/HtmlTag.styled';
+import Footer from './Footer';
 import Header from './Header';
 
 export default function Layout({ children }) {
@@ -14,7 +15,7 @@ export default function Layout({ children }) {
       <Main css={{ display: 'grid', gap: 60, maxWidth: 1200, margin: 'auto' }}>
         {children}
       </Main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

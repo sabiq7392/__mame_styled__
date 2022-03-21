@@ -3,9 +3,10 @@ const stylesConfig = {
     primary: '#007FFF',
     secondary: '#1D2D50',
     white: '#f5f5f5',
-    light: '#b2bac2',
+    light: 'rgba(255, 255, 255, 0.6)',
     dark: '#1A1A40',
     muted: 'rgba(255, 255, 255, 0.1)',
+    danger: '#A0204C',
     base: {
       primary: 'rgb(0, 30, 60)',
       secondary: {

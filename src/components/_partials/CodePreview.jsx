@@ -21,7 +21,7 @@ export default function CodePreview({ heading, title, member, gap, children }) {
 CodePreview.propTypes = {
   heading: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   member: PropTypes.string,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 

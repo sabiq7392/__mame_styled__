@@ -1,4 +1,4 @@
-import { Section } from '../../../styles/MameStyled/Mame.styled';
+import { Section } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Heading } from '../_partials/_partials';

@@ -42,25 +42,25 @@
  * @debug you can place debug attribute in all mame tag
  */
 
-import { Typography } from './core/Typography.styled';
-import { Grid, Flex } from './core/display/_Display.styled';
-import { 
-  Div, 
-  Section, 
-  Article, 
-  Header, 
-  Footer, 
-  Figure, 
-  Nav, 
-  Button, 
-  Main, 
-  H1, H2, H3, H4,H5, H6, P, A,
-  Form, Input, Legend, Fieldset, Label
-} from './core/HtmlTag.styled';
+// import { Typography } from './core/Typography.styled';
+// import { Grid, Flex } from './core/display/_Display.styled';
+// import { 
+//   Div, 
+//   Section, 
+//   Article, 
+//   Header, 
+//   Footer, 
+//   Figure, 
+//   Nav, 
+//   Button, 
+//   Main, 
+//   H1, H2, H3, H4,H5, H6, P, A,
+//   Form, Input, Legend, Fieldset, Label
+// } from './core/HtmlTag.styled';
 
-export { 
-  Typography, Grid, Flex, 
-  H1, H2, H3, H4, H5, H6, P, A,
-  Form, Input, Legend, Fieldset, Label,
-  Div, Section, Article, Header, Footer, Figure, Nav, Button, Main,
-};
+// export { 
+//   Typography, Grid, Flex, 
+//   H1, H2, H3, H4, H5, H6, P, A,
+//   Form, Input, Legend, Fieldset, Label,
+//   Div, Section, Article, Header, Footer, Figure, Nav, Button, Main,
+// };

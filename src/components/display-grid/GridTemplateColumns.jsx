@@ -1,13 +1,17 @@
-import { Article, Section, Grid, Div, Typography  } from '../../../styles/MameStyled/Mame.styled';
+import { Article, Section } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import { Grid } from '../../../styles/MameStyled/core/display/Grid.styled';
 import { ItemExample, Heading } from '../_partials/_partials';
 import CodePreview from '../_partials/CodePreview';
+import nextJsExample from '../../data/nextJsExample';
 
 export default function GridTemplateColumns() {
   return (
     <Article>
       <h3>Grid Template Columns</h3>
-      <ResultPreview />
-      <ResultCodePreview />
+      <Grid gap={30}>
+        <ResultPreview />
+        <ResultCodePreview />
+      </Grid>
     </Article>
   );
 }
@@ -17,69 +21,31 @@ function ResultPreview() {
     <>
       <Section>
         <Heading as="h4" member="Grid Template Columns" title="No Media Screen"  />
-        <Grid 
-          container
-          cols={4}
-          gap={15}
-        >
-          <ItemExample 
-            item="grid"
-            title="1 Documentation" 
-            href="https://nextjs.org/docs" 
-            description="Find in-depth information about Next.js features and API." 
-          />
-          <ItemExample 
-            item="grid"
-            title="2 Learn"
-            href="https://nextjs.org/learn"
-            description="Learn about Next.js in an interactive course with quizzes!"
-          />
-          <ItemExample 
-            item="grid"
-            title="3 Examples"
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            description="Discover and deploy boilerplate example Next.js projects."
-          />
-          <ItemExample 
-            item="grid"
-            title="4 Deploy"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            description="Instantly deploy your Next.js site to a public URL with Vercel."
-          />
+        <Grid container cols={4} gap={15}>
+          {nextJsExample.map(({ title, href, description }, _key) => 
+            <ItemExample 
+              key={_key}
+              item="grid"
+              title={title} 
+              href={href} 
+              description={description}
+            />
+          )}
         </Grid>
       </Section>
 
       <Section>
         <Heading as="h4" member="Grid Template Columns" title="With Media Screen"  />
-        <Grid 
-          container
-          cols={{ xs: 1, md: 2, lg: 4 }}
-          gap={15}
-        >
-          <ItemExample 
-            item="grid"
-            title="1 Documentation" 
-            href="https://nextjs.org/docs" 
-            description="Find in-depth information about Next.js features and API." 
-          />
-          <ItemExample 
-            item="grid"
-            title="2 Learn"
-            href="https://nextjs.org/learn"
-            description="Learn about Next.js in an interactive course with quizzes!"
-          />
-          <ItemExample 
-            item="grid"
-            title="3 Examples"
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            description="Discover and deploy boilerplate example Next.js projects."
-          />
-          <ItemExample 
-            item="grid"
-            title="4 Deploy"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            description="Instantly deploy your Next.js site to a public URL with Vercel."
-          />
+        <Grid container cols={{ xs: 1, md: 2, lg: 4 }} gap={15}>
+          {nextJsExample.map(({ title, href, description }, _key) => 
+            <ItemExample 
+              key={_key}
+              item="grid"
+              title={title} 
+              href={href} 
+              description={description}
+            />
+          )}
         </Grid>
       </Section>
     </>

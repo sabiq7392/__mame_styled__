@@ -1,4 +1,4 @@
-import {  Header as MameHeader, H1, P, A } from "../../styles/MameStyled/Mame.styled";
+import {  Header as MameHeader, H1, P, A } from "../../styles/MameStyled/core/HtmlTag.styled";
 
 export default function Header() {
   return (

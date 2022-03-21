@@ -18,28 +18,39 @@ const getMediaScreen = (config) => {
  * @param {'xs'|'sm'|'md'|'lg'|'xl'|'xxl'} size value of size screens
  * @returns {*}
  */
-const setFontSize = (props, screen) => {
-  if (screen) {
-    return { fontSize: props.fontSize[screen] }
-  }
-
-  return false;
-};
+// const setFontSize = (props, screen) => {
+//   typeof props.size === 'number' ? {
+//     [`@media (${screen.xs})`]: { fontSize: props.size, }
+//   }
+//   : typeof props.size !== 'number' ?
+//   {
+//     [`@media (${screen.xs})`]: { fontSize: props.size.xs },
+//     [`@media (${screen.sm})`]: { fontSize: props.size.sm },
+//     [`@media (${screen.md})`]: { fontSize: props.size.md },
+//     [`@media (${screen.lg})`]: { fontSize: props.size.lg },
+//     [`@media (${screen.xl})`]: { fontSize: props.size.xl },
+//     [`@media (${screen.xxl})`]: { fontSize: props.size.xxl },
+//   }
+//   : false
+// };
 
 export const Typography = styled.p(
   props => (
-    typeof props.size === 'number' ? {
-      [`@media (${screen.xs})`]: { fontSize: props.size, }
-    }
-    : 
-    {
-      [`@media (${screen.xs})`]: { fontSize: props.size.xs },
-      [`@media (${screen.sm})`]: { fontSize: props.size.sm },
-      [`@media (${screen.md})`]: { fontSize: props.size.md },
-      [`@media (${screen.lg})`]: { fontSize: props.size.lg },
-      [`@media (${screen.xl})`]: { fontSize: props.size.xl },
-      [`@media (${screen.xxl})`]: { fontSize: props.size.xxl },
-    }
+    !props.size ? false : (
+      typeof props.size === 'number' ? {
+        [`@media (${screen.xs})`]: { fontSize: props.size, }
+      }
+      : typeof props.size !== 'number' ?
+      {
+        [`@media (${screen.xs})`]: { fontSize: props.size.xs },
+        [`@media (${screen.sm})`]: { fontSize: props.size.sm },
+        [`@media (${screen.md})`]: { fontSize: props.size.md },
+        [`@media (${screen.lg})`]: { fontSize: props.size.lg },
+        [`@media (${screen.xl})`]: { fontSize: props.size.xl },
+        [`@media (${screen.xxl})`]: { fontSize: props.size.xxl },
+      }
+      : false
+    ) 
   ),
   props => ({
     fontWeight: (

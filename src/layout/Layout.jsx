@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { Main } from '../../styles/MameStyled/Mame.styled';
+import { Main } from '../../styles/MameStyled/core/HtmlTag.styled';
 import Header from './Header';
 
 export default function Layout({ children }) {

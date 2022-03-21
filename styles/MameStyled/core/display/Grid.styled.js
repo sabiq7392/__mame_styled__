@@ -96,6 +96,9 @@ export const Grid = styled.div(
       gridColumn: props.colPosition,
       gridRow: props.rowPosition,
       gridArea: props.area,
+      placeSelf: props.center ? 'center' : props.placeSelf,
+      alignSelf: props.vCenter ? 'center' : props.alignSelf,
+      justifySelf: props.hCenter ? 'center' : props.justifySelf,
     }
   ),
   ...attributes

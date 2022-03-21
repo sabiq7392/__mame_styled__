@@ -10,7 +10,7 @@ export const Flex = styled.div(
       alignItems: props.vCenter ? 'center' : props.center ? 'center' : props.alignItems,
       justifyContent: props.hCenter ? 'center' : props.center ? 'center' : props.justifyContent,
       gap: props.gap ?? props.gap + 'px',
-      flexDirection: props.flexDirection,
+      flexDirection: props.direction,
     }
     : 
     {

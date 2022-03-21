@@ -1,8 +1,10 @@
-import { Article, Flex } from "../../styles/MameStyled/Mame.styled";
+import { Article } from '../../styles/MameStyled/core/HtmlTag.styled';
+import { Flex } from '../../styles/MameStyled/core/display/Flex.styled';
+import Container from './_partials/Container';
 
 function DisplayFlex() {
   return (
-    <Article css={{ width: '100%', padding: 30, borderRadius: 12, border: '1px solid #eee' }}>
+    <Container>
       <h2>Display Flexsss</h2>
       <Flex 
         container 
@@ -35,7 +37,7 @@ function DisplayFlex() {
           </a>
         </Flex>
       </Flex>
-    </Article>
+    </Container>
   )
 }
 

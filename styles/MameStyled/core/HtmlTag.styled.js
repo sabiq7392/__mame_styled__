@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import screen from '../config/screen.config';
 import attributes from '../utils/constants/attributes';
 
 export const Div = styled.div(...attributes);
@@ -10,11 +11,18 @@ export const Footer = styled.footer(...attributes);
 export const Nav = styled.nav(...attributes);
 export const Button = styled.button(...attributes);
 export const Main = styled.main(...attributes);
+export const Span = styled.span(...attributes);
+
+/** Form */
 export const Input = styled.input(...attributes);
 export const Form = styled.form(...attributes);
 export const Fieldset = styled.fieldset(...attributes);
 export const Legend = styled.legend(...attributes);
 export const Label = styled.label(...attributes);
+
+/** Table */
+export const Table = styled.table(...attributes);
+export const Tbody = styled.tbody(...attributes);
 
 /** Typhography */
 export const H1 = styled.h1(...attributes);

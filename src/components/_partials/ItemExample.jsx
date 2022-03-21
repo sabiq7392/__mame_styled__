@@ -1,4 +1,4 @@
-import { Grid, Flex } from '../../../styles/MameStyled/Mame.styled'
+import { Grid, Flex } from '../../../styles/MameStyled/core/display/_Display.styled';
 import PropTypes from 'prop-types';
 
 export default function ItemExample({ item, title, href, description }) {
@@ -9,9 +9,7 @@ export default function ItemExample({ item, title, href, description }) {
     transition: '200ms'
   };
 
-  const hover = {
-    background: '#eee',
-  }
+  const hover = { background: '#eee' };
 
   return (
     <>
@@ -38,8 +36,8 @@ function Item({ href, title, description }) {
 }
 
 ItemExample.propTypes = {
-  item: PropTypes.oneOf(['grid', 'flex']),
-  title: PropTypes.string,
-  href: PropTypes.string,
-  description: PropTypes.string,
+  item: PropTypes.oneOf(['grid', 'flex']).isRequired,
+  title: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };

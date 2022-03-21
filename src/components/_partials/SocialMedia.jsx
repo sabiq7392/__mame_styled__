@@ -6,22 +6,27 @@ import { BsLinkedin } from 'react-icons/bs';
 import stylesConfig from '../../../styles.config';
 
 export default function SocialMedia() {
-  const { color, spacing } = stylesConfig;
+  const { color, spacing, timing } = stylesConfig;
+
   const css = {
     display: 'grid',
-    alignItems: 'center',
+    alignItems: 'center', 
+    color: color.white,
+    transition: timing.fast,
   };
 
+  const hover = { color: color.primary }
+
   return (
-    <Flex justifyContent="end" gap={spacing.sm}>
-      <A href={aboutMe.instagram} css={css}>
-        <AiOutlineInstagram color={color.white} />
+    <Flex justifyContent="end" gap={spacing.sm} >
+      <A href={aboutMe.instagram} css={css} hover={hover}>
+        <AiOutlineInstagram />
       </A>
-      <A href={aboutMe.github} css={css}> 
-        <AiOutlineGithub color={color.white} />
+      <A href={aboutMe.github} css={css} hover={hover}> 
+        <AiOutlineGithub  />
       </A>
-      <A href={aboutMe.linkedin} css={css}>
-        <BsLinkedin color={color.white} />
+      <A href={aboutMe.linkedin} css={css} hover={hover}>
+        <BsLinkedin />
       </A>
     </Flex>
   );

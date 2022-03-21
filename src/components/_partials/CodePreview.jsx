@@ -3,10 +3,13 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { Heading } from '../_partials/_partials';
 import PropTypes from 'prop-types';
+import stylesConfig from '../../../styles.config';
 
-export default function CodePreview({ heading, title, member, children }) {
+export default function CodePreview({ heading, title, member, gap, children }) {
+  const { spacing } = stylesConfig;
+
   return (
-    <Section>
+    <Section css={{ display: 'grid', gap: gap || spacing.sm }}>
       <Heading as={heading} member={member} title={title}  />
       <SyntaxHighlighter language="html" style={vscDarkPlus}>
         {children}

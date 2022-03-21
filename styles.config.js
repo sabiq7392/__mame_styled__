@@ -1,0 +1,44 @@
+const stylesConfig = {
+  color: {
+    primary: '#007FFF',
+    secondary: '#1D2D50',
+    white: '#f5f5f5',
+    light: '#b2bac2',
+    dark: '#1A1A40',
+    muted: 'rgba(255, 255, 255, 0.1)',
+    base: {
+      primary: 'rgb(0, 30, 60)',
+      secondary: {
+        default: '#1D2D50',
+        hover: '#133B5C',
+      },
+      
+    },
+  },
+  spacing: {
+    xs: 5, sm: 15, md: 30, lg: 45, xl: 60, xxl: 90, sxxl: 120,
+  },
+  shadow: {
+    primary: 'rgba(0, 0, 0, 0.16) 0px 1px 4px',
+  },
+  radius: {
+    xs: 4, sm: 8, md: 12,
+  },
+  font: {
+    lineHeight: '175%',
+    family: '',
+    size: { 
+      default: { xs: 10, },
+      small: {},
+      medium: {},
+      large: {},
+      xlarge: {},
+      xxlarge: {},
+    },
+  },
+  timing: {
+    fast: '200ms',
+  },
+};
+
+export default stylesConfig;

@@ -41,7 +41,7 @@ function ResultPreview() {
 
 function ResultCodePreview() {
   return (
-    <CodePreview>
+    <CodePreview heading="h4" title="Result Code Preview" member="Grid Template Columns">
       {`
         <Typography 
           weight="bold" 

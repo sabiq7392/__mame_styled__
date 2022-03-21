@@ -1,8 +1,18 @@
+import stylesConfig from '../../../styles.config';
 import { Article } from '../../../styles/MameStyled/core/HtmlTag.styled';
 
 export default function Container({ children }) {
+  const { color, spacing, radius } = stylesConfig;
+
   return (
-    <Article css={{ display: 'grid', gap: 30,width: '100%', padding: 30, borderRadius: 12, border: '1px solid #eee' }}>
+    <Article css={{ 
+      display: 'grid', 
+      gap: spacing.md,
+      width: '100%', 
+      padding: spacing.md, 
+      borderRadius: radius.md, 
+      border: `1px solid ${color.muted}` 
+    }}>
       {children}
     </Article>
   );

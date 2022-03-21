@@ -16,7 +16,7 @@ function Home() {
   return (
     <>
       <DisplayGrid />
-      <DisplayFlex />
+      {/* <DisplayFlex /> */}
       <IsTypography />
     </>
   )

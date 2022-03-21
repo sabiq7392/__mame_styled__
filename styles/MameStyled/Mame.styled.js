@@ -1,4 +1,6 @@
 /**
+ * @author Sabiq Muhammad Antebing Mame || github: sabiq7392 || gmail.com: sabiqmuhammad98
+ * 
  * @example
  * @attribute:
  * @css <Container as={Grid} center css={{ paddingTop: 60, paddingBottom: 120 }} cssLg={{ paddingTop: 150, paddingBottom: 120 }}></Container>

@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylesConfig from '../../../styles.config';
 
 export default function Heading({ as = 'h1', member, title, ...props }) {
+  const { color, spacing } = stylesConfig;
+
   const style = { 
-    color: '#aaa', 
+    color: color.light, 
     fontSize: 10, 
-    marginRight: 10, 
-    fontWeight: 400 ,
+    marginRight: spacing.xs, 
+    fontWeight: 'normal',
   };
 
   return React.createElement(
-    as, 
-    props, 
-    [React.createElement('span', {style}, member), title],
+    as || 'h1', 
+    { style: { color: color.white }, ...props }, 
+    [React.createElement('span', { style, key: 1 }, member), title],
   );
 }
 

@@ -29,7 +29,7 @@ function ResultPreview() {
 
   return (
     <>
-      <Container as="section" standard gap={spacing.sm}>
+      <Container as="section" standard >
         <Heading as={H4} member="Grid Template Columns" title="No Media Screen" />
         <Grid container cols={4} gap={spacing.sm} css={{ overflowX: 'auto' }}>
           {nextJsExample.map(({ title, href, description }, _key) => 
@@ -38,7 +38,7 @@ function ResultPreview() {
         </Grid>
       </Container>
 
-      <Container as="section" standard gap={spacing.sm}>
+      <Container as="section" standard>
         <Header css={{ display: 'grid', gap: spacing.xs }}>
           <Heading as={H4} member="Grid Template Columns" title="With Media Screen" />
           <Appeal as="p" text="Try to resize the screen, and see the effect!" />

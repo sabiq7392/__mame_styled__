@@ -21,7 +21,7 @@ function Home() {
       <HtmlTag />
       <DisplayGrid />
       {/* <DisplayFlex /> */}
-      {/* <IsTypography /> */}
+      <IsTypography />
     </>
   )
 }

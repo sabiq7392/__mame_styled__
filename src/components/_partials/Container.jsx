@@ -1,21 +1,23 @@
-// @ts-check
 import stylesConfig from '../../../styles.config';
 import { Div } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import PropTypes from 'prop-types';
+import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-function Container({ children, as, padding, radius, border, standard, display }) {
+function Container({ children, as, radius, border, standard, display, gap, ...props }) {
+  catchErrorPropsComponent({ props, component: 'CodePreview.jsx', location: '/src/components/_partials/CodePreview.jsx' });
+
   const { color, spacing } = stylesConfig;
 
   const css = { 
     display: display ?? 'grid', 
-    gap: spacing.md,
-    padding: standard ? 0 : padding || spacing.sm, 
+    gap: standard ? gap || spacing.sm : spacing.md ,
+    padding: standard ? 0 : spacing.sm, 
     borderRadius: standard ? 0 : radius || stylesConfig.radius.md, 
     border: standard ? 'none' : border || `1px solid ${color.muted}`, 
   };
 
   const cssLg = {
-    padding: spacing.md,
+    padding: standard ? 0 : spacing.md,
   };
 
   return (

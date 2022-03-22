@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
-import { Div, H1, H2, H3, H4, H5, H6, Span } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import ReactDOM from 'react-dom';
-import { Grid } from '../../../styles/MameStyled/core/display/Grid.styled';
-import catchErrorComponent from '../../utils/CatchErrorComponent';
+import { H1, H2, H3, H4, H5, H6 } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
 export default function Heading({ as, member, title, size, weight, ...props }) {
-  catchErrorComponent({ props, component: 'Heading' });
+  catchErrorPropsComponent({ props, component: 'Heading.jsx', location: '/src/components/_partials/Heading.jsx' });
   
   const { color, spacing } = stylesConfig;
 

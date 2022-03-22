@@ -2,8 +2,11 @@ import { Grid, Flex } from '../../../styles/MameStyled/core/display/_Display.sty
 import PropTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
 import { A, H2, P } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import catchErrorComponent from '../../utils/catchErrorPropsComponent';
 
-export default function ItemExample({ item, title, href, description }) {
+export default function ItemExample({ item, title, href, description, ...props }) {
+  catchErrorComponent({ props, component: 'ItemExample.jsx', location: '/src/components/_partials/ItemExample.jsx' });
+  
   const { radius, spacing, color, timing } = stylesConfig;
 
   const css = {
@@ -11,6 +14,7 @@ export default function ItemExample({ item, title, href, description }) {
     borderRadius: radius.sm, 
     transition: timing.fast,
     backgroundColor: color.base.secondary.default,
+    height: '100%',
   };
 
   const hover = { background: color.base.secondary.hover };

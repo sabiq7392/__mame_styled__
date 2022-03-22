@@ -4,8 +4,11 @@ import aboutMe from '../../data/aboutMe';
 import { AiOutlineInstagram, AiOutlineGithub } from 'react-icons/ai';
 import { BsLinkedin } from 'react-icons/bs';
 import stylesConfig from '../../../styles.config';
+import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-export default function SocialMedia() {
+export default function SocialMedia({ ...props }) {
+  catchErrorPropsComponent({ props, component: 'SocialMedia.jsx', location: '/src/components/_partials/SocialMedia.jsx' });
+
   const { color, spacing, timing } = stylesConfig;
 
   const css = {

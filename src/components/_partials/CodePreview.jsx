@@ -4,8 +4,11 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import Heading from './Heading';
 import PropTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
+import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-export default function CodePreview({ heading, title, member, gap, children }) {
+export default function CodePreview({ heading, title, member, gap, children, ...props }) {
+  catchErrorPropsComponent({ props, component: 'CodePreview.jsx', location: '/src/components/_partials/CodePreview.jsx' });
+
   const { spacing } = stylesConfig;
 
   return (

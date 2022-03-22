@@ -1,8 +1,11 @@
 import { P } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
 import PropTypes from 'prop-types';
+import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-export default function Description({ textAlign, margin, color, text, size, }) {
+export default function Description({ textAlign, margin, color, text, size, ...props }) {
+  catchErrorPropsComponent({ props, component: 'Description.jsx', location: '/src/components/_partials/Description.jsx' });
+
   const { font } = stylesConfig;
 
   const css = { 

@@ -10,7 +10,7 @@ export default function HtmlTag() {
   const { spacing } = stylesConfig;
 
   return (
-    <Container as="article" >
+    <Container as="article">
       <Header css={{ display: 'grid', gap: spacing.xs, }}>
         <Heading as={H2} title="HTML Tag" />
         <Appeal as="small" text="The HTML tag is superset!" />

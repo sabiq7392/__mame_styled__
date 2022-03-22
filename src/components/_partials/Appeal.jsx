@@ -1,9 +1,13 @@
 import { P } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
 import PropTypes from 'prop-types';
+import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-export default function Appeal({ text, css, as }) {
+export default function Appeal({ text, css, as, ...props }) {
+  catchErrorPropsComponent({ props, component: 'Appeal.jsx', location: '/src/components/_partials/Appeal.jsx' });
+
   const { color } = stylesConfig;
+
   const cssDefault = { 
     color: color.warning, 
     fontSize: 12,

@@ -11,9 +11,19 @@ export default function catchErrorPropsComponent ({props, component}) {
 };
 
 function ErrorMessage({ props, component, location }) {
+  const css = { 
+    color: 'white', 
+    display: 'flex',  
+    flexDirection: 'column', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    width: '100%', 
+    height: '100vh',
+  };
+
   return (
     <>
-      <P debug css={{ color: 'white', display: 'flex',  flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height: '100vh' }}>
+      <P debug css={css}>
         <Span>
           <Span>There was an unexpected props on: </Span>
           <Span css={{ display: 'grid', gap: 5 }}>

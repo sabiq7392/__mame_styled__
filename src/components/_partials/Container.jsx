@@ -1,28 +1,37 @@
+// @ts-check
 import stylesConfig from '../../../styles.config';
 import { Div } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import PropTypes from 'prop-types';
 
-export default function Container({ children, as, padding, radius, border, standard, display }) {
+function Container({ children, as, padding, radius, border, standard, display }) {
   const { color, spacing } = stylesConfig;
 
   const css = { 
     display: display ?? 'grid', 
     gap: spacing.md,
-    padding: standard ? 0 : padding || spacing.md, 
+    padding: standard ? 0 : padding || spacing.sm, 
     borderRadius: standard ? 0 : radius || stylesConfig.radius.md, 
     border: standard ? 'none' : border || `1px solid ${color.muted}`, 
   };
 
+  const cssLg = {
+    padding: spacing.md,
+  };
+
   return (
-    <Div as={as ?? 'article'} css={css}>{children}</Div>
+    <Div as={as ?? 'article'} css={css} cssLg={cssLg}>{children}</Div>
   );
 }
 
+const { any, oneOf, oneOfType, string, number } = PropTypes;
+
 Container.propTypes = {
-  children: PropTypes.any.isRequired,
-  as: PropTypes.oneOf(['article', 'section']).isRequired,
-  padding: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  border: PropTypes.string,
-  radius: PropTypes.number,
-  display: PropTypes.oneOf(['grid', 'flex']),
+  children: any.isRequired,
+  as: oneOf(['article', 'section']).isRequired,
+  padding: oneOfType([string, number]),
+  border: string,
+  radius: number,
+  display: oneOf(['grid', 'flex']),
 };
+
+export default Container;

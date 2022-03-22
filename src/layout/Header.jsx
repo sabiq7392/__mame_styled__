@@ -1,10 +1,9 @@
 import {  Header as MameHeader, H1, P, A } from '../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../styles.config';
 import Description from '../components/_partials/Description';
-import { Typography } from '../../styles/MameStyled/core/Typography.styled';
 
 export default function Header() {
-  const { color, spacing, radius, font } = stylesConfig;
+  const { color, spacing, radius, timing } = stylesConfig;
 
   return (
     <MameHeader 
@@ -29,7 +28,7 @@ export default function Header() {
       
       <A 
         href="/docs/index.html" 
-        css={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center' }}
+        css={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center', transition: timing.fast }}
         cssLg={{ padding: 10 }}
         hover={{ filter: 'brightness(80%)' }}
         size={{ xs: 12, md: 14, lg: 16 }}

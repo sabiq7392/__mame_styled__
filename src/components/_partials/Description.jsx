@@ -24,5 +24,5 @@ Description.propTypes = {
   textAlign: oneOf(['center', 'left', 'right']),
   margin: oneOfType([string, number]),
   color: string,
-  size: oneOfType([string, number, object])
+  size: oneOfType([string, number, object]),
 };

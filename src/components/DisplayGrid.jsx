@@ -7,7 +7,7 @@ import Heading from './_partials/Heading';
 export default function DisplayGrid() {
   return (
     <Container as="article">
-      <Heading as="h2" title="Display Grid" />
+      <Heading as={H2} title="Display Grid" />
       <GridTemplateColumns />
     </Container>
   );

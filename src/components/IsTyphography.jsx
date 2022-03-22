@@ -1,4 +1,4 @@
-import { Div, Header, Table, TBody, Td, Th, THead } from '../../styles/MameStyled/core/HtmlTag.styled';
+import { Div, Header, Table, TBody, Td, Th, THead, Tr, H3 } from '../../styles/MameStyled/core/HtmlTag.styled';
 import { Grid } from '../../styles/MameStyled/core/display/_Display.styled';
 import { Typography } from '../../styles/MameStyled/core/Typography.styled';
 import CodePreview from './_partials/CodePreview';
@@ -26,37 +26,42 @@ function Attributes() {
   const { spacing, color, radius } = stylesConfig;
 
   return (
-    <>
+    <div>
       <Container as="section" standard gap={spacing.sm}>
-        <Heading as="h3" title="Attributes" member="Typography" />
+        <Heading as={H3} title="Attributes" member="Typography" />
         <Table>
           <THead css={{ backgroundColor: color.light, borderRadius: radius.sm }}>
-            <Th css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px` }}>Name</Th>
-            <Th css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px` }}>Value</Th>
-            <Th css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px` }}>Type</Th>
-            <Th css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px` }}>Description</Th>
+            <Tr>
+              {['Name', 'Value', 'Type', 'Description'].map((_title, _key) =>
+                <Th key={_key} css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px` }}>
+                  {_title}
+                </Th>
+              )}
+            </Tr>
           </THead>
           <TBody css={{ backgroundColor: color.base.secondary.default }}>
-            <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>size</Td>
-            <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
-              {`size={{number}}`} 
-              <br />
-              {`size={{ xs: {number}, sm:..., md:..., lg:..., xl:..., xxl:... }}`}
-            </Td>
-            <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
-              number 
-              <br /> 
-              number{`{ xs, sm, md, lg, xl, xxl }`}
-            </Td>
-            <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
-              xs, md, ... is size of screen. 
-              <br />
-              the font size will be added based on the screen
-            </Td>
+            <Tr>
+              <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>size</Td>
+              <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
+                {`size={{number}}`} 
+                <br />
+                {`size={{ xs: {number}, sm:..., md:..., lg:..., xl:..., xxl:... }}`}
+              </Td>
+              <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
+                number 
+                <br /> 
+                number{`{ xs, sm, md, lg, xl, xxl }`}
+              </Td>
+              <Td css={{ textAlign: 'left', padding: `${spacing.xs}px ${spacing.sm}px`, color: color.white, verticalAlign: 'top' }}>
+                xs, md, ... is size of screen. 
+                <br />
+                the font size will be added based on the screen
+              </Td>
+            </Tr>
           </TBody>
         </Table>
       </Container>
-    </>
+    </div>
   );
 }
 
@@ -64,10 +69,10 @@ function ResultPreview() {
   const { color, radius, spacing } = stylesConfig;
 
   return (
-    <>
+    <div>
       <Container as="section" standard gap={spacing.sm}>
         <Header css={{ display: 'grid', gap: spacing.xs }}>
-          <Heading as="h3" title="Result Preview" member="Typography" />
+          <Heading as={H3} title="Result Preview" member="Typography" />
           <Appeal as="p" text="Try to resize the screen, and see the effect!" />
         </Header>
         <Div css={{ backgroundColor: color.base.secondary.default, borderRadius: radius.sm, padding: spacing.md }}>
@@ -80,13 +85,13 @@ function ResultPreview() {
           </Typography>
         </Div>
       </Container>
-    </>
+    </div>
   );
 }
 
 function ResultCodePreview() {
   return (
-    <CodePreview heading="h3" title="Result Code Preview" member="Typography">
+    <CodePreview heading={H3} title="Result Code Preview" member="Typography">
       {`
         <Typography 
           weight="bold" 

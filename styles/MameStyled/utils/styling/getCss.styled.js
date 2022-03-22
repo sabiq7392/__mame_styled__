@@ -1,6 +1,19 @@
+// @ts-check
 import screen from '../../config/screen.config';
 
-export const getCss = props => props.css;
+/**
+ * 
+ * @param {Object} props // is
+ * @param {*} props.css //is
+ * @returns {*}
+ */
+function getCss(props) { return props.css }
+
+/**
+ * 
+ * @param {*} props 
+ * @returns 
+ */
 export const getCssSm = props => ({ 
   [`@media (${screen.sm})`]: props.cssSm,
 });
@@ -21,3 +34,4 @@ export const getCssXxl = props => ({
   [`@media (${screen.xxl})`]: props.cssXxl,
 });
 
+export { getCss };

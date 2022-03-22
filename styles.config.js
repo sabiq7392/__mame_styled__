@@ -1,7 +1,7 @@
 const stylesConfig = {
   color: {
-    primary: '#007FFF',
-    secondary: '#1D2D50',
+    primary: '#00B4D8',
+    secondary: '#90E0EF',
     white: '#f5f5f5',
     light: 'rgba(255, 255, 255, 0.6)',
     dark: '#1A1A40',

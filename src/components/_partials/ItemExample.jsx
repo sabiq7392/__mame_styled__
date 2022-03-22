@@ -16,7 +16,7 @@ export default function ItemExample({ item, title, href, description }) {
   const hover = { background: color.base.secondary.hover };
 
   return (
-    <>
+    <div>
       {item === 'grid' ? 
         <Grid item  css={css} hover={hover}>
           <Item href={href} title={title} description={description} />
@@ -28,7 +28,7 @@ export default function ItemExample({ item, title, href, description }) {
         : 
         <></>
       }
-    </>
+    </div>
   );
 }
 
@@ -43,9 +43,11 @@ function Item({ href, title, description }) {
   );
 }
 
+const { oneOf, string } = PropTypes;
+
 ItemExample.propTypes = {
-  item: PropTypes.oneOf(['grid', 'flex']).isRequired,
-  title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  item: oneOf(['grid', 'flex']).isRequired,
+  title: string.isRequired,
+  href: string.isRequired,
+  description: string.isRequired,
 };

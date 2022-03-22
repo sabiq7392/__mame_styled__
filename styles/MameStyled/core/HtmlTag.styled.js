@@ -23,16 +23,22 @@ const setFontSize = props => (
 );
 
 /** General */
-export const Div = styled.div(...attributes);
+const Div = styled.div(...attributes);
 export const Article = styled.article(...attributes);
 export const Section = styled.section(...attributes);
-export const Figure = styled.figure(...attributes);
 export const Header = styled.header(...attributes);
 export const Footer = styled.footer(...attributes);
 export const Nav = styled.nav(...attributes);
 export const Button = styled.button(...attributes);
 export const Main = styled.main(...attributes);
 export const Span = styled.span(...attributes);
+
+/** image */
+export const Figure = styled.figure(...attributes);
+export const Img = styled.img(...attributes);
+export const Picture = styled.picture(...attributes);
+export const Caption = styled.caption(...attributes);
+export const Figcaption = styled.figcaption(...attributes);
 
 /** Form */
 export const Input = styled.input(...attributes);
@@ -47,6 +53,7 @@ export const Table = styled.table(...attributes);
 export const TBody = styled.tbody(...attributes);
 export const THead = styled.thead(...attributes);
 export const TFoot = styled.tfoot(...attributes);
+export const Tr = styled.tr(...attributes);
 export const Th = styled.th(...attributes);
 export const Td = styled.td(...attributes);
 
@@ -62,8 +69,11 @@ export const A = styled.a(...attributes, setFontSize);
 export const Small = styled.small(...attributes, setFontSize);
 export const B = styled.b(...attributes, setFontSize);
 export const I = styled.i(...attributes, setFontSize);
+export const Blockquote = styled.blockquote(...attributes, setFontSize);
 
 /** List */
 export const Ul = styled.ul(...attributes);
 export const Ol = styled.ol(...attributes);
 export const Li = styled.li(...attributes);
+
+export { Div };

@@ -5,7 +5,7 @@ import { H1, H2, H3, H4, H5, H6 } from '../../../styles/MameStyled/core/HtmlTag.
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
 export default function Heading({ as, member, title, size, weight, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Heading.jsx', location: '/src/components/_partials/Heading.jsx' });
+  catchErrorPropsComponent({ props, component: 'Heading.jsx' });
   
   const { color, spacing } = stylesConfig;
 

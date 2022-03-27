@@ -5,7 +5,7 @@ import { A, H2, P } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import catchErrorComponent from '../../utils/catchErrorPropsComponent';
 
 export default function ItemExample({ item, title, href, description, ...props }) {
-  catchErrorComponent({ props, component: 'ItemExample.jsx', location: '/src/components/_partials/ItemExample.jsx' });
+  catchErrorComponent({ props, component: 'ItemExample.jsx' });
   
   const { radius, spacing, color, timing } = stylesConfig;
 

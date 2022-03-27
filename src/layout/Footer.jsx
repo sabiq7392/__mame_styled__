@@ -1,9 +1,9 @@
 import { Footer as MameFooter } from '../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../styles.config';
 import { Grid } from '../../styles/MameStyled/core/display/Grid.styled';
-import Author from '../components/_partials/Author';
-import Brand from '../components/_partials/Brand';
-import SocialMedia from '../components/_partials/SocialMedia';
+import Author from '../components/molecules/Author';
+import Brand from '../components/organisms/Brand';
+import SocialMedia from '../components/molecules/SocialMedia';
 
 export default function Footer() {
   const { color, spacing } = stylesConfig;
@@ -12,11 +12,17 @@ export default function Footer() {
     <MameFooter css={{ marginTop: spacing.sxxl, background: color.base.secondary.default }}>
       <Grid 
         cols={3}
-        css={{ maxWidth: 1200, margin: 'auto', padding: spacing.md, justifyContent: 'space-between' }}
+        css={{ maxWidth: 1440, margin: 'auto', padding: spacing.md, justifyContent: 'space-between' }}
       >
-        <Author />
-        <Brand />
-        <SocialMedia />
+        <Grid item vCenter>
+          <Author />
+        </Grid>
+        <Grid item center>
+          <Brand as="small" />
+        </Grid>
+        <Grid item vCenter>
+          <SocialMedia position="end" />
+        </Grid>
       </Grid>
     </MameFooter>
   );

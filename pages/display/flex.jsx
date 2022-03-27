@@ -1,0 +1,11 @@
+import Container from '../../src/components/atoms/Container';
+import Heading from '../../src/components/molecules/Heading';
+import { H2 } from '../../styles/MameStyled/core/HtmlTag.styled';
+
+export default function flex() {
+  return (
+    <Container as="article">
+      <Heading head={H2} title="Display Flex" />
+    </Container>
+  )
+}

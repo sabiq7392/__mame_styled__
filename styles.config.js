@@ -9,7 +9,7 @@ const stylesConfig = {
     warning: '#C6DE41',
     danger: '#A0204C',
     base: {
-      primary: 'rgb(0, 30, 60)',
+      primary: '#001E3C',
       secondary: {
         default: '#1D2D50',
         hover: '#133B5C',

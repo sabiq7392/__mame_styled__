@@ -2,8 +2,8 @@ import { Small } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-export default function Author({ ...props }) {
-  catchErrorPropsComponent({ props, component: 'Author.jsx', location: '/src/components/_partials/Author.jsx' });
+export default function Author({ name, ...props }) {
+  catchErrorPropsComponent({ props, component: 'Author.jsx' });
 
   const { color } = stylesConfig;
 
@@ -15,6 +15,6 @@ export default function Author({ ...props }) {
   };
 
   return (
-    <Small css={css}>Author: Sabiq Muhammad Antebing Mame</Small>
+    <Small css={css}>Author: {name || 'Sabiq Muhammad Antebing Mame'}</Small>
   );
 }

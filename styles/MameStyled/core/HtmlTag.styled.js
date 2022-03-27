@@ -23,7 +23,7 @@ const setFontSize = props => (
 );
 
 /** General */
-const Div = styled.div(...attributes);
+export const Div = styled.div(...attributes);
 export const Article = styled.article(...attributes);
 export const Section = styled.section(...attributes);
 export const Header = styled.header(...attributes);
@@ -32,6 +32,9 @@ export const Nav = styled.nav(...attributes);
 export const Button = styled.button(...attributes);
 export const Main = styled.main(...attributes);
 export const Span = styled.span(...attributes);
+export const Aside = styled.aside(...attributes);
+export const Br = styled.br(...attributes);
+export const Hr= styled.hr(...attributes);
 
 /** image */
 export const Figure = styled.figure(...attributes);
@@ -70,10 +73,9 @@ export const Small = styled.small(...attributes, setFontSize);
 export const B = styled.b(...attributes, setFontSize);
 export const I = styled.i(...attributes, setFontSize);
 export const Blockquote = styled.blockquote(...attributes, setFontSize);
+export const Strong = styled.strong(...attributes);
 
 /** List */
 export const Ul = styled.ul(...attributes);
 export const Ol = styled.ol(...attributes);
 export const Li = styled.li(...attributes);
-
-export { Div };

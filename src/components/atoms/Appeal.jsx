@@ -1,10 +1,10 @@
-import { P } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import { P, Strong } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
 import PropTypes from 'prop-types';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-export default function Appeal({ text, css, as, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Appeal.jsx', location: '/src/components/_partials/Appeal.jsx' });
+export default function Appeal({ text, css, ...props }) {
+  catchErrorPropsComponent({ props, component: 'Appeal.jsx' });
 
   const { color } = stylesConfig;
 
@@ -15,15 +15,14 @@ export default function Appeal({ text, css, as, ...props }) {
   };
 
   return (
-    <P as={as} css={css ?? cssDefault}>{text}</P>
+    <Strong css={css ?? cssDefault}>{text}</Strong>
   );
 }
 
-const { string, object, oneOf } = PropTypes;
+const { string, object } = PropTypes;
 
 Appeal.propTypes = {
   text: string.isRequired,
   css: object,
-  as: oneOf(['small', 'p']).isRequired,
 };
 

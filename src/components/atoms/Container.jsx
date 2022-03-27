@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
 function Container({ children, as, radius, border, standard, display, gap, ...props }) {
-  catchErrorPropsComponent({ props, component: 'CodePreview.jsx', location: '/src/components/_partials/CodePreview.jsx' });
+  catchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
 
   const { color, spacing } = stylesConfig;
 
@@ -13,7 +13,7 @@ function Container({ children, as, radius, border, standard, display, gap, ...pr
     gap: standard ? gap || spacing.sm : spacing.md ,
     padding: standard ? 0 : spacing.sm, 
     borderRadius: standard ? 0 : radius || stylesConfig.radius.md, 
-    border: standard ? 'none' : border || `1px solid ${color.muted}`, 
+    border: border ? `1px solid ${color.muted}` : 'none', 
   };
 
   const cssLg = {

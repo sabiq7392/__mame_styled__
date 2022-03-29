@@ -8,7 +8,7 @@ import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import SetAutoHead from '../../utils/setAutoHead';
 import { nanoid } from 'nanoid';
 
-export default function CodePreview({ title, member, children, ...props }) {
+export default function CodePreview({ title = 'Result Code Preview', member, children, ...props }) {
   catchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
 
   const { spacing } = stylesConfig;
@@ -29,7 +29,7 @@ const { string } = PropTypes;
 
 CodePreview.propTypes = {
   member: string,
-  title: string.isRequired,
+  title: string,
   children: string.isRequired,
 };
 

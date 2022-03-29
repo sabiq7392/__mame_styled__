@@ -66,13 +66,13 @@ export const Typography = styled.p(
       props.center ? 'center' 
       : props.left ? 'left'
       : props.right ? 'right'
-      : props.textAlign
+      : props.align
     ),
     fontStyle: (
       props.styleNormal ? 'normal'
       : props.italic ? 'italic'
       : props.oblique ? 'oblique'
-      : 'normal'
+      : props.fontStyle
     ),
     lineHeight: props.lineHeight,
     fontVariant: props.variant,

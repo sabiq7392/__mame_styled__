@@ -1,13 +1,9 @@
-import { H3 } from '../../../../styles/MameStyled/core/HtmlTag.styled';
-import stylesConfig from '../../../../styles.config';
 import TableProperties from '../../organisms/TableProperties';
 import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
 import Harbor from '../../organisms/Harbor';
 
 export default function Properties({ ...props }) {
   catchErrorPropsComponent({ props, component: 'Properties of Typography' });
-
-  const { spacing } = stylesConfig;
 
   const tbodyData = [
     {
@@ -27,7 +23,7 @@ export default function Properties({ ...props }) {
   ];
 
   return (
-    <Harbor head={H3} title="Properties">
+    <Harbor title="Properties">
       <TableProperties data={tbodyData} />
     </Harbor>
   );

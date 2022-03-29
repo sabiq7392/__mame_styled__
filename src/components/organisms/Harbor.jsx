@@ -4,17 +4,20 @@ import stylesConfig from '../../../styles.config';
 import propTypes from 'prop-types';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import Heading from '../molecules/Heading';
-import { H1, H2, H3, H4, H5, H6 } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import { H2 } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import { nanoid } from 'nanoid';
+import SetAutoHead from '../../utils/setAutoHead';
 
-export default function Harbor({ head, children, member, title, appeal, description, ...props }) {
+export default function Harbor({ children, member, title, appeal, description, ...props }) {
   catchErrorPropsComponent({ props, catchErrorPropsComponent: 'Harbor', type: 'Organisms' });
 
   const { spacing } = stylesConfig;
+  const id = nanoid();
 
   return (
-    <Container as="article" standard>
+    <Container id={id} as="article" standard>
       <Grid gap={spacing.md}> 
-        <Heading head={head} member={member} title={title} appeal={appeal} description={description} /> 
+        <Heading head={SetAutoHead(id) || H2} member={member} title={title} appeal={appeal} description={description} /> 
         <Grid gap={spacing.lg}>
           {children}
         </Grid>
@@ -23,10 +26,9 @@ export default function Harbor({ head, children, member, title, appeal, descript
   );
 }
 
-const { node, oneOf, string } = propTypes;
+const { node, string } = propTypes;
 
 Harbor.propTypes = {
-  head: oneOf([H1, H2, H3, H4, H5, H6]).isRequired,
   children: node.isRequired,
   title: string.isRequired,
   member: string,

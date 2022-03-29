@@ -1,18 +1,29 @@
-import { H3 } from '../../../../styles/MameStyled/core/HtmlTag.styled';
 import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
 import Harbor from '../../organisms/Harbor';
-import ResultCodePreview from './font-size/ResultCodePreview';
-import ResultPreview from './font-size/ResultPreview';
+import Preview from '../../organisms/Preview';
+import CodePreview from '../../organisms/CodePreview';
+import { Typography } from '../../../../styles/MameStyled/core/Typography.styled';
 
 export default function FontSize({ ...props }) {
   catchErrorPropsComponent({ props, component: 'FontSize of Typography' });
 
   return (
-    <Harbor head={H3} title="Font Size" 
+    <Harbor title="Font Size" 
       description="xs, md, ... is size of screen. the font size will base on the screen"
     >
-      <ResultPreview />
-      <ResultCodePreview />
+      <Preview title="Result Preview" member="Font Size" appeal="Try to resize the screen, and see the effect">
+        <Typography size={{ xs: 20, sm: 25, md: 30, lg: 35, xl: 40, xxl: 45 }}>
+          Developer, Try Me!!
+        </Typography>
+      </Preview>
+      
+      <CodePreview title="Result Code Preview" member="Font Size">
+        {`
+          <Typography size={{ xs: 20, sm: 25, md: 30, lg: 35, xl: 40, xxl: 45 }}>
+            Developer Try Me
+          </Typography>
+        `}
+      </CodePreview>
     </Harbor>
   );
 }

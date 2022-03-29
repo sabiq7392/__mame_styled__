@@ -10,7 +10,7 @@ export default function DisplayGrid() {
 
   return (
     <>
-      <Heading head={H2} title="Display Grid" />
+      <Heading head={H2} title="Display Grid" appeal="The default tag of Grid is '<div>'" />
       <Grid gap={spacing.lg}>
         <GridTemplateColumns />
         <Properties />

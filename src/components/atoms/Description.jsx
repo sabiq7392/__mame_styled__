@@ -2,6 +2,7 @@ import { P } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
 import PropTypes from 'prop-types';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import { node } from 'prop-types';
 
 export default function Description({ textAlign, margin, color, text, size, ...props }) {
   catchErrorPropsComponent({ props, component: 'Description.jsx' });
@@ -23,7 +24,7 @@ export default function Description({ textAlign, margin, color, text, size, ...p
 const { string, oneOf, oneOfType, number, object } = PropTypes;
 
 Description.propTypes = {
-  text: string.isRequired,
+  text: oneOfType([string.isRequired, node.isRequired]),
   textAlign: oneOf(['center', 'left', 'right']),
   margin: oneOfType([string, number]),
   color: string,

@@ -3,7 +3,7 @@ import { Div } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import PropTypes from 'prop-types';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
-function Container({ children, as, radius, border, standard, display, gap, ...props }) {
+function Container({ children, as, radius, border, standard, display, gap, id, ...props }) {
   catchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
 
   const { color, spacing } = stylesConfig;
@@ -21,7 +21,7 @@ function Container({ children, as, radius, border, standard, display, gap, ...pr
   };
 
   return (
-    <Div as={as ?? 'article'} css={css} cssLg={cssLg}>{children}</Div>
+    <Div id={id} as={as ?? 'article'} css={css} cssLg={cssLg}>{children}</Div>
   );
 }
 
@@ -34,6 +34,9 @@ Container.propTypes = {
   border: string,
   radius: number,
   display: oneOf(['grid', 'flex']),
+  id: string,
+  standard: any,
+  gap: number,
 };
 
 export default Container;

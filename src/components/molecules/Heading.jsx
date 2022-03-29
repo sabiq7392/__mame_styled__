@@ -1,9 +1,9 @@
 import { H1, H2, H3, H4, H5, H6, Header, Span } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import Description from '../atoms/Description';
-import propTypes from 'prop-types';
 import Appeal from '../atoms/Appeal';
 import stylesConfig from '../../../styles.config';
+import { oneOfType, string, oneOf, node } from 'prop-types';
 
 export default function Heading({ head, title, appeal, member, headWeight, description, ...props }) {
   catchErrorPropsComponent({ props, component: 'Header' });
@@ -31,13 +31,11 @@ export default function Heading({ head, title, appeal, member, headWeight, descr
   );
 }
 
-const { string, oneOf } = propTypes;
-
 Heading.propTypes = {
   head: oneOf([H1, H2, H3, H4, H5, H6]).isRequired,
   title: string.isRequired,
+  description: oneOfType([string.isRequired, node.isRequired]),
   member: string,
   appeal: string,
-  description: string,
   headWeight: oneOf([500, 600, 800, 900, 'bold', 'normal', 'black'])
 };

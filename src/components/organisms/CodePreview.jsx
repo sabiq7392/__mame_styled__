@@ -5,7 +5,7 @@ import Heading from '../molecules/Heading';
 import PropTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
-import SetAutoHead from '../../utils/setAutoHead';
+import SetAutoHead from '../../utils/SetAutoHead';
 import { nanoid } from 'nanoid';
 
 export default function CodePreview({ title = 'Result Code Preview', member, children, ...props }) {

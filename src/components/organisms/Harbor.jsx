@@ -6,7 +6,7 @@ import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import Heading from '../molecules/Heading';
 import { H2 } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import { nanoid } from 'nanoid';
-import SetAutoHead from '../../utils/setAutoHead';
+import SetAutoHead from '../../utils/SetAutoHead';
 
 export default function Harbor({ children, member, title, appeal, description, ...props }) {
   catchErrorPropsComponent({ props, catchErrorPropsComponent: 'Harbor', type: 'Organisms' });

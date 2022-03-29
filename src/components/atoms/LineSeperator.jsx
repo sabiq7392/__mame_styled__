@@ -1,5 +1,5 @@
 import stylesConfig from '../../../styles.config';
-import { Div, Hr } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import { Div } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 
 export default function LineSeperator({ ...props }) {

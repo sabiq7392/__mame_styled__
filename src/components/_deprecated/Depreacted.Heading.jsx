@@ -23,10 +23,12 @@ export default function Heading({ as, member, title, size, weight, ...props }) {
   );
 }
 
-const { oneOf, string } = PropTypes;
+const { oneOf, string, any } = PropTypes;
 
 Heading.propTypes = {
   as: oneOf([H1, H2, H3, H4, H5, H6]),
   member: string,
   title: string.isRequired,
+  size: any,
+  weight: any,
 };

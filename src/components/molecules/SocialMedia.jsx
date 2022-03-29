@@ -6,7 +6,6 @@ import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import Linkedin from '../atoms/icons/Linkedin';
 import Github from '../atoms/icons/Github';
 import Instagram from '../atoms/icons/Instagram';
-import propTypes from 'prop-types';
 
 export default function SocialMedia({ ...props }) {
   catchErrorPropsComponent({ props, component: 'SocialMedia.jsx' });
@@ -36,9 +35,3 @@ export default function SocialMedia({ ...props }) {
     </Flex>
   );
 }
-
-// SocialMedia.propTypes = {
-//   position: propTypes.oneOf(['end', 'start', 'center']).isRequired,
-// };
-
-

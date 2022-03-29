@@ -36,6 +36,7 @@ export default function ItemExample({ item, title, href, description, ...props }
   );
 }
 
+// eslint-disable-next-line react/prop-types
 function Item({ href, title, description }) {
   const { spacing, color } = stylesConfig;
 
@@ -48,6 +49,7 @@ function Item({ href, title, description }) {
 }
 
 const { oneOf, string } = PropTypes;
+
 
 ItemExample.propTypes = {
   item: oneOf(['grid', 'flex']).isRequired,

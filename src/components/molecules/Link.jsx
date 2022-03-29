@@ -5,7 +5,7 @@ import propTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
 import { useRouter } from 'next/router';
 
-export default function Link({ active, href, text, ...props }) {
+export default function Link({ href, text, ...props }) {
   catchErrorPropsComponent({ props, component: 'Link' });
 
   const router = useRouter();

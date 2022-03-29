@@ -12,6 +12,11 @@ import Header from './Header';
 export default function Layout({ children }) {
   const router = useRouter();
   const { spacing, color } = stylesConfig;
+  const cssMain ={ 
+    display: 'grid', 
+    gap: spacing.xl, 
+    border: `1px solid ${color.muted}`,
+  };
 
   return (
     <Div>
@@ -22,7 +27,7 @@ export default function Layout({ children }) {
       </Head>
       <Div>
         {router.pathname === '/' ? 
-          <Main  css={{ display: 'grid', gap: 60, margin: 'auto', border: `1px solid ${color.muted}` }}>
+          <Main css={cssMain}>
             <Container as="article">
               {children}
             </Container>
@@ -34,7 +39,7 @@ export default function Layout({ children }) {
             css={{ maxWidth: 1440, margin: 'auto' }} 
           >
             <AsideLeft />
-            <Main css={{ display: 'grid', gap: 60, margin: 'auto', border: `1px solid ${color.muted}` }}>
+            <Main css={cssMain}>
               <Container as="article">
                 {children}
               </Container>

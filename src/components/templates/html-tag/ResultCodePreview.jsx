@@ -1,9 +1,8 @@
 import CodePreview from '../../organisms/CodePreview';
-import { H3 } from '../../../../styles/MameStyled/core/HtmlTag.styled';
 
 export default function ResultCodePreview() {
   return (
-    <CodePreview head={H3} title="Result Code Preview" member="HTML Tag">
+    <CodePreview title="Result Code Preview" member="HTML Tag">
       {`
         import { Blockquote, Div, Figcaption, Figure, H1, Header, Img, P, Small } from '../../styles/MameStyled/core/HtmlTag.styled';
 

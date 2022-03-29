@@ -66,7 +66,7 @@ export const Typography = styled.p(
       props.center ? 'center' 
       : props.left ? 'left'
       : props.right ? 'right'
-      : 'left' 
+      : props.textAlign
     ),
     fontStyle: (
       props.styleNormal ? 'normal'

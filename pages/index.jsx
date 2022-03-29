@@ -47,5 +47,5 @@ export default function Home() {
         <Button text="Screen" href="/screen" />
       </Grid>
     </>
-  )
+  );
 }

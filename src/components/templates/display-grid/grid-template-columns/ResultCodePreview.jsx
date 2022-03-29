@@ -1,9 +1,8 @@
 import CodePreview from '../../../organisms/CodePreview';
-import { H4 } from '../../../../../styles/MameStyled/core/HtmlTag.styled';
 
 export default function ResultCodePreview() {
   return (
-    <CodePreview head={H4} title="Result Code Preview" member="Grid Template Columns">
+    <CodePreview title="Result Code Preview" member="Grid Template Columns">
       {`
         // no Media Screen
         <Grid container cols={4}>

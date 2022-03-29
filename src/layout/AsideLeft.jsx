@@ -3,7 +3,7 @@ import { Grid } from '../../styles/MameStyled/core/display/Grid.styled';
 import { A, Aside, Hr} from '../../styles/MameStyled/core/HtmlTag.styled';
 import LineSeperator from '../components/atoms/LineSeperator';
 import Link from '../components/molecules/Link';
-import Brand from '../components/organisms/Brand';
+import Brand from '../components/molecules/Brand';
 import SocialMedia from '../components/molecules/SocialMedia';
 
 export default function AsideLeft() {
@@ -17,7 +17,7 @@ export default function AsideLeft() {
       <Grid container gap={spacing.lg}>
         <Grid gap={spacing.sm}>
           <Brand as="h1" />
-          <SocialMedia position="start" />
+          <SocialMedia />
         </Grid>
         <LineSeperator />
         <Grid container gap={spacing.sm}>

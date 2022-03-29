@@ -53,9 +53,9 @@ export const Select = styled.select(...attributes);
 
 /** Table */
 export const Table = styled.table(...attributes);
-export const TBody = styled.tbody(...attributes);
-export const THead = styled.thead(...attributes);
-export const TFoot = styled.tfoot(...attributes);
+export const Tbody = styled.tbody(...attributes);
+export const Thead = styled.thead(...attributes);
+export const Tfoot = styled.tfoot(...attributes);
 export const Tr = styled.tr(...attributes);
 export const Th = styled.th(...attributes);
 export const Td = styled.td(...attributes);

@@ -1,4 +1,4 @@
-import { A, Div, Small } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import { A, Small } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
 import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import propTypes from 'prop-types';
@@ -15,8 +15,9 @@ export default function Brand({ as, ...props }) {
   };
 
   return (
+    // eslint-disable-next-line react/react-in-jsx-scope
     <Link href="/" passHref>
-      <A>
+      <A css={{ display: 'grid' }}>
         <Small as={as} css={css}>Mame Styled</Small>
       </A>
     </Link>

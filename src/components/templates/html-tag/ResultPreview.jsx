@@ -1,9 +1,10 @@
-import Container from '../../atoms/Container';
 import { Figure, Img, Div, Blockquote, Figcaption, H1, Small } from '../../../../styles/MameStyled/core/HtmlTag.styled';
+import Preview from '../../organisms/Preview';
 
 export default function ResultPreview() {
+
   return (
-    <Container as="section" standard>
+    <Preview title="Result Preview" member="HTML Tag">
       <Figure 
         cssLg={{ flexDirection: 'row', width: '75%' }}
         css={{ display: 'flex', flexDirection: 'column', background: '#1D2D50', width: '100%',  borderRadius: 8, color: '#f5f5f5', transition: '200ms' }}
@@ -25,6 +26,6 @@ export default function ResultPreview() {
           </Figcaption>
         </Div>
       </Figure>
-    </Container>
+    </Preview>
   );
 }

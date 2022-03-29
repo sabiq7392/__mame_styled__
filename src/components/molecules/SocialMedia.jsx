@@ -8,13 +8,13 @@ import Github from '../atoms/icons/Github';
 import Instagram from '../atoms/icons/Instagram';
 import propTypes from 'prop-types';
 
-export default function SocialMedia({ position, ...props }) {
+export default function SocialMedia({ ...props }) {
   catchErrorPropsComponent({ props, component: 'SocialMedia.jsx' });
 
   const { color, spacing, timing } = stylesConfig;
 
   const css = {
-    display: 'grid',
+    display: 'flex',
     alignItems: 'center', 
     transition: timing.fast,
     color: 'white',
@@ -23,7 +23,7 @@ export default function SocialMedia({ position, ...props }) {
   const hover = { color: color.primary }
 
   return (
-    <Flex justifyContent={position} gap={spacing.sm} >
+    <Flex gap={spacing.sm}>
       <A href={aboutMe.instagram} css={css} hover={hover}>
         <Instagram />
       </A>
@@ -37,8 +37,8 @@ export default function SocialMedia({ position, ...props }) {
   );
 }
 
-SocialMedia.propTypes = {
-  position: propTypes.oneOf(['end', 'start', 'center']).isRequired,
-};
+// SocialMedia.propTypes = {
+//   position: propTypes.oneOf(['end', 'start', 'center']).isRequired,
+// };
 
 

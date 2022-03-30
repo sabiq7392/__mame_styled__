@@ -9,12 +9,11 @@ const stylesConfig = {
     warning: '#C6DE41',
     danger: '#A0204C',
     base: {
-      primary: '#001E3C',
+      primary: '#1A1A40',
       secondary: {
-        default: '#1D2D50',
+        default: 'rgba(47, 47, 87, .5)',
         hover: '#133B5C',
       },
-      
     },
   },
   spacing: {

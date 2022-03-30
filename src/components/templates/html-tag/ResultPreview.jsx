@@ -1,14 +1,16 @@
+import stylesConfig from '../../../../styles.config';
 import { Figure, Img, Div, Blockquote, Figcaption, H1, Small } from '../../../../styles/MameStyled/core/HtmlTag.styled';
 import Preview from '../../organisms/Preview';
 
 export default function ResultPreview() {
+  const { color } = stylesConfig;
 
   return (
-    <Preview title="Result Preview" member="HTML Tag">
+    <Preview title="Result Preview" member="HTML Tag" noLandfield>
       <Figure 
         cssLg={{ flexDirection: 'row', width: '75%' }}
-        css={{ display: 'flex', flexDirection: 'column', background: '#1D2D50', width: '100%',  borderRadius: 8, color: '#f5f5f5', transition: '200ms' }}
-        hover={{ background: '#133B5C' }}
+        css={{ display: 'flex', flexDirection: 'column', background: color.base.secondary.default, width: '100%',  borderRadius: 8, color: '#f5f5f5', transition: '200ms' }}
+        hover={{ background: color.base.secondary.hover }}
       >
         <Img src="/images/photos/sabiq-mini.jpg" alt="Sabiq Muhammad" 
           css={{ width: 125, height: 125, objectFit: 'cover', objectPosition: 'top', borderRadius: '50%', margin: '20px auto 0 auto' }} 

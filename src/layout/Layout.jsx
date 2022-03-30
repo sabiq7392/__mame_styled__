@@ -7,15 +7,11 @@ import Container from '../components/atoms/Container';
 import AsideLeft from './AsideLeft';
 import Footer from './Footer';
 import { node } from 'prop-types';
+import Header from './Header';
 
 export default function Layout({ children }) {
   const router = useRouter();
   const { spacing, color } = stylesConfig;
-  const cssMain ={ 
-    display: 'grid', 
-    gap: spacing.xl, 
-    border: `1px solid ${color.muted}`,
-  };
 
   return (
     <>
@@ -26,11 +22,12 @@ export default function Layout({ children }) {
       </Head>
       <>
         {router.pathname === '/' ? 
-          <Main css={cssMain}>
-            <Container as="article">
+          <>
+            <Header />
+            <Main css={{ maxWidth: 1440, margin: 'auto' }}>
               {children}
-            </Container>
-          </Main>
+            </Main>
+          </>
         :
           <Grid 
             cols={{ xs: 1, md: '2fr 10fr' }} 
@@ -38,8 +35,8 @@ export default function Layout({ children }) {
             css={{ maxWidth: 1440, margin: 'auto' }} 
           >
             <AsideLeft />
-            <Main css={cssMain}>
-              <Container as="article">
+            <Main css={{ display: 'grid', gap: spacing.xl, border: `1px solid ${color.muted}` }}>
+              <Container as="div">
                 {children}
               </Container>
             </Main>

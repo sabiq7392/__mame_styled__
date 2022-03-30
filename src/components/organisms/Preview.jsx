@@ -5,7 +5,7 @@ import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
 import SetAutoHead from '../../utils/SetAutoHead';
 import Heading from '../molecules/Heading';
 import { nanoid } from 'nanoid';
-import Landfield from '../molecules/Landfield';
+import Landfield from '../atoms/Landfield';
 import { any } from 'prop-types';
 
 export default function Preview({ member, title = 'Result Preview', appeal, description, children, noLandfield, background, ...props }) {

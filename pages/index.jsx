@@ -1,50 +1,44 @@
-import { Grid } from '../styles/MameStyled/core/display/_Display.styled';
 import stylesConfig from '../styles.config';
-import Button from '../src/components/atoms/Button';
-import { Header, H1, A } from '../styles/MameStyled/core/HtmlTag.styled';
+import { Header, H1, A, Div, H2, Figure } from '../styles/MameStyled/core/HtmlTag.styled';
 import Description from '../src/components/atoms/Description';
+import Container from '../src/components/atoms/Container';
+import { Grid } from '../styles/MameStyled/core/display/Grid.styled';
+import Image from 'next/image';
 
 export default function Home() {
-  const { spacing, color, radius, timing } = stylesConfig;
-
+  const { spacing } = stylesConfig;
   return (
     <>
-      <Header
-        css={{ padding: `${spacing.sxxl}px ${spacing.sm}px`, maxWidth: 1200, margin: 'auto', display: 'grid', gap: spacing.md, textAlign: 'center' }}
-        cssSm={{ padding: `${spacing.sxxl}px ${spacing.md}px` }}
-        cssLg={{ padding: `${spacing.sxxl}px ${spacing.sxxl}px` }}
-      >
-      <H1 bold center 
-        size={{ xs: '2rem', md: '3rem',  lg: '4rem' }}
-        css={{ margin: 0, lineHeight: 1.15, color: color.white }}
-      >
-        Welcome to <A href="#" css={{ color: color.primary }}>Mame Styled</A>
-      </H1>
-      <Description 
-        text="
-          this is a styled component that makes it easy to develop user interfaces, 
-          where you can write internal css in inline css style. 
-          hopefully if you use this you can easily create components without having to create css files again
-        "
-        size={{ xs: 12, md: 14, lg: 16 }}
-      />
-      
-      <A 
-        href="/getting-started" 
-        css={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center', transition: timing.fast }}
-        cssLg={{ padding: 10 }}
-        hover={{ filter: 'brightness(80%)' }}
-        size={{ xs: 12, md: 14, lg: 16 }}
-      >
-        Getting Started
-      </A>
-      </Header>
-      <Grid container cols={{ xs: 1, sm: 2, md: 3, lg: 5 }} gap={spacing.sm}>
-        <Button text="Display Grid" href="/display/grid" />
-        <Button text="Display Flex" href="/display/flex" />
-        <Button text="Typography" href="/typography" />
-        <Button text="HTML Tag" href="/html-tag" />
-        <Button text="Screen" href="/screen" />
+      <Grid gap={spacing.md} css={{ padding: spacing.lg }}>
+        <Container as="article">
+          <H2 css={{ color: 'white' }} size={{ lg: 32 }}>Installation</H2>
+          <Description 
+            text="
+              install Bootstrap’s source Sass and JavaScript files via npm, Composer, or Meteor. 
+              Package managed installs don’t include documentation or our full build scripts. 
+              You can also use our npm template repo to quickly generate a Bootstrap project via npm.
+            " 
+            size={{ xs: 12, md: 14, lg: 16 }}
+          />
+        </Container>
+
+        <Container as="article">
+          <H2 css={{ color: 'white' }} size={{ lg: 32 }}>Why Mame Styled?</H2>
+          <Description
+            text="
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
+              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            "
+          />
+        </Container>
+
+        <Container as="article">
+          <H2 css={{ color: 'white' }} size={{ lg: 32 }}>Thanks to</H2>
+          <Figure css={{ display: 'flex', gap: spacing.lg }}>
+            <Image src="/images/photos/styled-components.png" alt="styled-components" width={100} height={100} />
+            <Image src="/images/photos/next-js.png" alt="styled-components" width={200} height={110} />
+          </Figure>
+        </Container>
       </Grid>
     </>
   );

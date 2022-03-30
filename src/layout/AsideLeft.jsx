@@ -21,6 +21,7 @@ export default function AsideLeft() {
         </Grid>
         <LineSeperator />
         <Grid container gap={spacing.sm}>
+          <Link href="/" text="Home" />
           <Link href="/getting-started" text="Getting Started" />
           <Link href="/display/grid" text="Display Grid"  />
           <Link href="/display/flex" text="Display Flex" />

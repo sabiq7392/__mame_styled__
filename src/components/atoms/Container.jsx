@@ -21,7 +21,7 @@ function Container({ children, as, radius, border, standard, display, gap, id, .
   };
 
   return (
-    <Div id={id} as={as ?? 'article'} css={css} cssLg={cssLg}>{children}</Div>
+    <Div id={id} as={as} css={css} cssLg={cssLg}>{children}</Div>
   );
 }
 
@@ -29,7 +29,7 @@ const { any, oneOf, oneOfType, string, number } = PropTypes;
 
 Container.propTypes = {
   children: any.isRequired,
-  as: oneOf(['article', 'section']).isRequired,
+  as: oneOf(['article', 'section', 'div']).isRequired,
   padding: oneOfType([string, number]),
   border: string,
   radius: number,

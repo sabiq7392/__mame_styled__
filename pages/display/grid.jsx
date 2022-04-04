@@ -3,6 +3,8 @@ import GridTemplateColumns from '../../src/components/templates/display-grid/Gri
 import { Grid } from '../../styles/MameStyled/core/display/Grid.styled';
 import stylesConfig from '../../styles.config';
 import Harbor from '../../src/components/organisms/Harbor';
+import GridTemplateRows from '../../src/components/templates/display-grid/GridTemplatRows';
+import GridTemplateAreas from '../../src/components/templates/display-grid/GridTemplateAreas';
 
 export default function DisplayGrid() {
   const { spacing } = stylesConfig;
@@ -11,6 +13,8 @@ export default function DisplayGrid() {
     <Harbor title="Display Grid" appeal="The default tag of Grid is '<div>'">
       <Grid gap={spacing.lg}>
         <GridTemplateColumns />
+        <GridTemplateRows />
+        <GridTemplateAreas />
         <Properties />
       </Grid>
     </Harbor>

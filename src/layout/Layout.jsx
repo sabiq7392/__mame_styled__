@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import stylesConfig from '../../styles.config';
 import { Grid } from '../../styles/MameStyled/core/display/Grid.styled';
-import { Main } from '../../styles/MameStyled/core/HtmlTag.styled';
+import { Div, Main } from '../../styles/MameStyled/core/HtmlTag.styled';
 import Container from '../components/atoms/Container';
 import AsideLeft from './AsideLeft';
 import Footer from './Footer';
@@ -22,12 +22,12 @@ export default function Layout({ children }) {
       </Head>
       <>
         {router.pathname === '/' ? 
-          <>
+          <Div>
             <Header />
             <Main css={{ maxWidth: 1440, margin: 'auto' }}>
               {children}
             </Main>
-          </>
+          </Div>
         :
           <Grid 
             cols={{ xs: 1, md: '2fr 10fr' }} 

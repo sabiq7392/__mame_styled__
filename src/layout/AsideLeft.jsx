@@ -7,7 +7,7 @@ import Brand from '../components/molecules/Brand';
 import SocialMedia from '../components/molecules/SocialMedia';
 
 export default function AsideLeft() {
-  const { color, spacing } = stylesConfig;
+  const { spacing } = stylesConfig;
 
   return (
     <Aside 

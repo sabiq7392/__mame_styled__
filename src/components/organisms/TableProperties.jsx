@@ -1,10 +1,10 @@
 import stylesConfig from '../../../styles.config';
 import { Table, Thead, Tbody, Tr, Th, Td } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 import propTypes from 'prop-types';
 
 export default function TableProperties({ data, ...props }) {
-  catchErrorPropsComponent({ props, component: 'TableProperties' });
+  CatchErrorPropsComponent({ props, component: 'TableProperties' });
   
   const { spacing, color, radius } = stylesConfig;
   const cssThThead = {
@@ -23,22 +23,22 @@ export default function TableProperties({ data, ...props }) {
 
   return (
     <Table>
-      <Thead css={{ backgroundColor: color.light, borderRadius: radius.sm }}>
+      <Thead cssXs={{ backgroundColor: color.light, borderRadius: radius.sm }}>
         <Tr>
           {theadData.map((_title, _key) =>
-            <Th key={_key} css={cssThThead}>
+            <Th key={_key} cssXs={cssThThead}>
               {_title}
             </Th>
           )}
         </Tr>
       </Thead>
-      <Tbody css={{ backgroundColor: color.base.secondary.default }}>
+      <Tbody cssXs={{ backgroundColor: color.base.secondary.default }}>
         {data.map(({ name, value, type, description }) =>
           <Tr key={name}>
-            <Td css={cssTdTbody}>{name}</Td>
-            <Td css={cssTdTbody}>{value}</Td>
-            <Td css={cssTdTbody}>{type}</Td>
-            <Td css={cssTdTbody}>{description}</Td>
+            <Td cssXs={cssTdTbody}>{name}</Td>
+            <Td cssXs={cssTdTbody}>{value}</Td>
+            <Td cssXs={cssTdTbody}>{type}</Td>
+            <Td cssXs={cssTdTbody}>{description}</Td>
           </Tr>
         )}
       </Tbody>

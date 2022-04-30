@@ -1,28 +1,7 @@
 import styled from 'styled-components';
-import screen from '../config/screen.config';
 import attributes from '../utils/constants/attributes';
+import setFontSize from '../utils/styling/setFontSize';
 
-
-// Sementara
-const setFontSize = props => (
-  !props.size ? false : (
-    typeof props.size === 'number' ? {
-      [`@media (${screen.xs})`]: { fontSize: props.size, }
-    }
-    : typeof props.size !== 'number' ?
-    {
-      [`@media (${screen.xs})`]: { fontSize: props.size.xs },
-      [`@media (${screen.sm})`]: { fontSize: props.size.sm },
-      [`@media (${screen.md})`]: { fontSize: props.size.md },
-      [`@media (${screen.lg})`]: { fontSize: props.size.lg },
-      [`@media (${screen.xl})`]: { fontSize: props.size.xl },
-      [`@media (${screen.xxl})`]: { fontSize: props.size.xxl },
-    }
-    : false
-  ) 
-);
-
-/** General */
 export const A = styled.a(...attributes, setFontSize);
 export const Abbr = styled.abbr(...attributes);
 export const Address = styled.address(...attributes, setFontSize);
@@ -66,6 +45,7 @@ export const Picture = styled.picture(...attributes);
 export const Section = styled.section(...attributes);
 export const Select = styled.select(...attributes);
 export const Small = styled.small(...attributes, setFontSize);
+export const Source = styled.source(...attributes);
 export const Span = styled.span(...attributes);
 export const Strong = styled.strong(...attributes);
 export const Summary = styled.summary(...attributes, setFontSize);
@@ -79,4 +59,3 @@ export const Thead = styled.thead(...attributes);
 export const Tr = styled.tr(...attributes);
 export const Ul = styled.ul(...attributes);
 export const Video = styled.video(...attributes);
-

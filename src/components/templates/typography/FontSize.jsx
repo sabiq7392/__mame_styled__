@@ -1,11 +1,11 @@
-import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
 import Harbor from '../../organisms/Harbor';
 import Preview from '../../organisms/Preview';
 import CodePreview from '../../organisms/CodePreview';
 import { Typography } from '../../../../styles/MameStyled/core/Typography.styled';
 
 export default function FontSize({ ...props }) {
-  catchErrorPropsComponent({ props, component: 'FontSize of Typography' });
+  CatchErrorPropsComponent({ props, component: 'FontSize of Typography' });
 
   return (
     <Harbor title="Font Size" 

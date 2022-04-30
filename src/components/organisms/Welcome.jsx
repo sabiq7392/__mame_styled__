@@ -4,6 +4,7 @@ import Description from '../atoms/Description';
 
 export default function Welcome() {
   const { color, spacing, radius, timing } = stylesConfig;
+  
   const cssHeader = { 
     padding: `${spacing.sxxl}px ${spacing.sm}px`, 
     margin: 'auto', 
@@ -16,15 +17,15 @@ export default function Welcome() {
 
   return (
     <Header
-      css={cssHeader}
+      cssXs={cssHeader}
       cssSm={{ padding: `${spacing.sxxl}px ${spacing.md}px` }}
       cssLg={{ padding: `${spacing.sxxl}px ${spacing.sxxl}px` }}
     >
       <H1 bold center 
         size={{ xs: '2rem', md: '3rem',  lg: '4rem' }}
-        css={{ margin: 0, lineHeight: 1.15, color: color.white }}
+        cssXs={{ margin: 0, lineHeight: 1.15, color: color.white }}
       >
-        Welcome to <A href="#" css={{ color: color.primary }}>Mame Styled</A>
+        Welcome to <A href="#" cssXs={{ color: color.primary }}>Mame Styled</A>
       </H1>
       <Description 
         text="
@@ -36,7 +37,7 @@ export default function Welcome() {
       />
       <A 
         href="/getting-started" 
-        css={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center', transition: timing.fast }}
+        cssXs={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center', transition: timing.fast }}
         cssLg={{ padding: 10 }}
         hover={{ filter: 'brightness(80%)' }}
         size={{ xs: 12, md: 14, lg: 16 }}

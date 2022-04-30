@@ -4,20 +4,20 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import Heading from '../molecules/Heading';
 import PropTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
-import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 import SetAutoHead from '../../utils/SetAutoHead';
 import { nanoid } from 'nanoid';
 
 export default function CodePreview({ title = 'Result Code Preview', member, children, ...props }) {
-  catchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
+  CatchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
 
   const { spacing } = stylesConfig;
 
   const id = nanoid();
 
   return (
-    <Section id={id} css={{ display: 'grid', gap: `calc(${spacing.sm}px - .5em)` }}>
-      <Heading head={SetAutoHead(id) || H1} member={member} title={title}  />
+    <Section id={id} cssXs={{ display: 'grid', gap: `calc(${spacing.sm}px - .5em)` }}>
+      <Heading head={SetAutoHead({ id }) || H1} member={member} title={title}  />
       <SyntaxHighlighter language="html" style={vscDarkPlus}>
         {children}
       </SyntaxHighlighter>

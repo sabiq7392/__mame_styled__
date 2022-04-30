@@ -1,9 +1,9 @@
 import TableProperties from '../../organisms/TableProperties';
-import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
 import Harbor from '../../organisms/Harbor';
 
 export default function Properties({ ...props }) {
-  catchErrorPropsComponent({ props, component: 'Properties of Typography' });
+  CatchErrorPropsComponent({ props, component: 'Properties of Typography' });
 
   const tbodyData = [
     {

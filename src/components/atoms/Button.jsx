@@ -2,10 +2,10 @@ import Link from 'next/link';
 import propTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
 import { A, Button as MameButton } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 
 export default function Button({ text, href, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Button' });
+  CatchErrorPropsComponent({ props, component: 'Button' });
   
   const { color, radius, timing } = stylesConfig;
 
@@ -31,12 +31,12 @@ export default function Button({ text, href, ...props }) {
     <>
       {href ? 
         <Link href={href} passHref>
-          <A css={css} cssLg={cssLg} hover={hover}>
+          <A cssXs={css} cssLg={cssLg} hover={hover}>
             {text}
           </A>
         </Link>
       :
-        <MameButton css={css} cssLg={cssLg} hover={hover}>
+        <MameButton cssXs={css} cssLg={cssLg} hover={hover}>
         {text}
         </MameButton>
       }

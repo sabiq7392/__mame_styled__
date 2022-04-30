@@ -1,12 +1,12 @@
 import { H1, H2, H3, H4, H5, H6, Header, Span } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 import Description from '../atoms/Description';
 import Appeal from '../atoms/Appeal';
 import stylesConfig from '../../../styles.config';
 import { oneOfType, string, oneOf, node } from 'prop-types';
 
 export default function Heading({ head, title, appeal, member, headWeight, description, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Header' });
+  CatchErrorPropsComponent({ props, component: 'Header' });
   
   const { color, spacing } = stylesConfig;
 
@@ -23,8 +23,8 @@ export default function Heading({ head, title, appeal, member, headWeight, descr
   };
 
   return (
-    <Header css={{ display: 'grid', gap: spacing.xs }}>
-      <H1 as={head} css={cssHead}>{member ? <Span css={styleMember}>{member}</Span> : null} {title}</H1>
+    <Header cssXs={{ display: 'grid', gap: spacing.xs }}>
+      <H1 as={head} cssXs={cssHead}>{member ? <Span cssXs={styleMember}>{member}</Span> : null} {title}</H1>
       {appeal ? <Appeal text={appeal} /> : null}
       {description ? <Description text={description} /> : null}
     </Header>

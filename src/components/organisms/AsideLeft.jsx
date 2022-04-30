@@ -1,17 +1,17 @@
-import stylesConfig from '../../styles.config';
-import { Grid } from '../../styles/MameStyled/core/display/Grid.styled';
-import { A, Aside, Hr} from '../../styles/MameStyled/core/HtmlTag.styled';
-import LineSeperator from '../components/atoms/LineSeperator';
-import Link from '../components/molecules/Link';
-import Brand from '../components/molecules/Brand';
-import SocialMedia from '../components/molecules/SocialMedia';
+import stylesConfig from '../../../styles.config';
+import { Grid } from '../../../styles/MameStyled/core/display/Grid.styled';
+import { Aside } from '../../../styles/MameStyled/core/HtmlTag.styled';
+import LineSeperator from '../atoms/LineSeperator';
+import Link from '../molecules/Link';
+import Brand from '../molecules/Brand';
+import SocialMedia from '../molecules/SocialMedia';
 
 export default function AsideLeft() {
   const { spacing } = stylesConfig;
 
   return (
     <Aside 
-      css={{ display: 'none', position: 'sticky', top: 0, height: '100vh', padding: `${spacing.md}px 20px` }} 
+      cssXs={{ display: 'none', position: 'sticky', top: 0, height: '100vh', padding: `${spacing.md}px 20px` }} 
       cssMd={{ display: 'block' }}
     >
       <Grid container gap={spacing.lg}>

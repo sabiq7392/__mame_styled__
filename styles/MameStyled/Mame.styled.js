@@ -3,9 +3,9 @@
  * 
  * @example
  * @attribute:
- * @css <Container as={Grid} center css={{ paddingTop: 60, paddingBottom: 120 }} cssLg={{ paddingTop: 150, paddingBottom: 120 }}></Container>
+ * @css <Container as={Grid} center cssXs={{ paddingTop: 60, paddingBottom: 120 }} cssLg={{ paddingTop: 150, paddingBottom: 120 }}></Container>
  * css || cssSm || cssMd || cssLg || cssXl || cssXxl => media-screen
- * @hover <Container css={{ ':hover': { backround: 'red' } }}></Container>
+ * @hover <Container cssXs={{ ':hover': { backround: 'red' } }}></Container>
  * 
  * 
  * @tag

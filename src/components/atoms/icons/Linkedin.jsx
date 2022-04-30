@@ -1,9 +1,9 @@
-import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
 import { BsLinkedin } from 'react-icons/bs';
 import propTypes from 'prop-types';
 
 export default function Linkedin({ size, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Linkedin' });
+  CatchErrorPropsComponent({ props, component: 'Linkedin' });
 
   return (
     <BsLinkedin size={size || 18} />

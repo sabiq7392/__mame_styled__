@@ -1,4 +1,4 @@
-import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
 import Harbor from '../../organisms/Harbor';
 import CodePreview from '../../organisms/CodePreview';
 import Preview from '../../organisms/Preview';
@@ -6,7 +6,7 @@ import { Typography } from '../../../../styles/MameStyled/core/Typography.styled
 import { Br } from '../../../../styles/MameStyled/core/HtmlTag.styled';
 
 export default function FontWeight({ ...props }) {
-  catchErrorPropsComponent({ props, component: 'FontWeight of Typography' });
+  CatchErrorPropsComponent({ props, component: 'FontWeight of Typography' });
 
   return (
     <Harbor title="Font Weight" description="sets how thick or thin characters in text should be displayed">

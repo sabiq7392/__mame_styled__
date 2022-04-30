@@ -2,9 +2,9 @@ import { Grid, Flex } from '../../../styles/MameStyled/core/display/_Display.sty
 import PropTypes from 'prop-types';
 import stylesConfig from '../../../styles.config';
 import { A, H2, P } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import catchErrorComponent from '../../utils/catchErrorPropsComponent';
+import catchErrorComponent from '../../utils/CatchErrorPropsComponent';
 
-export default function ItemExample({ item, title, href, description, ...props }) {
+export default function ItemExample({  item, title, href, description, ...props }) {
   catchErrorComponent({ props, component: 'ItemExample.jsx' });
   
   const { radius, spacing, color, timing } = stylesConfig;
@@ -22,11 +22,11 @@ export default function ItemExample({ item, title, href, description, ...props }
   return (
     <div>
       {item === 'grid' ? 
-        <Grid item  css={css} hover={hover}>
+        <Grid item  cssXs={css} hover={hover}>
           <Item href={href} title={title} description={description} />
         </Grid>
         : item === 'flex' ?
-        <Flex item css={css} hover={hover}>
+        <Flex item cssXs={css} hover={hover}>
           <Item href={href} title={title} description={description} />
         </Flex>
         : 
@@ -41,7 +41,7 @@ function Item({ href, title, description }) {
   const { spacing, color } = stylesConfig;
 
   return (
-    <A href={href} css={{ display: 'grid', gap: spacing.sm, color: color.white }}>
+    <A href={href} cssXs={{ display: 'grid', gap: spacing.sm, color: color.white }}>
       <H2>{title} &rarr;</H2>
       <P>{description}</P>
     </A>

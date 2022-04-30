@@ -1,11 +1,11 @@
 import { A, Small } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import stylesConfig from '../../../styles.config';
-import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 import propTypes from 'prop-types';
 import Link from 'next/link';
 
 export default function Brand({ as, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Brand' });
+  CatchErrorPropsComponent({ props, component: 'Brand' });
 
   const { color } = stylesConfig;
   const css = { 
@@ -17,8 +17,8 @@ export default function Brand({ as, ...props }) {
   return (
     // eslint-disable-next-line react/react-in-jsx-scope
     <Link href="/" passHref>
-      <A css={{ display: 'grid' }}>
-        <Small as={as} css={css}>Mame Styled</Small>
+      <A cssXs={{ display: 'grid' }}>
+        <Small as={as} cssXs={css}>Mame Styled</Small>
       </A>
     </Link>
   );

@@ -15,10 +15,10 @@ export default function ErrorMessage({ props, component, type, typeShouldBe, des
 
   return (
     <>
-      <P debug css={css}>
+      <P debug cssXs={css}>
         <Span>
           <Span>{description}</Span>
-          <Span css={{ display: 'grid', gap: 5 }}>
+          <Span cssXs={{ display: 'grid', gap: 5 }}>
             <ListInfoError title="Component" value={component} />
             <ListInfoError title="Prop Name" value={propName} />
             { props ? <ListInfoError title="Props" value={JSON.stringify(props)} /> : null }
@@ -35,7 +35,7 @@ export default function ErrorMessage({ props, component, type, typeShouldBe, des
 function ListInfoError({ title, value }) {
   return (
     <Span>
-      <Span css={{ color: 'red' }}>{title}: </Span><Span>{value}</Span>
+      <Span cssXs={{ color: 'red' }}>{title}: </Span><Span>{value}</Span>
     </Span>
   );
 }

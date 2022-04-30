@@ -1,10 +1,10 @@
 import stylesConfig from '../../../styles.config';
 import { Div } from '../../../styles/MameStyled/core/HtmlTag.styled';
 import PropTypes from 'prop-types';
-import catchErrorPropsComponent from '../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 
 function Container({ children, as, radius, border, standard, display, gap, id, ...props }) {
-  catchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
+  CatchErrorPropsComponent({ props, component: 'CodePreview.jsx' });
 
   const { color, spacing } = stylesConfig;
 
@@ -21,7 +21,7 @@ function Container({ children, as, radius, border, standard, display, gap, id, .
   };
 
   return (
-    <Div id={id} as={as} css={css} cssLg={cssLg}>{children}</Div>
+    <Div id={id} as={as} cssXs={css} cssLg={cssLg}>{children}</Div>
   );
 }
 

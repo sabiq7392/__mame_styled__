@@ -1,9 +1,9 @@
 import propTypes from 'prop-types';
 import { AiOutlineGithub } from 'react-icons/ai';
-import catchErrorPropsComponent from '../../../utils/catchErrorPropsComponent';
+import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
 
 export default function Github({ size, ...props }) {
-  catchErrorPropsComponent({ props, component: 'Github' })
+  CatchErrorPropsComponent({ props, component: 'Github' })
 
   return (
     <AiOutlineGithub size={size || 24} />

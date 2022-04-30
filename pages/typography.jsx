@@ -1,6 +1,4 @@
-import { Grid } from '../styles/MameStyled/core/display/Grid.styled';
 import Properties from '../src/components/templates/typography/Properties';
-import stylesConfig from '../styles.config';
 import FontSize from '../src/components/templates/typography/FontSize';
 import FontWeight from '../src/components/templates/typography/FontWeight';
 import TextAlign from '../src/components/templates/typography/TextAlign';
@@ -11,7 +9,6 @@ import FontVariant from '../src/components/templates/typography/FontVariant';
 import Harbor from '../src/components/organisms/Harbor';
 
 export default function IsTypography() {
-  const { spacing } = stylesConfig;
 
   return (
     <Harbor 
@@ -22,16 +19,14 @@ export default function IsTypography() {
         P, A, B, I, Small, Blockquote, Strong, H1...,
       "
     >
-      <Grid gap={spacing.lg}>
-        <Color />
-        <FontSize />
-        <FontStyle />
-        <FontVariant />
-        <FontWeight />
-        <LineHeight />
-        <TextAlign />
-        <Properties />
-      </Grid>
+      <Color />
+      <FontSize />
+      <FontStyle />
+      <FontVariant />
+      <FontWeight />
+      <LineHeight />
+      <TextAlign />
+      <Properties />
     </Harbor>
   );
 }

@@ -3,6 +3,11 @@ import css from '../styling/css.styled';
 import hover from '../styling/hover';
 import { globalResponsiveProperty } from '../styling/responsive-property';
 
-const attributes = [debug, css, hover, ...globalResponsiveProperty];
+const attributes = [
+  debug, 
+  css,
+  hover, 
+  ...globalResponsiveProperty,
+];
 
 export default attributes;

@@ -9,5 +9,5 @@ export default function LineSeperator({ ...props }) {
 
   return (
     <Div cssXs={{ background: color.muted, width: '100%', height: 1 }} />
-  )
+  );
 }

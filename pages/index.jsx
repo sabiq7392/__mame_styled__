@@ -9,7 +9,7 @@ import HtmlTag from './html-tag';
 export default function Home() {
   const { spacing } = stylesConfig;
   return (
-    <Grid gap={{ xs: 2 }}>
+    <Grid>
       <Container as="article">
         <HtmlTag />
       </Container>

@@ -7,7 +7,7 @@ function setResponsiveProperty(props , property, propNameInComponent) {
     !setProperty ? false : (
       typeof setProperty === 'number' || 
       typeof setProperty === 'string' ? {
-        [property]: setProperty
+        [property]: setProperty,
       }
       :
       {
@@ -28,22 +28,28 @@ function setResponsiveProperty(props , property, propNameInComponent) {
         },
         [`@media (${screen.xxl})`]: {
           [property]: setProperty.xxl,
-        }
+        },
       }
     )
   );
 }
 
+/** choosen */
 export const gap = (props) => setResponsiveProperty(props, 'gap');
-export const fontSize = (props) => setResponsiveProperty(props, 'fontSize', 'fontSize');
+
+/** global */
+export const fontSize = (props) => setResponsiveProperty(props, 'fontSize');
 export const width = (props) => setResponsiveProperty(props, 'width');
 export const height = (props) => setResponsiveProperty(props, 'height)');
 export const padding = (props) => setResponsiveProperty(props, 'padding');
 export const display = (props) => setResponsiveProperty(props, 'display');
-export const background = (props) => setResponsiveProperty(props, 'background', 'bg');
+export const background = (props) => setResponsiveProperty(props, 'background');
 
 export const globalResponsiveProperty = [
   width,
   height,
   padding,
+  display,
+  background,
+  fontSize,
 ];

@@ -6,7 +6,7 @@ export default function Linkedin({ size, ...props }) {
   CatchErrorPropsComponent({ props, component: 'Linkedin' });
 
   return (
-    <BsLinkedin size={size || 18} />
+    <BsLinkedin fontSize={size || 18} />
   );
 }
 

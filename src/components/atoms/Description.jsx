@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
 import { node } from 'prop-types';
 
-export default function Description({ textAlign, margin, color, text, size, ...props }) {
+export default function Description({ textAlign, margin, color, text, fontSize, ...props }) {
   CatchErrorPropsComponent({ props, component: 'Description.jsx' });
 
   const { font } = stylesConfig;
@@ -17,7 +17,7 @@ export default function Description({ textAlign, margin, color, text, size, ...p
   };
 
   return (
-    <P cssXs={css} size={size}>{text}</P>
+    <P cssXs={css} fontSize={fontSize}>{text}</P>
   );
 }
 
@@ -28,5 +28,5 @@ Description.propTypes = {
   textAlign: oneOf(['center', 'left', 'right']),
   margin: oneOfType([string, number]),
   color: string,
-  size: oneOfType([string, number, object]),
+  fontSize: oneOfType([string, number, object]),
 };

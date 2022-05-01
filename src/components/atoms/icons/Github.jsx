@@ -6,7 +6,7 @@ export default function Github({ size, ...props }) {
   CatchErrorPropsComponent({ props, component: 'Github' })
 
   return (
-    <AiOutlineGithub size={size || 24} />
+    <AiOutlineGithub fontSize={size || 24} />
   );
 }
 

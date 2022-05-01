@@ -22,7 +22,7 @@ export default function Welcome() {
       cssLg={{ padding: `${spacing.sxxl}px ${spacing.sxxl}px` }}
     >
       <H1 bold center 
-        size={{ xs: '2rem', md: '3rem',  lg: '4rem' }}
+        fontSize={{ xs: '2rem', md: '3rem',  lg: '4rem' }}
         cssXs={{ margin: 0, lineHeight: 1.15, color: color.white }}
       >
         Welcome to <A href="#" cssXs={{ color: color.primary }}>Mame Styled</A>
@@ -33,14 +33,14 @@ export default function Welcome() {
           where you can write internal css in inline css style. 
           hopefully if you use this you can easily create components without having to create css files again
         "
-        size={{ xs: 12, md: 14, lg: 16 }}
+        fontSize={{ xs: 12, md: 14, lg: 16 }}
       />
       <A 
         href="/getting-started" 
         cssXs={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center', transition: timing.fast }}
         cssLg={{ padding: 10 }}
         hover={{ filter: 'brightness(80%)' }}
-        size={{ xs: 12, md: 14, lg: 16 }}
+        fontSize={{ xs: 12, md: 14, lg: 16 }}
       >
         Getting Started
       </A>

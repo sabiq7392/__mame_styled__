@@ -6,7 +6,7 @@ export default function Instagram({ size, ...props }) {
   CatchErrorPropsComponent({ props, component: 'Instagram' });
 
   return (
-    <AiOutlineInstagram size={size || 24} /> 
+    <AiOutlineInstagram fontSize={size || 24} /> 
   );
 }
 

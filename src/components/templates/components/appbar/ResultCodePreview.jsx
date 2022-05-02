@@ -4,14 +4,14 @@ export default function ResultCodePreview() {
   return <>
     <CodePreview title="Result Code Preview" member="Appbar">
       {`
-        import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
-        import { useEffect, useRef, useState } from "react";
-        import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
-        import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
-        import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
-        import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
-        import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
-        import NavbarNav from "../../../../../styles/MameStyled/core/components/navbar/NavbarNav";
+        import { useState, useRef, useEffect } from "react";
+        import Navbar from "../../../styles/MameStyled/core/components/navbar/Navbar";
+        import NavbarContentWrapper from "../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
+        import NavbarNav from "../../../styles/MameStyled/core/components/navbar/NavbarNav";
+        import NavbarBrand from "../../../styles/MameStyled/core/components/navbar/NavbarBrand";
+        import NavbarToggleMenu from "../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
+        import NavLink from "../../../styles/MameStyled/core/components/navbar/NavbarLink";
+        import { Flex } from "../../../styles/MameStyled/core/display/Flex";
         
         function Appbar() {
           const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,13 +30,20 @@ export default function ResultCodePreview() {
           });
 
           return (
-            <Navbar navbar={navbar}>
-              <NavbarContentWrapper>
+            <Navbar navbar={navbar}> 
+              <NavbarContentWrapper> 
                 <Flex vCenter>
-                  <NavbarBrand />
-                  <NavbarToggleMenu menuButton={menuButton} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+                  <NavbarBrand 
+                    src="/images/logo/mame.svg"
+                    alt="MAME"
+                  />
+                  <NavbarToggleMenu 
+                    menuButton={menuButton} 
+                    isMenuOpen={isMenuOpen} 
+                    setIsMenuOpen={setIsMenuOpen} 
+                  />
                 </Flex>
-
+      
                 <NavbarNav navbarHeight={navbarHeight} isMenuOpen={isMenuOpen}>
                   <NavLink title="Home" href="#home" />
                   <NavLink title="About" href="#about" />

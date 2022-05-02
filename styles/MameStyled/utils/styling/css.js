@@ -1,4 +1,4 @@
-import screen from '../../config/screen.config';
+import screen from "../../config/screen.config";
 
 const css = props => ({
   [`@media (${screen.xs})`]: props.css || props.cssXs,

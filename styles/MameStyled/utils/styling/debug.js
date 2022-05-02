@@ -1,5 +1,5 @@
 const debug = props => ({
-  border: props.debug ? '1px solid red' : ''
+  border: props.debug && "1px solid red",
 });
 export default debug;
 

@@ -1,28 +1,28 @@
-import screen from '../../config/screen.config';
+import screen from "../../config/screen.config";
 
 const hover = props => ({
-  ':hover': props.hover || props.hoverXs,
+  ":hover": props.hover || props.hoverXs,
   [`@media (${screen.sm})`]: {
-    ':hover': props.hoverSm,
+    ":hover": props.hoverSm,
   },
   [`@media (${screen.md})`]: {
-    ':hover': props.hoverMd,
+    ":hover": props.hoverMd,
   },
   [`@media (${screen.lg})`]: {
-    ':hover': props.hoverLg,
+    ":hover": props.hoverLg,
   },
   [`@media (${screen.xl})`]: {
-    ':hover': props.hoverXl,
+    ":hover": props.hoverXl,
   },
   [`@media (${screen.xxl})`]: {
-    ':hover': props.hoverXxl,
+    ":hover": props.hoverXxl,
   },
 });
 
 export default hover;
 
 // export const getHover = props => ({
-//   ':hover': props.hover
+//   ":hover": props.hover
 // });
 
 // export const getHoverSm = props => ({ 

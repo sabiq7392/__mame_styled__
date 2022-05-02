@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }) {
         </>
       :
         <> 
-          <Appbar />
+          <Appbar  />
           <Grid 
             cols={{ xs: 1, md: "2fr 10fr" }} 
             gap={spacing.md} 

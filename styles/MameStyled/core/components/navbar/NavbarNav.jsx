@@ -1,8 +1,11 @@
-import { number } from "prop-types";
-import { bool, node } from "prop-types";
+import { bool, node, number } from "prop-types";
 import { Div } from "../../HtmlTag.styled";
+import { createElement } from "react";
+import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-export default function NavbarNav({ children, navbarHeight, isMenuOpen }) {
+
+
+export default function NavbarNav({ children, navbarHeight, isMenuOpen, ...props }) {
   const cssXs = { 
     display: "flex",
     flexDirection: "column",
@@ -20,7 +23,7 @@ export default function NavbarNav({ children, navbarHeight, isMenuOpen }) {
       },
       to: {
         width: "100%",
-      }
+      },
     },
     ["@keyframes menu-close"]: {
       from: {
@@ -29,7 +32,7 @@ export default function NavbarNav({ children, navbarHeight, isMenuOpen }) {
       to: {
         width: 0,
         visibility: "hidden"
-      }
+      },
     },
   };
 
@@ -39,13 +42,13 @@ export default function NavbarNav({ children, navbarHeight, isMenuOpen }) {
     position: "static",
     height: "auto!important", 
     transition: "0ms!important",
-    animation: "none"
+    animation: "none",
   };
 
-  return (
-    <Div cssXs={cssXs} cssLg={cssLg}>
-      {children}
-    </Div>
+  return createElement(
+    Div,
+    { ...requiredProps(props, { cssXs, cssLg }) },
+    children,
   );
 }
 
@@ -53,4 +56,5 @@ NavbarNav.propTypes = {
   children: node.isRequired,
   navbarHeight: number.isRequired,
   isMenuOpen: bool.isRequired,
+  ...requiredPropTypes,
 };

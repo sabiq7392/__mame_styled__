@@ -1,12 +1,25 @@
+/* eslint-disable react/prop-types */
+
 import { useEffect } from "react";
 import { Span, P } from "../../HtmlTag.styled";
 import propTypes from "prop-types";
 import { createRoot } from "react-dom/client";
+import { any } from "prop-types";
+import { node } from "prop-types";
+import { string } from "prop-types";
 
-export default function CatchErrorPropsComponent({ props, component, type }) {
+export default function CatchErrorPropsComponent({ 
+  props, 
+  component, 
+  type, 
+  note,
+  children,
+  exceptProps
+}) {
+
+
   useEffect(() => {
     if (Object.keys(props).length !== 0) {
-
       /** @for_react_below_version_18 */
       // ReactDOM.hydrate(
       //   <ErrorMessage description="There was an unexpected props on: " props={props} component={component} type={type} />, 
@@ -22,14 +35,33 @@ export default function CatchErrorPropsComponent({ props, component, type }) {
           props={props} 
           component={component} 
           type={type} 
+          note={note}
         />
       );
-    } 
-  });
+    }
+
+  }, [props, component, type, note, children, exceptProps]);
+
+  if (children) return <>{children}</>
 }
 
-// eslint-disable-next-line react/prop-types
-function ErrorMessage({ props, component, type, typeShouldBe, description, propName, isRequired }) {
+CatchErrorPropsComponent.propTypes = {
+  props: any.isRequired,
+  component: string.isRequired,
+  children: node,
+  type: string,
+};
+
+function ErrorMessage({ 
+  props, 
+  component, 
+  type, 
+  typeShouldBe, 
+  description, 
+  propName, 
+  isRequired,
+  note,
+}) {
   const css = { 
     color: "white", 
     display: "flex",  
@@ -48,10 +80,22 @@ function ErrorMessage({ props, component, type, typeShouldBe, description, propN
           <Span cssXs={{ display: "grid", gap: 5 }}>
             <ListInfoError title="Component" value={component} />
             <ListInfoError title="Prop Name" value={propName} />
-            { props ? <ListInfoError title="Props" value={JSON.stringify(props)} /> : null }
-            { type ? <ListInfoError title="Type" value={type} /> : null }
-            { typeShouldBe ? <ListInfoError title="Type Should Be" value={typeShouldBe} /> : null }
-            { isRequired ? <ListInfoError title="Is Required" value={isRequired} /> : null }
+
+            { props &&
+              <ListInfoError title="Props" value={JSON.stringify(props)} />  
+            }
+            { type && 
+              <ListInfoError title="Type" value={type} /> 
+            }
+            { typeShouldBe && 
+              <ListInfoError title="Type Should Be" value={typeShouldBe} /> 
+            }
+            { isRequired && 
+              <ListInfoError title="Is Required" value={isRequired} /> 
+            }
+            { note && 
+              <ListInfoError title="Note" value={note} /> 
+            }
           </Span>
         </Span>
       </P>
@@ -62,7 +106,8 @@ function ErrorMessage({ props, component, type, typeShouldBe, description, propN
 function ListInfoError({ title, value }) {
   return (
     <Span>
-      <Span cssXs={{ color: "red" }}>{title}: </Span><Span>{value}</Span>
+      <Span cssXs={{ color: "red" }}>{title}: </Span>
+      <Span>{value}</Span>
     </Span>
   );
 }
@@ -71,3 +116,5 @@ ListInfoError.propTypes = {
   title: propTypes.string.isRequired,
   value: propTypes.any.isRequired
 };
+
+

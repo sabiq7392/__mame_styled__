@@ -1,7 +1,7 @@
 import { Grid, Flex } from "../../../styles/MameStyled/core/display/_Display.styled";
 import PropTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
-import { A, H2, P } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { A, H2, P, Div } from "../../../styles/MameStyled/core/HtmlTag.styled";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 
 export default function ItemExample({  item, title, href, description, ...props }) {
@@ -20,7 +20,7 @@ export default function ItemExample({  item, title, href, description, ...props 
   const hover = { background: color.base.secondary.hover };
 
   return (
-    <div>
+    <Div>
       {item === "grid" ? 
         <Grid item  cssXs={css} hover={hover}>
           <Item href={href} title={title} description={description} />
@@ -32,7 +32,7 @@ export default function ItemExample({  item, title, href, description, ...props 
         : 
         <></>
       }
-    </div>
+    </Div>
   );
 }
 

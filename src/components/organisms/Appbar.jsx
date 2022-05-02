@@ -6,8 +6,9 @@ import NavbarBrand from "../../../styles/MameStyled/core/components/navbar/Navba
 import NavbarToggleMenu from "../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
 import NavLink from "../../../styles/MameStyled/core/components/navbar/NavbarLink";
 import { Flex } from "../../../styles/MameStyled/core/display/Flex.styled";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 
-export default function Appbar() {
+export default function Appbar({ ...props }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0);
   const menuButton = useRef();
@@ -24,20 +25,29 @@ export default function Appbar() {
   });
 
   return (
-    <Navbar navbar={navbar}> 
-      <NavbarContentWrapper>
-        <Flex vCenter>
-          <NavbarBrand  />
-          <NavbarToggleMenu menuButton={menuButton} isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        </Flex>
+    <CatchErrorPropsComponent props={props} component="Appbar">
+      <Navbar navbar={navbar}> 
+        <NavbarContentWrapper> 
+          <Flex vCenter>
+            <NavbarBrand 
+              src="/images/logo/mame.svg"
+              alt="MAME"
+            />
+            <NavbarToggleMenu 
+              menuButton={menuButton} 
+              isMenuOpen={isMenuOpen} 
+              setIsMenuOpen={setIsMenuOpen} 
+            />
+          </Flex>
 
-        <NavbarNav navbarHeight={navbarHeight} isMenuOpen={isMenuOpen}>
-          <NavLink title="Home" href="#home" />
-          <NavLink title="About" href="#about" />
-          <NavLink title="Contact" href="#contact" />
-          <NavLink title="News" href="#news" />
-        </NavbarNav>
-      </NavbarContentWrapper>
-    </Navbar>
+          <NavbarNav navbarHeight={navbarHeight} isMenuOpen={isMenuOpen}>
+            <NavLink title="Home" href="#home" />
+            <NavLink title="About" href="#about" />
+            <NavLink title="Contact" href="#contact" />
+            <NavLink title="News" href="#news" />
+          </NavbarNav>
+        </NavbarContentWrapper>
+      </Navbar>
+    </CatchErrorPropsComponent>
   );
 }

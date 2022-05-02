@@ -1,13 +1,13 @@
-import debug from '../styling/debug.styled';
-import css from '../styling/css.styled';
-import hover from '../styling/hover';
-import { globalResponsiveProperty } from '../styling/responsive-property';
+import debug from "../styling/debug";
+import css from "../styling/css";
+import hover from "../styling/hover";
+import { globalResponsiveProps } from "./globalResponsiveProps";
 
 const attributes = [
   debug, 
   css,
   hover, 
-  ...globalResponsiveProperty,
+  ...globalResponsiveProps,
 ];
 
 export default attributes;

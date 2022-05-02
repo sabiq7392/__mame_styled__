@@ -10,6 +10,7 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "warn",
-    "quotes": ["warn", "double"]
+    "quotes": ["warn", "double"],
+    "react/prop-types": "warn"
   }
 }

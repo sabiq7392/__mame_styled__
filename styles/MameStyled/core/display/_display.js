@@ -1,4 +1,4 @@
-import { Grid } from "./Grid.styled";
-import { Flex } from "./Flex.styled";
+import { Grid } from "./Grid";
+import { Flex } from "./Flex";
 
 export { Grid, Flex };

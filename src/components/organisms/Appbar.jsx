@@ -6,7 +6,7 @@ import NavbarBrand from "../../../styles/MameStyled/core/components/navbar/Navba
 import NavbarToggleMenu from "../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
 import NavLink from "../../../styles/MameStyled/core/components/navbar/NavbarLink";
 import { Flex } from "../../../styles/MameStyled/core/display/Flex";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 
 export default function Appbar({ ...props }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

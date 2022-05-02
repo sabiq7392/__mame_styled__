@@ -1,7 +1,7 @@
 import Link from "next/link";
 import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
-import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag";
 import CatchErrorPropsComponent from "../../utils/CatchErrorPropsComponent";
 
 export default function Button({ text, href, ...props }) {

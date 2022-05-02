@@ -1,6 +1,6 @@
 import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import propTypes from "prop-types";
 import Link from "next/link";
 

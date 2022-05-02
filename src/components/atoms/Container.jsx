@@ -1,7 +1,7 @@
 import stylesConfig from "../../../styles.config";
 import { Div } from "../../../styles/MameStyled/core/HtmlTag";
 import PropTypes from "prop-types";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 
 function Container({ children, as, radius, border, standard, display, gap, id, ...props }) {
   CatchErrorPropsComponent({ props, component: "CodePreview.jsx" });

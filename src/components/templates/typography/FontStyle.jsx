@@ -1,4 +1,4 @@
-import { Br } from "../../../../styles/MameStyled/core/HtmlTag.styled";
+import { Br } from "../../../../styles/MameStyled/core/HtmlTag";
 import { Typography } from "../../../../styles/MameStyled/core/_deprecated/Typography.styled";
 import CodePreview from "../../organisms/CodePreview";
 import Harbor from "../../organisms/Harbor";

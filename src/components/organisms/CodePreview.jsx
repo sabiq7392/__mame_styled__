@@ -1,10 +1,10 @@
-import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Heading from "../molecules/Heading";
 import PropTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import SetAutoHead from "../../utils/SetAutoHead";
 import { useId } from "react";
 

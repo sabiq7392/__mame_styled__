@@ -1,5 +1,5 @@
 import TableProperties from "../../organisms/TableProperties";
-import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import Harbor from "../../organisms/Harbor";
 
 export default function Properties({ ...props }) {

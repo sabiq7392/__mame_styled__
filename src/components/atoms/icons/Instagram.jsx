@@ -1,5 +1,5 @@
 import { AiOutlineInstagram } from "react-icons/ai";
-import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import propTypes from "prop-types";
 
 export default function Instagram({ size, ...props }) {

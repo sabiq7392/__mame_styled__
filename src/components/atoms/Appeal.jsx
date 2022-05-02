@@ -1,7 +1,7 @@
 import { Strong } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
 import PropTypes from "prop-types";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 
 export default function Appeal({ text, css, ...props }) {
   CatchErrorPropsComponent({ props, component: "Appeal.jsx" });

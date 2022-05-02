@@ -4,7 +4,7 @@ export default function ResultCodePreview() {
   return (
     <CodePreview title="Result Code Preview" member="HTML Tag">
       {`
-        import { Blockquote, Div, Figcaption, Figure, H1, Header, Img, P, Small } from "../../styles/MameStyled/core/HtmlTag.styled";
+        import { Blockquote, Div, Figcaption, Figure, H1, Header, Img, P, Small } from "../../styles/MameStyled/core/HtmlTag";
 
         <Figure 
           cssLg={{ flexDirection: "row", width: "75%" }}

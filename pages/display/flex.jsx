@@ -1,5 +1,5 @@
 import Heading from "../../src/components/molecules/Heading";
-import { H2 } from "../../styles/MameStyled/core/HtmlTag.styled";
+import { H2 } from "../../styles/MameStyled/core/HtmlTag";
 
 export default function flex() {
   return (

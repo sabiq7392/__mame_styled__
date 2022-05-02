@@ -1,4 +1,4 @@
-import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import { BsLinkedin } from "react-icons/bs";
 import propTypes from "prop-types";
 

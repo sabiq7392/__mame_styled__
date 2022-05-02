@@ -1,6 +1,6 @@
 import stylesConfig from "../../../styles.config";
-import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag.styled";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import propTypes from "prop-types";
 
 export default function TableProperties({ data, ...props }) {

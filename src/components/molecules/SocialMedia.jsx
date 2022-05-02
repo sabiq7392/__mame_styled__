@@ -2,7 +2,7 @@ import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 import { A } from "../../../styles/MameStyled/core/HtmlTag";
 import aboutMe from "../../data/aboutMe";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import Linkedin from "../atoms/icons/Linkedin";
 import Github from "../atoms/icons/Github";
 import Instagram from "../atoms/icons/Instagram";

@@ -1,7 +1,7 @@
 import { P } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
 import PropTypes from "prop-types";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import { node } from "prop-types";
 
 export default function Description({ textAlign, margin, color, text, fontSize, ...props }) {

@@ -1,4 +1,4 @@
-import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import Harbor from "../../organisms/Harbor";
 import Preview from "../../organisms/Preview";
 import CodePreview from "../../organisms/CodePreview";

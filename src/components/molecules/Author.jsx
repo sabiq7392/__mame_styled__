@@ -1,6 +1,6 @@
 import { Small } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
 import { string } from "prop-types";
 
 export default function Author({ name, ...props }) {

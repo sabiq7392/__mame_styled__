@@ -3,7 +3,7 @@ import ItemExample from "../../molecules/ItemExample";
 import CodePreview from "../../organisms/CodePreview";
 import Harbor from "../../organisms/Harbor";
 import Preview from "../../organisms/Preview";
-import { Grid } from "../../../../styles/MameStyled/core/display/Grid.styled";
+import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
 import stylesConfig from "../../../../styles.config";
 
 const { spacing } = stylesConfig;

@@ -1,4 +1,4 @@
-import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 import propTypes from "prop-types";

@@ -1,5 +1,5 @@
 import { default as NextLink } from "next/link";
-import { A } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { A } from "../../../styles/MameStyled/core/HtmlTag";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";

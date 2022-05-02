@@ -1,6 +1,6 @@
 import stylesConfig from "../../../styles.config";
-import { Grid } from "../../../styles/MameStyled/core/display/Grid.styled";
-import { Aside } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { Grid } from "../../../styles/MameStyled/core/display/Grid";
+import { Aside } from "../../../styles/MameStyled/core/HtmlTag";
 import LineSeperator from "../atoms/LineSeperator";
 import Link from "../molecules/Link";
 import Brand from "../molecules/Brand";

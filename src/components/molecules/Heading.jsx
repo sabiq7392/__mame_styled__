@@ -1,4 +1,4 @@
-import { H1, H2, H3, H4, H5, H6, Header, Span } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { H1, H2, H3, H4, H5, H6, Header, Span } from "../../../styles/MameStyled/core/HtmlTag";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 import Description from "../atoms/Description";
 import Appeal from "../atoms/Appeal";

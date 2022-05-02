@@ -1,4 +1,4 @@
-import { Strong } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { Strong } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
 import PropTypes from "prop-types";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";

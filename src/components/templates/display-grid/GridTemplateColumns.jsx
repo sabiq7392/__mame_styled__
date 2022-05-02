@@ -2,7 +2,7 @@ import Harbor from "../../organisms/Harbor";
 import Preview from "../../organisms/Preview";
 import nextJsExample from "../../../data/nextJsExample";
 import ItemExample from "../../molecules/ItemExample";
-import { Grid } from "../../../../styles/MameStyled/core/display/Grid.styled";
+import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
 import stylesConfig from "../../../../styles.config";
 import CodePreview from "../../organisms/CodePreview";
 

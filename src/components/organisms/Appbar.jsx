@@ -5,7 +5,7 @@ import NavbarNav from "../../../styles/MameStyled/core/components/navbar/NavbarN
 import NavbarBrand from "../../../styles/MameStyled/core/components/navbar/NavbarBrand";
 import NavbarToggleMenu from "../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
 import NavLink from "../../../styles/MameStyled/core/components/navbar/NavbarLink";
-import { Flex } from "../../../styles/MameStyled/core/display/Flex.styled";
+import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 
 export default function Appbar({ ...props }) {

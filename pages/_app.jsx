@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 import Head from "next/head"
 import "../styles/globals.css";
-import { Main } from "../styles/MameStyled/core/HtmlTag.styled";
+import { Main } from "../styles/MameStyled/core/HtmlTag";
 import AsideLeft from "../src/components/organisms/AsideLeft";
 import Container from "../src/components/atoms/Container";
-import { Grid } from "../styles/MameStyled/core/display/Grid.styled";
+import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";

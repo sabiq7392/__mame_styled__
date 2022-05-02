@@ -1,5 +1,5 @@
-import { Flex } from "../../../styles/MameStyled/core/display/Flex.styled";
-import { A } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { Flex } from "../../../styles/MameStyled/core/display/Flex";
+import { A } from "../../../styles/MameStyled/core/HtmlTag";
 import aboutMe from "../../data/aboutMe";
 import stylesConfig from "../../../styles.config";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";

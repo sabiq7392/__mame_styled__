@@ -1,8 +1,8 @@
 import stylesConfig from "../styles.config";
-import { H2, Figure } from "../styles/MameStyled/core/HtmlTag.styled";
+import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
 import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
-import { Grid } from "../styles/MameStyled/core/display/Grid.styled";
+import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Image from "next/image";
 import HtmlTag from "./html-tag";
 

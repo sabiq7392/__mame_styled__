@@ -1,5 +1,5 @@
 import stylesConfig from "../../../styles.config";
-import { Div } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { Div } from "../../../styles/MameStyled/core/HtmlTag";
 import PropTypes from "prop-types";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 

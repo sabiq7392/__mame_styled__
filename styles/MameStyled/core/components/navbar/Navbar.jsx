@@ -1,5 +1,5 @@
 import { any, oneOf, node, string } from "prop-types";
-import { Nav } from "../../HtmlTag.styled";
+import { Nav } from "../../HtmlTag";
 import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 

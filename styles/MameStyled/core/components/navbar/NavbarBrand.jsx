@@ -1,4 +1,4 @@
-import { A, Img } from "../../HtmlTag.styled";
+import { A, Img } from "../../HtmlTag";
 import { string, node } from "prop-types";
 import { requiredPropTypes, requiredProps } from "../../../utils/constants/requiredProps";
 import { createElement } from "react";

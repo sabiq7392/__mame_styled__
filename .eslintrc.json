@@ -5,12 +5,15 @@
     "plugin:react/recommended"
   ],
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "warn",
     "quotes": ["warn", "double"],
-    "react/prop-types": "warn"
+    "react/prop-types": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useEffect } from "react";
-import { Span, P } from "../../HtmlTag.styled";
+import { Span, P } from "../../HtmlTag";
 import propTypes from "prop-types";
 import { createRoot } from "react-dom/client";
 import { any } from "prop-types";

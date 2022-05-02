@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
-import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 import SetAutoHead from "../../utils/SetAutoHead";
 import Heading from "../molecules/Heading";

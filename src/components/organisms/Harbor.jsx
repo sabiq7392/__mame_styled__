@@ -1,10 +1,10 @@
 import Container from "../atoms/Container";
-import { Grid } from "../../../styles/MameStyled/core/display/Grid.styled";
+import { Grid } from "../../../styles/MameStyled/core/display/Grid";
 import stylesConfig from "../../../styles.config";
 import propTypes from "prop-types";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 import Heading from "../molecules/Heading";
-import { H2 } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { H2 } from "../../../styles/MameStyled/core/HtmlTag";
 import { useId } from "react";
 import SetAutoHead from "../../utils/SetAutoHead";
 

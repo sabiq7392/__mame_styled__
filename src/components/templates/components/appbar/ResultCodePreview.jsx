@@ -4,7 +4,7 @@ export default function ResultCodePreview() {
   return <>
     <CodePreview title="Result Code Preview" member="Appbar">
       {`
-        import { Flex } from "../../../../../styles/MameStyled/core/display/Flex.styled";
+        import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
         import { useEffect, useRef, useState } from "react";
         import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
         import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";

@@ -1,5 +1,5 @@
 import { node } from "prop-types";
-import { Div } from "../../HtmlTag.styled";
+import { Div } from "../../HtmlTag";
 import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 

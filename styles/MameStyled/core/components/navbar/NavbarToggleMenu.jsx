@@ -1,4 +1,4 @@
-import { Button } from "../../HtmlTag.styled";
+import { Button } from "../../HtmlTag";
 import { RiMenu4Fill } from "react-icons/ri";
 import { any, bool, func, node } from "prop-types";
 import { createElement } from "react";

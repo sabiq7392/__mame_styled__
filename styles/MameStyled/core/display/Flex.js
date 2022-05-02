@@ -1,9 +1,7 @@
-// @ts-check
 import styled from "styled-components";
 import attributes from "../../utils/constants/attributes";
 
 export const Flex = styled.div(
-  /** @param {*} props */
   props => (
     props.container || !props.item ? {
       display: "flex",
@@ -17,5 +15,5 @@ export const Flex = styled.div(
       
     }
   ),
-  ...attributes
+  ...attributes,
 );

@@ -1,6 +1,6 @@
-import { Footer as MameFooter } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import { Footer as MameFooter } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
-import { Grid } from "../../../styles/MameStyled/core/display/Grid.styled";
+import { Grid } from "../../../styles/MameStyled/core/display/Grid";
 import Author from "../molecules/Author";
 import Brand from "../molecules/Brand";
 import SocialMedia from "../molecules/SocialMedia";

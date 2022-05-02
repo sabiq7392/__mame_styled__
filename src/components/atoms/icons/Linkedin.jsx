@@ -1,9 +1,9 @@
-import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
-import { BsLinkedin } from 'react-icons/bs';
-import propTypes from 'prop-types';
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import { BsLinkedin } from "react-icons/bs";
+import propTypes from "prop-types";
 
 export default function Linkedin({ size, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Linkedin' });
+  CatchErrorPropsComponent({ props, component: "Linkedin" });
 
   return (
     <BsLinkedin fontSize={size || 18} />

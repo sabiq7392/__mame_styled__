@@ -1,8 +1,8 @@
-import { Br } from '../../../../styles/MameStyled/core/HtmlTag.styled';
-import { Typography } from '../../../../styles/MameStyled/core/Typography.styled';
-import CodePreview from '../../organisms/CodePreview';
-import Harbor from '../../organisms/Harbor';
-import Preview from '../../organisms/Preview';
+import { Br } from "../../../../styles/MameStyled/core/HtmlTag.styled";
+import { Typography } from "../../../../styles/MameStyled/core/_deprecated/Typography.styled";
+import CodePreview from "../../organisms/CodePreview";
+import Harbor from "../../organisms/Harbor";
+import Preview from "../../organisms/Preview";
 
 export default function FontStyle() {
   return (

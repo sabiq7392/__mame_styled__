@@ -1,31 +1,31 @@
-import Link from 'next/link';
-import propTypes from 'prop-types';
-import stylesConfig from '../../../styles.config';
-import { A, Button as MameButton } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
+import Link from "next/link";
+import propTypes from "prop-types";
+import stylesConfig from "../../../styles.config";
+import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import CatchErrorPropsComponent from "../../utils/CatchErrorPropsComponent";
 
 export default function Button({ text, href, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Button' });
+  CatchErrorPropsComponent({ props, component: "Button" });
   
   const { color, radius, timing } = stylesConfig;
 
   const css = {
     background: color.base.secondary.default,
-    border: 'none',
+    border: "none",
     padding: 5, 
-    color: 'white', 
+    color: "white", 
     borderRadius: radius.sm, 
     maxWidth: 500, 
-    width: '100%', 
-    placeSelf: 'center', 
+    width: "100%", 
+    placeSelf: "center", 
     transition: timing.fast,
     fontWeight: 600,
-    textAlign: 'center'
+    textAlign: "center"
   };
 
   const cssLg = { padding: 10 };
 
-  const hover = { filter: 'brightness(80%)' };
+  const hover = { filter: "brightness(80%)" };
 
   return (
     <>

@@ -16,6 +16,14 @@ const stylesConfig = {
       },
     },
   },
+  screen: {
+    xs: 'min-width: 1px', 
+    sm: 'min-width: 576px', 
+    md: 'min-width: 768px', 
+    lg: 'min-width: 992px', 
+    xl: 'min-width: 1200px', 
+    xxl: 'min-width: 1400px', 
+  },
   spacing: {
     xs: 5, sm: 15, md: 30, lg: 45, xl: 60, xxl: 90, sxxl: 120,
   },

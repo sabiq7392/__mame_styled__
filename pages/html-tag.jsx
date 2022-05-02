@@ -1,6 +1,6 @@
-import ResultCodePreview from '../src/components/templates/html-tag/ResultCodePreview';
-import ResultPreview from '../src/components/templates/html-tag/ResultPreview';
-import Harbor from '../src/components/organisms/Harbor';
+import ResultCodePreview from "../src/components/templates/html-tag/ResultCodePreview";
+import ResultPreview from "../src/components/templates/html-tag/ResultPreview";
+import Harbor from "../src/components/organisms/Harbor";
 
 export default function HtmlTag() {
   return (

@@ -1,4 +1,4 @@
-import Harbor from '../../organisms/Harbor';
+import Harbor from "../../organisms/Harbor";
 
 export default function Properties() {
   return (

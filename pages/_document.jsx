@@ -1,5 +1,5 @@
-import { Head, Html, Main, NextScript } from 'next/document';
-import stylesConfig from '../styles.config';
+import { Head, Html, Main, NextScript } from "next/document";
+import stylesConfig from "../styles.config";
 
 export default function Document() {
   const { color } = stylesConfig;

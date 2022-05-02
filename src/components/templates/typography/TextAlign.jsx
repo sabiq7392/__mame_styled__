@@ -1,8 +1,8 @@
-import Harbor from '../../organisms/Harbor';
-import Preview from '../../organisms/Preview';
-import { Typography } from '../../../../styles/MameStyled/core/Typography.styled';
-import { Br } from '../../../../styles/MameStyled/core/HtmlTag.styled';
-import CodePreview from '../../organisms/CodePreview';
+import Harbor from "../../organisms/Harbor";
+import Preview from "../../organisms/Preview";
+import { Typography } from "../../../../styles/MameStyled/core/_deprecated/Typography.styled";
+import { Br } from "../../../../styles/MameStyled/core/HtmlTag.styled";
+import CodePreview from "../../organisms/CodePreview";
 
 export default function TextAlign() {
   return (

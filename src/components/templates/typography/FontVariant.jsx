@@ -1,4 +1,4 @@
-import { Typography } from '../../../../styles/MameStyled/core/Typography.styled';
+import { Typography } from '../../../../styles/MameStyled/core/_deprecated/Typography.styled';
 import CodePreview from '../../organisms/CodePreview';
 import Harbor from '../../organisms/Harbor';
 import Preview from '../../organisms/Preview';

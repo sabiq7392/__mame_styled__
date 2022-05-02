@@ -1,22 +1,22 @@
-import { Small } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import stylesConfig from '../../../styles.config';
-import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
-import { string } from 'prop-types';
+import { Small } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import stylesConfig from "../../../styles.config";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import { string } from "prop-types";
 
 export default function Author({ name, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Author.jsx' });
+  CatchErrorPropsComponent({ props, component: "Author.jsx" });
 
   const { color } = stylesConfig;
 
   const css = { 
-    display: 'grid', 
-    alignItems: 'center', 
+    display: "grid", 
+    alignItems: "center", 
     color: color.light, 
     fontSize: 10,  
   };
 
   return (
-    <Small cssXs={css}>Author: {name || 'Sabiq Muhammad Antebing Mame'}</Small>
+    <Small cssXs={css}>Author: {name || "Sabiq Muhammad Antebing Mame"}</Small>
   );
 }
 

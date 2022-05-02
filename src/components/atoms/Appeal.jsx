@@ -1,10 +1,10 @@
-import { Strong } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import stylesConfig from '../../../styles.config';
-import PropTypes from 'prop-types';
-import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
+import { Strong } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import stylesConfig from "../../../styles.config";
+import PropTypes from "prop-types";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
 
 export default function Appeal({ text, css, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Appeal.jsx' });
+  CatchErrorPropsComponent({ props, component: "Appeal.jsx" });
 
   const { color } = stylesConfig;
 

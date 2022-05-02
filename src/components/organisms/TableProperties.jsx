@@ -1,25 +1,25 @@
-import stylesConfig from '../../../styles.config';
-import { Table, Thead, Tbody, Tr, Th, Td } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
-import propTypes from 'prop-types';
+import stylesConfig from "../../../styles.config";
+import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import propTypes from "prop-types";
 
 export default function TableProperties({ data, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'TableProperties' });
+  CatchErrorPropsComponent({ props, component: "TableProperties" });
   
   const { spacing, color, radius } = stylesConfig;
   const cssThThead = {
-    textAlign: 'left', 
+    textAlign: "left", 
     padding: `${spacing.xs}px ${spacing.sm}px`,
   };
 
   const cssTdTbody = { 
-    textAlign: 'left', 
+    textAlign: "left", 
     padding: `${spacing.xs}px ${spacing.sm}px`, 
     color: color.white, 
-    verticalAlign: 'top' 
+    verticalAlign: "top" 
   };
 
-  const theadData = ['Name', 'Default', 'Type',  'Description'];
+  const theadData = ["Name", "Default", "Type",  "Description"];
 
   return (
     <Table>

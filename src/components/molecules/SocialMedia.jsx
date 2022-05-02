@@ -1,22 +1,22 @@
-import { Flex } from '../../../styles/MameStyled/core/display/Flex.styled';
-import { A } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import aboutMe from '../../data/aboutMe';
-import stylesConfig from '../../../styles.config';
-import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
-import Linkedin from '../atoms/icons/Linkedin';
-import Github from '../atoms/icons/Github';
-import Instagram from '../atoms/icons/Instagram';
+import { Flex } from "../../../styles/MameStyled/core/display/Flex.styled";
+import { A } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import aboutMe from "../../data/aboutMe";
+import stylesConfig from "../../../styles.config";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import Linkedin from "../atoms/icons/Linkedin";
+import Github from "../atoms/icons/Github";
+import Instagram from "../atoms/icons/Instagram";
 
 export default function SocialMedia({ ...props }) {
-  CatchErrorPropsComponent({ props, component: 'SocialMedia.jsx' });
+  CatchErrorPropsComponent({ props, component: "SocialMedia.jsx" });
 
   const { color, spacing, timing } = stylesConfig;
 
   const css = {
-    display: 'flex',
-    alignItems: 'center', 
+    display: "flex",
+    alignItems: "center", 
     transition: timing.fast,
-    color: 'white',
+    color: "white",
   };
 
   const hover = { color: color.primary }

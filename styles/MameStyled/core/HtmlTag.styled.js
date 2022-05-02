@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import attributes from '../utils/constants/attributes';
+import styled from "styled-components";
+import attributes from "../utils/constants/attributes";
 
 export const A = styled.a(...attributes);
 export const Abbr = styled.abbr(...attributes);
@@ -92,7 +92,7 @@ export const Svg = styled.svg(...attributes);
 export const Table = styled.table(...attributes);
 export const Tbody = styled.tbody(...attributes);
 export const Td = styled.td(...attributes);
-export const Template = styled.template(...attributes);
+// export const Template = styled.template(...attributes);
 export const Textarea = styled.textarea(...attributes);
 export const Tfoot = styled.tfoot(...attributes);
 export const Th = styled.th(...attributes);

@@ -1,7 +1,10 @@
+// JUST TRY USING  GENERAL TAG HTML AND MORE READABLE TOO SUCH P H1 H2, H3 ETC...
+
+
 import styled from 'styled-components';
-import screen from '../config/screen.config';
-import typographyConfig from '../config/typography.config.styled';
-import attributes from '../utils/constants/attributes';
+import screen from '../../config/screen.config';
+import typographyConfig from '../../config/typography.config.styled';
+import attributes from '../../utils/constants/attributes';
 
 const getMediaScreen = (config) => {
   let screens = {};
@@ -10,29 +13,6 @@ const getMediaScreen = (config) => {
   }
   return screens;
 };
-
-/**
- * Set Font Size
- * @category Font
- * @param {*} props props
- * @param {'xs'|'sm'|'md'|'lg'|'xl'|'xxl'} size value of size screens
- * @returns {*}
- */
-// const setFontSize = (props, screen) => {
-//   typeof props.size === 'number' ? {
-//     [`@media (${screen.xs})`]: { fontSize: props.size, }
-//   }
-//   : typeof props.size !== 'number' ?
-//   {
-//     [`@media (${screen.xs})`]: { fontSize: props.size.xs },
-//     [`@media (${screen.sm})`]: { fontSize: props.size.sm },
-//     [`@media (${screen.md})`]: { fontSize: props.size.md },
-//     [`@media (${screen.lg})`]: { fontSize: props.size.lg },
-//     [`@media (${screen.xl})`]: { fontSize: props.size.xl },
-//     [`@media (${screen.xxl})`]: { fontSize: props.size.xxl },
-//   }
-//   : false
-// };
 
 export const Typography = styled.p(
   props => (

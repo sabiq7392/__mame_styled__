@@ -1,16 +1,16 @@
-import { Header, H1, A } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import stylesConfig from '../../../styles.config';
-import Description from '../atoms/Description';
+import { Header, H1, A } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import stylesConfig from "../../../styles.config";
+import Description from "../atoms/Description";
 
 export default function Welcome() {
   const { color, spacing, radius, timing } = stylesConfig;
   
   const cssHeader = { 
     padding: `${spacing.sxxl}px ${spacing.sm}px`, 
-    margin: 'auto', 
-    display: 'grid', 
+    margin: "auto", 
+    display: "grid", 
     gap: spacing.md, 
-    textAlign: 'center', 
+    textAlign: "center", 
     border: `1px solid ${color.muted}`, 
     marginBottom: spacing.sxxl, 
   };
@@ -22,7 +22,7 @@ export default function Welcome() {
       cssLg={{ padding: `${spacing.sxxl}px ${spacing.sxxl}px` }}
     >
       <H1 bold center 
-        fontSize={{ xs: '2rem', md: '3rem',  lg: '4rem' }}
+        fontSize={{ xs: "2rem", md: "3rem",  lg: "4rem" }}
         cssXs={{ margin: 0, lineHeight: 1.15, color: color.white }}
       >
         Welcome to <A href="#" cssXs={{ color: color.primary }}>Mame Styled</A>
@@ -37,9 +37,9 @@ export default function Welcome() {
       />
       <A 
         href="/getting-started" 
-        cssXs={{ backgroundColor: color.primary, padding: 5, color: 'white', borderRadius: radius.sm, maxWidth: 500, width: '100%', placeSelf: 'center', transition: timing.fast }}
+        cssXs={{ backgroundColor: color.primary, padding: 5, color: "white", borderRadius: radius.sm, maxWidth: 500, width: "100%", placeSelf: "center", transition: timing.fast }}
         cssLg={{ padding: 10 }}
-        hover={{ filter: 'brightness(80%)' }}
+        hover={{ filter: "brightness(80%)" }}
         fontSize={{ xs: 12, md: 14, lg: 16 }}
       >
         Getting Started

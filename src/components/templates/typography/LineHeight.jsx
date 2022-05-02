@@ -1,8 +1,8 @@
-import CodePreview from '../../organisms/CodePreview';
-import Preview from '../../organisms/Preview';
-import Harbor from '../../organisms/Harbor';
-import { Typography } from '../../../../styles/MameStyled/core/Typography.styled';
-import { Br } from '../../../../styles/MameStyled/core/HtmlTag.styled';
+import CodePreview from "../../organisms/CodePreview";
+import Preview from "../../organisms/Preview";
+import Harbor from "../../organisms/Harbor";
+import { Typography } from "../../../../styles/MameStyled/core/_deprecated/Typography.styled";
+import { Br } from "../../../../styles/MameStyled/core/HtmlTag.styled";
 
 export default function LineHeight() {
   return (

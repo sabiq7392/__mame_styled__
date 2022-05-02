@@ -1,18 +1,18 @@
-import TableProperties from '../../organisms/TableProperties';
-import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
-import Harbor from '../../organisms/Harbor';
+import TableProperties from "../../organisms/TableProperties";
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import Harbor from "../../organisms/Harbor";
 
 export default function Properties({ ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Properties of Typography' });
+  CatchErrorPropsComponent({ props, component: "Properties of Typography" });
 
   const tbodyData = [
     {
-      name: 'size',
-      default: '-',
+      name: "size",
+      default: "-",
       type: <>
         number 
         <br /> 
-        number{`{ xs, sm, md, lg, xl, xxl }`}
+        number{"{ xs, sm, md, lg, xl, xxl }"}
       </>,
       description: <>
         xs, md, ... is size of screen. 

@@ -1,12 +1,12 @@
-import Properties from '../src/components/templates/typography/Properties';
-import FontSize from '../src/components/templates/typography/FontSize';
-import FontWeight from '../src/components/templates/typography/FontWeight';
-import TextAlign from '../src/components/templates/typography/TextAlign';
-import FontStyle from '../src/components/templates/typography/FontStyle';
-import LineHeight from '../src/components/templates/typography/LineHeight';
-import Color from '../src/components/templates/typography/Color';
-import FontVariant from '../src/components/templates/typography/FontVariant';
-import Harbor from '../src/components/organisms/Harbor';
+import Properties from "../src/components/templates/typography/Properties";
+import FontSize from "../src/components/templates/typography/FontSize";
+import FontWeight from "../src/components/templates/typography/FontWeight";
+import TextAlign from "../src/components/templates/typography/TextAlign";
+import FontStyle from "../src/components/templates/typography/FontStyle";
+import LineHeight from "../src/components/templates/typography/LineHeight";
+import Color from "../src/components/templates/typography/Color";
+import FontVariant from "../src/components/templates/typography/FontVariant";
+import Harbor from "../src/components/organisms/Harbor";
 
 export default function IsTypography() {
 

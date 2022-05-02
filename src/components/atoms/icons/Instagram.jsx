@@ -1,9 +1,9 @@
-import { AiOutlineInstagram } from 'react-icons/ai';
-import CatchErrorPropsComponent from '../../../utils/CatchErrorPropsComponent';
-import propTypes from 'prop-types';
+import { AiOutlineInstagram } from "react-icons/ai";
+import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import propTypes from "prop-types";
 
 export default function Instagram({ size, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Instagram' });
+  CatchErrorPropsComponent({ props, component: "Instagram" });
 
   return (
     <AiOutlineInstagram fontSize={size || 24} /> 

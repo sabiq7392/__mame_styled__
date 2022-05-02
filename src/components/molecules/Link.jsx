@@ -1,12 +1,12 @@
-import { default as NextLink } from 'next/link';
-import { A } from '../../../styles/MameStyled/core/HtmlTag.styled';
-import CatchErrorPropsComponent from '../../utils/CatchErrorPropsComponent';
-import propTypes from 'prop-types';
-import stylesConfig from '../../../styles.config';
-import { useRouter } from 'next/router';
+import { default as NextLink } from "next/link";
+import { A } from "../../../styles/MameStyled/core/HtmlTag.styled";
+import CatchErrorPropsComponent from "../../../styles/MameStyled/core/components/handle-error/CatchErrorPropsComponent";
+import propTypes from "prop-types";
+import stylesConfig from "../../../styles.config";
+import { useRouter } from "next/router";
 
 export default function Link({ href, text, ...props }) {
-  CatchErrorPropsComponent({ props, component: 'Link' });
+  CatchErrorPropsComponent({ props, component: "Link" });
 
   const router = useRouter();
 
@@ -15,7 +15,7 @@ export default function Link({ href, text, ...props }) {
   return (
     <NextLink href={href} passHref>
       <A 
-        cssXs={{ color: router.pathname === href ? color.primary : 'white', transition: timing.fast, }} 
+        cssXs={{ color: router.pathname === href ? color.primary : "white", transition: timing.fast, }} 
         hover={{ color: color.primary }}
       >
         {text}

@@ -5,6 +5,7 @@ import LineSeperator from "../atoms/LineSeperator";
 import Link from "../molecules/Link";
 import Brand from "../molecules/Brand";
 import SocialMedia from "../molecules/SocialMedia";
+import link from "../../../link.config";
 
 export default function AsideLeft() {
   const { spacing } = stylesConfig;
@@ -21,14 +22,9 @@ export default function AsideLeft() {
         </Grid>
         <LineSeperator />
         <Grid container gap={spacing.sm}>
-          <Link href="/" text="Home" />
-          <Link href="/getting-started" text="Getting Started" />
-          <Link href="/display/grid" text="Display Grid"  />
-          <Link href="/display/flex" text="Display Flex" />
-          <Link href="/typography" text="Typography" />
-          <Link href="/html-tag" text="HTML Tag" />
-          <Link href="/screen" text="Screen" />
-          <Link href="/components/appbar" text="Appbar"  />
+          {link.pages.map(({ title, href }) => 
+            <Link key={title} title={title} href={href} />
+          )}
         </Grid>
       </Grid>
     </Aside>

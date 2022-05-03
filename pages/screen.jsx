@@ -5,7 +5,6 @@ export default function Screen() {
   return (
     <>
       <Heading head={H2} title="Screen" />
-      
     </>
   );
 }

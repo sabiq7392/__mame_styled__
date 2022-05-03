@@ -8,7 +8,6 @@ import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
-import Welcome from "../src/components/organisms/Welcome";
 // import Appbar from "../src/components/organisms/Appbar";
 
 const { spacing, color } = stylesConfig;
@@ -25,7 +24,6 @@ export default function MyApp({ Component, pageProps }) {
       </Head>
       {router.pathname === "/" ? 
         <>
-          <Welcome />
           <Main cssXs={{ maxWidth: 1440, margin: "auto" }}>
             
             <Component {...pageProps} />

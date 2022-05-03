@@ -11,7 +11,7 @@ export default function Welcome() {
     display: "grid", 
     gap: spacing.md, 
     textAlign: "center", 
-    border: `1px solid ${color.muted}`, 
+    borderBottom: `1px solid ${color.muted}`, 
     marginBottom: spacing.sxxl, 
   };
 
@@ -29,9 +29,10 @@ export default function Welcome() {
       </H1>
       <Description 
         text="
-          this is a styled component that makes it easy to develop user interfaces, 
-          where you can write internal css in inline css style. 
-          hopefully if you use this you can easily create components without having to create css files again
+          JavaScript Library where is focusing to build UI, 
+          You can write CSS like pseudo selector, 
+          Media Queries, etc in inline css style.
+          Also there are components
         "
         fontSize={{ xs: 12, md: 14, lg: 16 }}
       />

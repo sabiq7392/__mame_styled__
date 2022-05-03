@@ -5,11 +5,16 @@ import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Image from "next/image";
 import HtmlTag from "./html-tag";
+import Welcome from "../src/components/organisms/Welcome";
 
 export default function Home() {
   const { spacing } = stylesConfig;
   return (
     <Grid>
+      <Container as="article">
+        <Welcome />
+      </Container>
+
       <Container as="article">
         <HtmlTag />
       </Container>

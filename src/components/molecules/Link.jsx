@@ -5,7 +5,7 @@ import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
 import { useRouter } from "next/router";
 
-export default function Link({ href, text, ...props }) {
+export default function Link({ href, title, ...props }) {
   CatchErrorPropsComponent({ props, component: "Link" });
 
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function Link({ href, text, ...props }) {
         cssXs={{ color: router.pathname === href ? color.primary : "white", transition: timing.fast, }} 
         hover={{ color: color.primary }}
       >
-        {text}
+        {title}
       </A>
     </NextLink>
   );
@@ -28,7 +28,7 @@ const { string } = propTypes;
 
 Link.propTypes = {
   href: string.isRequired,
-  text: string.isRequired,
+  title: string.isRequired,
 };
 
 

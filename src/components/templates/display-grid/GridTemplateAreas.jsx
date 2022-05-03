@@ -11,7 +11,7 @@ const { spacing } = stylesConfig;
 export default function GridTemplateAreas() {
   return (
     <Harbor title="Grid Template Areas">
-      <Preview title="Result Preview - No Media Screen" member="Grid Template Rows">
+      <Preview title="Result Preview - No Media Screen" member="Grid Template Rows" noLandfield>
         <Grid container gap={spacing.sm}>
           {nextJsExample.map(({ title, href, description }) => 
             <ItemExample 

@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 
+/**
+ * @use
+ * MediaScreen("<=", "lg") ? active : false;
+ */
+
 export default function MediaScreen(_option, _screenWidth) {
   const [screenWidth, setScreenWidth] = useState(null);
+
   useEffect(() => {
     const observer = new ResizeObserver((entries) => {
       const getScreenWidth = entries[0].contentRect.width;

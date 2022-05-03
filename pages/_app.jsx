@@ -9,7 +9,7 @@ import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
 import Welcome from "../src/components/organisms/Welcome";
-import Appbar from "../src/components/organisms/Appbar";
+// import Appbar from "../src/components/organisms/Appbar";
 
 const { spacing, color } = stylesConfig;
 
@@ -34,7 +34,7 @@ export default function MyApp({ Component, pageProps }) {
         </>
       :
         <> 
-          <Appbar  />
+          {/* <Appbar  /> */}
           <Grid 
             cols={{ xs: 1, md: "2fr 10fr" }} 
             gap={spacing.md} 

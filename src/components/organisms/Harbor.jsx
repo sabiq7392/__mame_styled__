@@ -7,6 +7,7 @@ import Heading from "../molecules/Heading";
 import { H2 } from "../../../styles/MameStyled/core/HtmlTag";
 import { useId } from "react";
 import SetAutoHead from "../../utils/SetAutoHead";
+import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 
 export default function Harbor({ children, member, title, appeal, description, ...props }) {
   CatchErrorPropsComponent({ props, CatchErrorPropsComponent: "Harbor", type: "Organisms" });
@@ -18,9 +19,9 @@ export default function Harbor({ children, member, title, appeal, description, .
     <Container id={id} as="article" standard>
       <Grid gap={spacing.md}> 
         <Heading head={SetAutoHead({ id }) || H2} member={member} title={title} appeal={appeal} description={description} /> 
-        <Grid gap={spacing.lg}>
+        <Flex direction="column" gap={spacing.lg}>
           {children}
-        </Grid>
+        </Flex>
       </Grid>
     </Container>
   );

@@ -20,11 +20,11 @@ const link = {
     },
     {
       title: "Display Grid",
-      href: "/display-grid",
+      href: "/display/grid",
     },
     {
       title: "Display Flex",
-      href: "/display-flex",
+      href: "/display/flex",
     },
     {
       title: "Typography",

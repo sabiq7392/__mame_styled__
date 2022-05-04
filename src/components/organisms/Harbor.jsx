@@ -1,5 +1,4 @@
 import Container from "../atoms/Container";
-import { Grid } from "../../../styles/MameStyled/core/display/Grid";
 import stylesConfig from "../../../styles.config";
 import propTypes from "prop-types";
 import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
@@ -17,12 +16,12 @@ export default function Harbor({ children, member, title, appeal, description, .
 
   return (
     <Container id={id} as="article" standard>
-      <Grid gap={spacing.md}> 
+      <Flex direction="column" gap={spacing.md}> 
         <Heading head={SetAutoHead({ id }) || H2} member={member} title={title} appeal={appeal} description={description} /> 
         <Flex direction="column" gap={spacing.lg}>
           {children}
         </Flex>
-      </Grid>
+      </Flex>
     </Container>
   );
 }

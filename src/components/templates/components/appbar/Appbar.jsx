@@ -25,7 +25,7 @@ export default function Appbar() {
 
   useEffect(() => {
     getNavbarHeight();
-  });
+  }, []);
 
   return (
     <Navbar navbar={navbar}> 

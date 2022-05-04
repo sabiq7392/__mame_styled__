@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import Accordion from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
-import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
+import Accordion  from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
 import AccordionHeader from "../../../../../styles/MameStyled/core/components/accordion/AccordionHeader";
+import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
 
 export default function MameAccordion({ isAlwaysOpen = false }) {
   const [isContentOpen, setIsContentOpen] = useState(isAlwaysOpen);
@@ -48,10 +48,4 @@ export default function MameAccordion({ isAlwaysOpen = false }) {
     </Accordion>
   </>;
 }
-
-
-
-
-
-
 

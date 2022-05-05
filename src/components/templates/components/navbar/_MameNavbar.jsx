@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, memo } from "react";
 import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
 import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
 import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
@@ -7,8 +7,8 @@ import NavbarNav from "../../../../../styles/MameStyled/core/components/navbar/N
 import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
 import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
 
-export default function MameNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const MameNavbar = memo(function MameComponent() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const [navbarHeight, setNavbarHeight] = useState(0);
   const menuButton = useRef();
   const navbar = useRef();
@@ -23,13 +23,12 @@ export default function MameNavbar() {
     observer.observe(navbar.current);
   };
 
-
   useEffect(() => {
     getNavbarHeight();
   }, []);
 
   return (
-    <Navbar navbar={navbar}> 
+    <Navbar _ref={navbar}> 
       <NavbarContentWrapper> 
         <Flex vCenter>
           <NavbarBrand 
@@ -54,4 +53,6 @@ export default function MameNavbar() {
       </NavbarContentWrapper>
     </Navbar>
   );
-}
+});
+
+export default MameNavbar;

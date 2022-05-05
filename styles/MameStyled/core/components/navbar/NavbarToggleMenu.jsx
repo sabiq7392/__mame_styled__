@@ -1,10 +1,11 @@
 import { Button } from "../../HtmlTag";
-import { RiMenu4Fill } from "react-icons/ri";
 import { any, bool, func, node } from "prop-types";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import MenuIcon from "../icons/MenuIcon";
+import CloseIcon from "../icons/CloseIcon";
 
-export default function NavbarToggleMenu({ 
+const NavbarToggleMenu = memo(function NavbarToggleMenu({ 
   menuButton, 
   isMenuOpen, 
   setIsMenuOpen, 
@@ -24,7 +25,8 @@ export default function NavbarToggleMenu({
           minWidth: 44,
           minHeight: 44,
           marginLeft: "auto",
-          border: "1px solid rgba(255,255,255, 0.1)",
+          // border: "1px solid rgba(255,255,255, 0.1)",
+          border: "none",
           borderRadius: 2,
           cursor: "pointer",
         },
@@ -33,9 +35,9 @@ export default function NavbarToggleMenu({
         },
       }),
     },
-    icon || <RiMenu4Fill size={32} color="white" />,
+    icon || isMenuOpen ? <CloseIcon /> : <MenuIcon />,
   );
-}
+});
 
 NavbarToggleMenu.propTypes = {
   menuButton: any.isRequired,
@@ -44,3 +46,5 @@ NavbarToggleMenu.propTypes = {
   icon: node,
   ...requiredPropTypes,
 };
+
+export default NavbarToggleMenu;

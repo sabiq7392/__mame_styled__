@@ -1,7 +1,7 @@
-import { Typography } from '../../../../styles/MameStyled/core/_deprecated/Typography.styled';
-import CodePreview from '../../organisms/CodePreview';
-import Harbor from '../../organisms/Harbor';
-import Preview from '../../organisms/Preview';
+import { Typography } from "../../../../styles/MameStyled/core/_deprecated/Typography.styled";
+import CodePreview from "../../organisms/CodePreview";
+import Harbor from "../../organisms/Harbor";
+import Preview from "../../organisms/Preview";
 
 export default function FontVariant() {
   return (
@@ -17,5 +17,5 @@ export default function FontVariant() {
         `}
       </CodePreview>
     </Harbor>
-  )
+  );
 }

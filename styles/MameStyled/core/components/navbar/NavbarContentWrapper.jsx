@@ -1,9 +1,9 @@
 import { node } from "prop-types";
 import { Div } from "../../HtmlTag";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-export default function NavbarContentWrapper({ children, ...props }) {
+const NavbarContentWrapper = memo(function NavbarContentWrapper({ children, ...props }) {
   return createElement(
     Div,
     {
@@ -21,9 +21,11 @@ export default function NavbarContentWrapper({ children, ...props }) {
     },
     children,
   );
-}
+});
 
 NavbarContentWrapper.propTypes = {
   children: node.isRequired,
   ...requiredPropTypes,
 };
+
+export default NavbarContentWrapper;

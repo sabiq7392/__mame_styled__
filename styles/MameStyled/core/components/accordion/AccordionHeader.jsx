@@ -1,11 +1,11 @@
 import { H2, Button, Div, H1, H3, H4, H5, H6 } from "../../HtmlTag";
-import { BsChevronDown } from "react-icons/bs";
 import { any, func, bool, number, oneOfType, string, node, element } from "prop-types";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { oneOf } from "prop-types";
+import ChevronDownIcon from "../icons/ChevronDownIcon";
 
-export default function AccordionHeader({ 
+const AccordionHeader = memo(function AccordionHeader({ 
   refButtonAccordion, 
   setIsContentOpen, 
   isContentOpen, 
@@ -52,11 +52,11 @@ export default function AccordionHeader({
           transition: `transform ${transitionSpeed}ms ease!important`, 
         }}
       >
-        {icon || <BsChevronDown size={24} />}
+        {icon || <ChevronDownIcon /> }
       </Div>
     </Button>
   );
-}
+});
 
 AccordionHeader.propTypes = {
   refButtonAccordion: any.isRequired,
@@ -68,3 +68,5 @@ AccordionHeader.propTypes = {
   as: oneOf([H1, H2, H3, H4, H5, H6]),
   ...requiredPropTypes,
 };
+
+export default AccordionHeader;

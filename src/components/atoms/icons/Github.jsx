@@ -3,7 +3,7 @@ import { AiOutlineGithub } from "react-icons/ai";
 import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 
 export default function Github({ size, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Github" })
+  ErrorUnexpectedProps({ props, component: "Github" });
 
   return (
     <AiOutlineGithub fontSize={size || 24} />

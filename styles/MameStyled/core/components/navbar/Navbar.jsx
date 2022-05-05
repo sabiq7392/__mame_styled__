@@ -1,11 +1,10 @@
-import { any, oneOf, node, string } from "prop-types";
+import { oneOf, node, string } from "prop-types";
 import { Nav } from "../../HtmlTag";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-export default function Navbar({ 
+const Navbar = memo(function Navbar({
   children, 
-  navbar, 
   position, 
   direction, 
   ...props
@@ -13,7 +12,6 @@ export default function Navbar({
   return createElement(
     Nav,
     { 
-      ref: navbar,
       ...requiredProps(props, {
         cssXs: {
           background: "#111", 
@@ -31,12 +29,13 @@ export default function Navbar({
     },
     children,
   );
-}
+});
 
 Navbar.propTypes = {
   children: node.isRequired,
-  navbar: any.isRequired,
   position: string,
   direction: oneOf(["top", "bottom"]),
   ...requiredPropTypes,
 };
+
+export default Navbar;

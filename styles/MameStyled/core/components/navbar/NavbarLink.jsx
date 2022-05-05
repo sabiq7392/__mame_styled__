@@ -1,9 +1,9 @@
 import { oneOfType, node, string } from "prop-types";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { A } from "../../HtmlTag";
 
-export default function NavLink({ title, href, ...props }) {
+const NavLink = memo(function NavLink({ title, href, ...props }) {
   return createElement(
     A,
     {
@@ -23,10 +23,12 @@ export default function NavLink({ title, href, ...props }) {
     },
     title,
   );
-}
+});
 
 NavLink.propTypes = {
   title: oneOfType([string, node]).isRequired,
   href: string.isRequired,
   ...requiredPropTypes,
 };
+
+export default NavLink;

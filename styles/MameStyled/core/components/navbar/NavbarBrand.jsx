@@ -1,11 +1,11 @@
 import { A, Img } from "../../HtmlTag";
 import { string, node } from "prop-types";
 import { requiredPropTypes, requiredProps } from "../../../utils/constants/requiredProps";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { number } from "prop-types";
 import ErrorCannotCombinedProps from "../../utils/handle-error/ErrorCannotCombinedProps";
 
-export default function NavbarBrand({ 
+const NavbarBrand = memo(function NavbarBrand({ 
   children, 
   src, 
   alt, 
@@ -32,7 +32,7 @@ export default function NavbarBrand({
     }, 
     children || <Img src={src} alt={alt} width={width} height={height} />,
   );
-}
+});
 
 NavbarBrand.propTypes = {
   src: string,
@@ -42,3 +42,5 @@ NavbarBrand.propTypes = {
   width: number,
   ...requiredPropTypes,
 };
+
+export default NavbarBrand;

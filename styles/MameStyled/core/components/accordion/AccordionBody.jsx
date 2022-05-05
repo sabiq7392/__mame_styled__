@@ -1,12 +1,12 @@
 import { Div } from "../../HtmlTag";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { bool } from "prop-types";
 import { number } from "prop-types";
 import { any } from "prop-types";
 import { node } from "prop-types";
 
-export default function AccordionBody({ 
+const AccordionBody = memo(function AccordionBody({ 
   isContentOpen, 
   transitionSpeed, 
   heightContent, 
@@ -35,7 +35,7 @@ export default function AccordionBody({
       {children}
     </Div>
   );
-}
+});
 
 AccordionBody.propTypes = {
   isContentOpen: bool.isRequired,
@@ -45,3 +45,5 @@ AccordionBody.propTypes = {
   transitionSpeed: number,
   ...requiredPropTypes,
 };
+
+export default AccordionBody;

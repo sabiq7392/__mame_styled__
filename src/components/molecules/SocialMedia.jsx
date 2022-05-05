@@ -21,7 +21,7 @@ export default function SocialMedia({ ...props }) {
     color: "white",
   };
 
-  const hover = { color: color.primary }
+  const hover = { color: color.primary };
 
   return (
     <Flex gap={spacing.sm}>

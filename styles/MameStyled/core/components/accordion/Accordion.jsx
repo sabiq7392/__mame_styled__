@@ -1,9 +1,9 @@
 import { Div } from "../../HtmlTag";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { node } from "prop-types";
 
-export default function Accordion({ 
+const Accordion = memo(function Accordion({ 
   children,
   ...props
 }) {
@@ -19,9 +19,11 @@ export default function Accordion({
     },
     children,
   );
-}
+});
 
 Accordion.propTypes = {
   children: node.isRequired,
   ...requiredPropTypes,
 };
+
+export default Accordion;

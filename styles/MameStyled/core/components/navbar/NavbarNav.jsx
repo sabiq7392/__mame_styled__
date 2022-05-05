@@ -1,11 +1,9 @@
 import { bool, node, number } from "prop-types";
 import { Div } from "../../HtmlTag";
-import { createElement } from "react";
+import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-
-
-export default function NavbarNav({ children, navbarHeight, isMenuOpen, ...props }) {
+const NavbarNav = memo(function NavbarNav({ children, navbarHeight, isMenuOpen, ...props }) {
   const cssXs = { 
     display: "flex",
     flexDirection: "column",
@@ -50,7 +48,7 @@ export default function NavbarNav({ children, navbarHeight, isMenuOpen, ...props
     { ...requiredProps(props, { cssXs, cssLg }) },
     children,
   );
-}
+});
 
 NavbarNav.propTypes = {
   children: node.isRequired,
@@ -58,3 +56,5 @@ NavbarNav.propTypes = {
   isMenuOpen: bool.isRequired,
   ...requiredPropTypes,
 };
+
+export default NavbarNav;

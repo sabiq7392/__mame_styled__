@@ -36,7 +36,7 @@ export default function ErrorUnexpectedProps({
 
   }, [props, component, type, note, children, exceptProps]);
 
-  if (children) return <>{children}</>
+  if (children) return <>{children}</>;
 }
 
 ErrorUnexpectedProps.propTypes = {

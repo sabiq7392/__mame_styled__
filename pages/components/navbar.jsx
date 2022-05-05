@@ -12,5 +12,5 @@ export default function Appbar() {
       <ResultPreview />
       <ResultCodePreview />
     </Harbor>
-  </>
+  </>;
 }

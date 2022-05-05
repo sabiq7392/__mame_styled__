@@ -2,16 +2,18 @@ import { useState, useRef, useEffect } from "react";
 import Accordion  from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
 import AccordionHeader from "../../../../../styles/MameStyled/core/components/accordion/AccordionHeader";
 import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
+import { bool } from "prop-types";
 
 export default function MameAccordion({ 
   isAlwaysOpen = false, 
-  transitionSpeed = 400,
-  
 }) {
   const [isContentOpen, setIsContentOpen] = useState(isAlwaysOpen);
   const [heightContent, setHeightContent] = useState(0);
   const buttonAccordion = useRef();
   const content = useRef();
+
+  /** @in_milisecond */
+  const transitionSpeed = 400;
 
   const getHeightContent = () => {
     const observer = new ResizeObserver((entries) => {
@@ -51,3 +53,6 @@ export default function MameAccordion({
   </>;
 }
 
+MameAccordion.propTypes = {
+  isAlwaysOpen: bool,
+};

@@ -7,7 +7,7 @@ const link = {
         linkedin: "https://www.linkedin.com/in/sabiq-muhammad-6b314a210/",
         github: "https://github.com/sabiq7392",
       },
-    }
+    },
   ],
   pages: [
     {
@@ -44,8 +44,8 @@ const link = {
     },
     {
       title: "Accordion",
-      href: "/components/accordion"
-    }
+      href: "/components/accordion",
+    },
   ],
 };
 

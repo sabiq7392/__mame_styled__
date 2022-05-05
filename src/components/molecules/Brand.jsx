@@ -26,4 +26,4 @@ export default function Brand({ as, ...props }) {
 
 Brand.propTypes = {
   as: propTypes.oneOf(["small", "h1"]),
-}
+};

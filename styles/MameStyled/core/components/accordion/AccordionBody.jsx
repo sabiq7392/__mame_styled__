@@ -1,40 +1,47 @@
-import { Div, P } from "../../HtmlTag";
+import { Div } from "../../HtmlTag";
+import { createElement } from "react";
+import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import { bool } from "prop-types";
+import { number } from "prop-types";
+import { any } from "prop-types";
+import { node } from "prop-types";
 
-export default function AccordeionBody({ 
+export default function AccordionBody({ 
   isContentOpen, 
   transitionSpeed, 
   heightContent, 
   refContent, 
-  content 
+  children,
+  ...props
 }) {
-  return <>
-    <Div 
-      cssXs={{ 
+  return createElement(
+    Div,
+    {
+      ...requiredProps(props, {
+      cssXs: { 
         display: isContentOpen ? "grid" : setTimeout(() => "none", transitionSpeed),
         background: "#222", 
         color: "white", 
         overflow: "hidden", 
         transition: `height ${transitionSpeed}ms ease!important`,
         height: isContentOpen ? heightContent : 0,
-      }}
+      }
+      }),
+    },
+    <Div
+      ref={refContent}
+      cssXs={{ padding: "1rem" }}
     >
-      <Div
-        ref={refContent}
-        cssXs={{ padding: "1rem" }}
-      >
-        {content || 
-          <P>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed minima accusamus quia, voluptatem, obcaecati corporis debitis 
-            ratione eos et saepe officia explicabo. Accusamus tempore eum aspernatur error nobis accusantium voluptatum?
-
-            <br />
-            <br />
-
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas ipsum ipsa voluptate cum ratione illum placeat a 
-            dolorum assumenda praesentium explicabo vitae nihil laboriosam dicta, minima nulla accusamus optio? Atque.
-          </P>
-        }
-      </Div>
+      {children}
     </Div>
-  </>;
+  );
 }
+
+AccordionBody.propTypes = {
+  isContentOpen: bool.isRequired,
+  heightContent: number.isRequired,
+  refContent: any.isRequired,
+  children: node.isRequired,
+  transitionSpeed: number,
+  ...requiredPropTypes,
+};

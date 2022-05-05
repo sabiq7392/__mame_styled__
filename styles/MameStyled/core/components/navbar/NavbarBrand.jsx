@@ -16,8 +16,8 @@ export default function NavbarBrand({
   if (children && (src || alt || width || height)) {
     ErrorCannotCombinedProps({ 
       componentName: "NavbarBrand", 
-      note: "Cannot combined props children with: src || alt || width || height" 
-    })
+      note: "Cannot combined props children with: src || alt || width || height",
+    });
   } 
 
   return createElement(

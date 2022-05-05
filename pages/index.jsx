@@ -9,6 +9,7 @@ import Welcome from "../src/components/organisms/Welcome";
 
 export default function Home() {
   const { spacing } = stylesConfig;
+
   return (
     <Grid>
       <Container as="article">

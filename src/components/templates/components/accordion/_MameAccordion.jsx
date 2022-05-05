@@ -1,8 +1,10 @@
 import { useState, useRef, useEffect } from "react";
-import Accordion  from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
-import AccordionHeader from "../../../../../styles/MameStyled/core/components/accordion/AccordionHeader";
-import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
+import dynamic from "next/dynamic";
 import { bool } from "prop-types";
+
+const Accordion = dynamic(() => import("../../../../../styles/MameStyled/core/components/accordion/Accordion"));
+const AccordionHeader = dynamic(() => import("../../../../../styles/MameStyled/core/components/accordion/AccordionHeader"));
+const AccordionBody = dynamic(() => import ("../../../../../styles/MameStyled/core/components/accordion/AccordionBody"));
 
 export default function MameAccordion({ 
   isAlwaysOpen = false, 

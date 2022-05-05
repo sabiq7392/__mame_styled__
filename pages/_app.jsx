@@ -8,12 +8,19 @@ import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
+// import { unstable_useWebVitalsReport } from "next/streaming"
+
 // import Appbar from "../src/components/organisms/Appbar";
 
 const { spacing, color } = stylesConfig;
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
+
+  // unstable_useWebVitalsReport((data) => {
+  //   console.log(data);
+  // });
+
 
   return (
     <>

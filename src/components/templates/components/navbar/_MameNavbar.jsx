@@ -1,11 +1,15 @@
 import { useState, useRef, useEffect, memo } from "react";
-import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
-import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
-import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
-import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
-import NavbarNav from "../../../../../styles/MameStyled/core/components/navbar/NavbarNav";
-import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
-import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
+import dynamic from "next/dynamic";
+
+const Navbar = dynamic(() => import("../../../../../styles/MameStyled/core/components/navbar/Navbar"));
+const NavbarBrand = dynamic(() => import("../../../../../styles/MameStyled/core/components/navbar/NavbarBrand"));
+const NavbarToggleMenu = dynamic(() => import("../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu"));
+const NavbarNav = dynamic(() => import("../../../../../styles/MameStyled/core/components/navbar/NavbarNav"));
+const NavbarContentWrapper = dynamic(() => import("../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper"));
+const NavLink = dynamic(() => import("../../../../../styles/MameStyled/core/components/navbar/NavbarLink"));
+const Flex = dynamic(() => 
+  import("../../../../../styles/MameStyled/core/display/Flex").then(mod => mod.Flex),
+);
 
 const MameNavbar = memo(function MameComponent() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 

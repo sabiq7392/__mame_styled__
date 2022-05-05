@@ -1,6 +1,8 @@
-import Harbor from "../../src/components/organisms/Harbor";
-import ResultPreview from "../../src/components/templates/components/accordion/ResultPreview";
-import ResultCodePreview from "../../src/components/templates/components/accordion/ResultCodePreview";
+import dynamic from "next/dynamic";
+
+const Harbor = dynamic(() => import("../../src/components/organisms/Harbor"));
+const ResultPreview = dynamic(() => import("../../src/components/templates/components/accordion/ResultPreview"));
+const ResultCodePreview = dynamic(() => import("../../src/components/templates/components/accordion/ResultCodePreview"));
 
 export default function Accordion() {
   return <>

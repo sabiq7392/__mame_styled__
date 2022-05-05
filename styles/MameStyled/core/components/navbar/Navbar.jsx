@@ -7,11 +7,13 @@ const Navbar = memo(function Navbar({
   children, 
   position, 
   direction, 
+  _ref,
   ...props
 }) {
   return createElement(
     Nav,
     { 
+      ref: _ref,
       ...requiredProps(props, {
         cssXs: {
           background: "#111", 

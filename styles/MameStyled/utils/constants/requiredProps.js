@@ -27,7 +27,7 @@ export const requiredProps = (props, {
   hoverLg: { ...hoverLg, ...props.hoverLg },
   hoverXl: { ...hoverXl, ...props.hoverXl },
   hoverXxl: { ...hoverXxl, ...props.hoverXxl },
-  ref: props._ref,
+  // ref: props._ref,
   debug: props.debug && true,
   className: props.className,
   id: props.id,

@@ -5,11 +5,13 @@ import { node } from "prop-types";
 
 const Accordion = memo(function Accordion({ 
   children,
+  _ref,
   ...props
 }) {
   return createElement(
     Div,
     {
+      ref: _ref,
       ...requiredProps(props, {
         cssXs: {
           display: "flex",

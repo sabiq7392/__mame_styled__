@@ -10,7 +10,7 @@ const AccordionBody = memo(function AccordionBody({
   isContentOpen, 
   transitionSpeed, 
   heightContent, 
-  refContent, 
+  _ref,
   children,
   ...props
 }) {
@@ -29,7 +29,7 @@ const AccordionBody = memo(function AccordionBody({
       }),
     },
     <Div
-      ref={refContent}
+      ref={_ref}
       cssXs={{ padding: "1rem" }}
     >
       {children}
@@ -40,7 +40,7 @@ const AccordionBody = memo(function AccordionBody({
 AccordionBody.propTypes = {
   isContentOpen: bool.isRequired,
   heightContent: number.isRequired,
-  refContent: any.isRequired,
+  _ref: any.isRequired,
   children: node.isRequired,
   transitionSpeed: number,
   ...requiredPropTypes,

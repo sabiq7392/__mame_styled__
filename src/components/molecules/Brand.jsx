@@ -1,11 +1,11 @@
 import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import propTypes from "prop-types";
 import Link from "next/link";
 
 export default function Brand({ as, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Brand" });
+  ErrorUnexpectedProps({ props, component: "Brand" });
 
   const { color } = stylesConfig;
   const css = { 

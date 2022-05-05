@@ -1,11 +1,11 @@
 import { P } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
 import PropTypes from "prop-types";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import { node } from "prop-types";
 
 export default function Description({ textAlign, margin, color, text, fontSize, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Description.jsx" });
+  ErrorUnexpectedProps({ props, component: "Description.jsx" });
 
   const { font } = stylesConfig;
 

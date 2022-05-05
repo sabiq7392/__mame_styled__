@@ -1,7 +1,7 @@
 import Container from "../atoms/Container";
 import stylesConfig from "../../../styles.config";
 import propTypes from "prop-types";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Heading from "../molecules/Heading";
 import { H2 } from "../../../styles/MameStyled/core/HtmlTag";
 import { useId } from "react";
@@ -9,7 +9,7 @@ import SetAutoHead from "../../utils/SetAutoHead";
 import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 
 export default function Harbor({ children, member, title, appeal, description, ...props }) {
-  CatchErrorPropsComponent({ props, CatchErrorPropsComponent: "Harbor", type: "Organisms" });
+  ErrorUnexpectedProps({ props, ErrorUnexpectedProps: "Harbor", type: "Organisms" });
 
   const { spacing } = stylesConfig;
   const id = useId();

@@ -2,7 +2,7 @@ import CodePreview from "../../../organisms/CodePreview";
 
 export default function ResultCodePreview() {
   return <>
-    <CodePreview title="Result Code Preview" member="Appbar">
+    <CodePreview title="Result Code Preview" member="Navbar">
       {`
         import { useState, useRef, useEffect } from "react";
         import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";

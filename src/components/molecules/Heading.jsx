@@ -1,12 +1,12 @@
 import { H1, H2, H3, H4, H5, H6, Header, Span } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Description from "../atoms/Description";
 import Appeal from "../atoms/Appeal";
 import stylesConfig from "../../../styles.config";
 import { oneOfType, string, oneOf, node } from "prop-types";
 
 export default function Heading({ head, title, appeal, member, headWeight, description, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Header" });
+  ErrorUnexpectedProps({ props, component: "Header" });
   
   const { color, spacing } = stylesConfig;
 

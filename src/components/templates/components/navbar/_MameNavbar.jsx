@@ -7,7 +7,7 @@ import NavbarNav from "../../../../../styles/MameStyled/core/components/navbar/N
 import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
 import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
 
-export default function Appbar() {
+export default function MameNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0);
   const menuButton = useRef();
@@ -23,6 +23,7 @@ export default function Appbar() {
     observer.observe(navbar.current);
   };
 
+
   useEffect(() => {
     getNavbarHeight();
   }, []);
@@ -34,6 +35,8 @@ export default function Appbar() {
           <NavbarBrand 
             src="/images/logo/mame.svg"
             alt="MAME"
+            width={146}
+            height={36}
           />
           <NavbarToggleMenu 
             menuButton={menuButton} 

@@ -3,9 +3,23 @@ import { string, node } from "prop-types";
 import { requiredPropTypes, requiredProps } from "../../../utils/constants/requiredProps";
 import { createElement } from "react";
 import { number } from "prop-types";
-import { requiredIf } from "../../../../../src/utils/CustomPropTypes";
+import ErrorCannotCombinedProps from "../../utils/handle-error/ErrorCannotCombinedProps";
 
-export default function NavbarBrand({ children, src, alt, width, height, ...props }) {
+export default function NavbarBrand({ 
+  children, 
+  src, 
+  alt, 
+  width, 
+  height, 
+  ...props 
+}) {
+  if (children && (src || alt || width || height)) {
+    ErrorCannotCombinedProps({ 
+      componentName: "NavbarBrand", 
+      note: "Cannot combined props children with: src || alt || width || height" 
+    })
+  } 
+
   return createElement(
     A, 
     { 
@@ -21,9 +35,7 @@ export default function NavbarBrand({ children, src, alt, width, height, ...prop
 }
 
 NavbarBrand.propTypes = {
-  src: (props, propName, componentName) => requiredIf(
-    props, propName, componentName, { notExistProps: ["children", "alt"], shouldType: "string" }
-  ),
+  src: string,
   alt: string,
   children: node,
   height: number,

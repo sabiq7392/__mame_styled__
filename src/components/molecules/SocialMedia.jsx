@@ -1,7 +1,7 @@
 import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 import { A } from "../../../styles/MameStyled/core/HtmlTag";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Linkedin from "../atoms/icons/Linkedin";
 import Github from "../atoms/icons/Github";
 import Instagram from "../atoms/icons/Instagram";
@@ -10,7 +10,7 @@ import link from "../../../link.config";
 const { authors } = link;
 
 export default function SocialMedia({ ...props }) {
-  CatchErrorPropsComponent({ props, component: "SocialMedia.jsx" });
+  ErrorUnexpectedProps({ props, component: "SocialMedia.jsx" });
 
   const { color, spacing, timing } = stylesConfig;
 

@@ -1,9 +1,9 @@
 import TableProperties from "../../organisms/TableProperties";
-import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Harbor from "../../organisms/Harbor";
 
 export default function Properties({ ...props }) {
-  CatchErrorPropsComponent({ props, component: "Properties of Typography" });
+  ErrorUnexpectedProps({ props, component: "Properties of Typography" });
 
   const tbodyData = [
     {

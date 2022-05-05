@@ -1,11 +1,11 @@
 import Preview from "../../../organisms/Preview";
-import Appbar from "./Appbar";
+import MameNavbar from "./_MameNavbar";
 
 export default function ResultPreview() {
 
   return <>
-    <Preview member="Appbar" noLandfield>
-      <Appbar />
+    <Preview member="Navbar" noLandfield>
+      <MameNavbar />
     </Preview>
   </>
 }

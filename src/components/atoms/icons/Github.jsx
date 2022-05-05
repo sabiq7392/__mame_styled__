@@ -1,9 +1,9 @@
 import propTypes from "prop-types";
 import { AiOutlineGithub } from "react-icons/ai";
-import CatchErrorPropsComponent from "../../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 
 export default function Github({ size, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Github" })
+  ErrorUnexpectedProps({ props, component: "Github" })
 
   return (
     <AiOutlineGithub fontSize={size || 24} />

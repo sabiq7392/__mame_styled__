@@ -39,8 +39,8 @@ const link = {
       href: "/screen",
     },
     {
-      title: "Appbar",
-      href: "/components/appbar",
+      title: "Navbar",
+      href: "/components/navbar",
     },
     {
       title: "Accordion",

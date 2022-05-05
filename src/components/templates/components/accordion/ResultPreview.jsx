@@ -1,5 +1,5 @@
 import Preview from "../../../organisms/Preview";
-import MameAccordion from "./Accordion";
+import MameAccordion from "./_MameAccordion";
 
 export default function ResultPreview() {
   return <>

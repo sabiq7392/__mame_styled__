@@ -4,12 +4,12 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Heading from "../molecules/Heading";
 import PropTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import SetAutoHead from "../../utils/SetAutoHead";
 import { useId } from "react";
 
 export default function CodePreview({ title = "Result Code Preview", member, children, ...props }) {
-  CatchErrorPropsComponent({ props, component: "CodePreview.jsx" });
+  ErrorUnexpectedProps({ props, component: "CodePreview.jsx" });
 
   const { spacing } = stylesConfig;
 

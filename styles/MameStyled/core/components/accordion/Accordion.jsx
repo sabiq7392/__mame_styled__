@@ -1,6 +1,16 @@
-import { Div } from "../../HtmlTag"
+import { Div } from "../../HtmlTag";
+import { createElement } from "react";
 
-export default function Accordion({ children }) {
+export default function Accordion({ 
+  children,
+  ...props
+}) {
+  // return createElement(
+  //   Div,
+  //   {
+
+  //   }
+  // );
   return <>
     <Div
       cssXs={{ 
@@ -12,3 +22,7 @@ export default function Accordion({ children }) {
     </Div>
   </>
 }
+
+Accordion.propTypes = {
+
+};

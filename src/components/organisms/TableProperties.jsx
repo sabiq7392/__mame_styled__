@@ -1,10 +1,10 @@
 import stylesConfig from "../../../styles.config";
 import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import propTypes from "prop-types";
 
 export default function TableProperties({ data, ...props }) {
-  CatchErrorPropsComponent({ props, component: "TableProperties" });
+  ErrorUnexpectedProps({ props, component: "TableProperties" });
   
   const { spacing, color, radius } = stylesConfig;
   const cssThThead = {

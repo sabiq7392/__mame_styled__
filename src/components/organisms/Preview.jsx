@@ -1,7 +1,7 @@
 import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
 import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import SetAutoHead from "../../utils/SetAutoHead";
 import Heading from "../molecules/Heading";
 import Landfield from "../atoms/Landfield";
@@ -9,7 +9,7 @@ import { any } from "prop-types";
 import { useId } from "react";
 
 export default function Preview({ member, title = "Result Preview", appeal, description, children, noLandfield, background, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Review", type: "Organisms" });
+  ErrorUnexpectedProps({ props, component: "Review", type: "Organisms" });
 
   const { spacing } = stylesConfig;
 

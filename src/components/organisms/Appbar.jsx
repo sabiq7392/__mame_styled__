@@ -6,7 +6,7 @@
 // import NavbarToggleMenu from "../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
 // import NavLink from "../../../styles/MameStyled/core/components/navbar/NavbarLink";
 // import { Flex } from "../../../styles/MameStyled/core/display/Flex";
-// import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+// import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 
 // export default function Appbar({ ...props }) {
 //   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +25,7 @@
 //   });
 
 //   return (
-//     <CatchErrorPropsComponent props={props} component="Appbar">
+//     <ErrorUnexpectedProps props={props} component="Appbar">
 //       <Navbar navbar={navbar}> 
 //         <NavbarContentWrapper> 
 //           <Flex vCenter>
@@ -48,6 +48,6 @@
 //           </NavbarNav>
 //         </NavbarContentWrapper>
 //       </Navbar>
-//     </CatchErrorPropsComponent>
+//     </ErrorUnexpectedProps>
 //   );
 // }

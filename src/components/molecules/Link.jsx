@@ -1,12 +1,12 @@
 import { default as NextLink } from "next/link";
 import { A } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
 import { useRouter } from "next/router";
 
 export default function Link({ href, title, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Link" });
+  ErrorUnexpectedProps({ props, component: "Link" });
 
   const router = useRouter();
 

@@ -2,10 +2,10 @@ import { string } from "prop-types";
 import { node } from "prop-types";
 import stylesConfig from "../../../styles.config";
 import { Div } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 
 export default function Landfield({ children, background, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Landifield", type: "Molecules" });
+  ErrorUnexpectedProps({ props, component: "Landifield", type: "Molecules" });
 
   const { color, radius, spacing } = stylesConfig;
 

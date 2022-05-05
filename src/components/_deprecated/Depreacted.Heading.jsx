@@ -2,10 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
 import { H1, H2, H3, H4, H5, H6 } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../utils/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../utils/ErrorUnexpectedProps";
 
 export default function Heading({ as, member, title, size, weight, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Heading.jsx" });
+  ErrorUnexpectedProps({ props, component: "Heading.jsx" });
   
   const { color, spacing } = stylesConfig;
 

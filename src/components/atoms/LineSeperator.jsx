@@ -1,9 +1,9 @@
 import stylesConfig from "../../../styles.config";
 import { Div } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../../styles/MameStyled/core/utils/handle-error/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 
 export default function LineSeperator({ ...props }) {
-  CatchErrorPropsComponent({ props, component: "LineSeperator" });
+  ErrorUnexpectedProps({ props, component: "LineSeperator" });
 
   const { color } = stylesConfig;
 

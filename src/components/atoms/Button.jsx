@@ -2,10 +2,10 @@ import Link from "next/link";
 import propTypes from "prop-types";
 import stylesConfig from "../../../styles.config";
 import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag";
-import CatchErrorPropsComponent from "../../utils/CatchErrorPropsComponent";
+import ErrorUnexpectedProps from "../../utils/ErrorUnexpectedProps";
 
 export default function Button({ text, href, ...props }) {
-  CatchErrorPropsComponent({ props, component: "Button" });
+  ErrorUnexpectedProps({ props, component: "Button" });
   
   const { color, radius, timing } = stylesConfig;
 

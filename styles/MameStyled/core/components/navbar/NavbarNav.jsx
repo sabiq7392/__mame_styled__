@@ -3,7 +3,12 @@ import { Div } from "../../HtmlTag";
 import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-const NavbarNav = memo(function NavbarNav({ children, navbarHeight, isMenuOpen, ...props }) {
+const NavbarNav = memo(function NavbarNav({ 
+  children, 
+  navbarHeight, 
+  isMenuOpen, 
+  ...props 
+}) {
   const cssXs = { 
     display: "flex",
     flexDirection: "column",

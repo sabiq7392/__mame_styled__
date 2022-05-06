@@ -1,7 +1,6 @@
 import { number, string } from "prop-types";
-import { memo } from "react";
 
-const MenuIcon = memo(function MenuIcon({ size = 28, color = "white" }) {
+export default function MenuIcon({ size = 28, color = "white" }) {
   return <>
     <svg 
       width={size} 
@@ -16,11 +15,9 @@ const MenuIcon = memo(function MenuIcon({ size = 28, color = "white" }) {
       />
     </svg>
   </>;
-});
+}
 
 MenuIcon.propTypes = {
   size: number,
   color: string,
 };
-
-export default MenuIcon;

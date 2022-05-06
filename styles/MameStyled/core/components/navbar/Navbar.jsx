@@ -1,9 +1,9 @@
 import { oneOf, node, string } from "prop-types";
 import { Nav } from "../../HtmlTag";
-import { createElement, memo } from "react";
+import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-const Navbar = memo(function Navbar({
+function Navbar({
   children, 
   position, 
   direction, 
@@ -31,7 +31,7 @@ const Navbar = memo(function Navbar({
     },
     children,
   );
-});
+}
 
 Navbar.propTypes = {
   children: node.isRequired,

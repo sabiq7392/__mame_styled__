@@ -1,7 +1,6 @@
 import { string, number } from "prop-types";
-import { memo } from "react";
 
-const ChevronDownIcon = memo(function ChevronDownIcon({ size = 18, color = "white" }) {
+export default function ChevronDownIcon({ size = 18, color = "white" }) {
   return <>
     <svg 
       width={size} 
@@ -19,11 +18,10 @@ const ChevronDownIcon = memo(function ChevronDownIcon({ size = 18, color = "whit
       />
     </svg>
   </>;
-});
+}
 
 ChevronDownIcon.propTypes = {
   size: number,
   color: string,
 };
 
-export default ChevronDownIcon;

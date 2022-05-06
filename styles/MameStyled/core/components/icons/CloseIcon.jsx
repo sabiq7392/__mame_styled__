@@ -1,7 +1,6 @@
-import { memo } from "react";
 import { number, string } from "prop-types";
 
-const CloseIcon = memo(function CloseIcon({ size = 24, color = "white" }) {
+export default function CloseIcon({ size = 24, color = "white" }) {
   return <>
     <svg 
       width={size} 
@@ -16,11 +15,9 @@ const CloseIcon = memo(function CloseIcon({ size = 24, color = "white" }) {
       />
     </svg>
   </>;
-});
+}
 
 CloseIcon.propTypes = {
   size: number,
   color: string,
 };
-
-export default CloseIcon;

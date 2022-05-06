@@ -1,5 +1,5 @@
 import { Div } from "../../HtmlTag";
-import { createElement, memo } from "react";
+import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { node } from "prop-types";
 

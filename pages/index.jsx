@@ -1,5 +1,4 @@
 import stylesConfig from "../styles.config";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 
 // const H2 = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.H2));

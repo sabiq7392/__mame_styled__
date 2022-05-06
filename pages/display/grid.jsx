@@ -1,9 +1,4 @@
-// import Properties from "../../src/components/templates/display-grid/Properties";
-// import GridTemplateColumns from "../../src/components/templates/display-grid/GridTemplateColumns";
 import Harbor from "../../src/components/organisms/Harbor";
-// import GridTemplateRows from "../../src/components/templates/display-grid/GridTemplatRows";
-// import GridTemplateAreas from "../../src/components/templates/display-grid/GridTemplateAreas";
-
 import dynamic from "next/dynamic";
 
 const Properties = dynamic(() => import("../../src/components/templates/display-grid/Properties"));

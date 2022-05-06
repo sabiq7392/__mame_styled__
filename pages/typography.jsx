@@ -7,9 +7,18 @@ import LineHeight from "../src/components/templates/typography/LineHeight";
 import Color from "../src/components/templates/typography/Color";
 import FontVariant from "../src/components/templates/typography/FontVariant";
 import Harbor from "../src/components/organisms/Harbor";
+import dynamic from "next/dynamic";
+
+// const Properties = dynamic(() => import("../src/components/templates/typography/Properties"));
+// const FontSize = dynamic(() => import("../src/components/templates/typography/FontSize"));
+// const FontWeight = dynamic(() => import("../src/components/templates/typography/FontWeight"));
+// const TextAlign = dynamic(() => import("../src/components/templates/typography/TextAlign"));
+// const FontStyle = dynamic(() => import("../src/components/templates/typography/TextAlign"));
+// const LineHeight = dynamic(() => import("../src/components/templates/typography/LineHeight"));
+// const Color = dynamic(() => import("../src/components/templates/typography/Color"));
+// const FontVariant = dynamic(() => import("../src/components/templates/typography/FontVariant"));
 
 export default function IsTypography() {
-
   return (
     <Harbor 
       title="Typography" 

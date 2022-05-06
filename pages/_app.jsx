@@ -8,6 +8,7 @@ import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
+import "@fontsource/poppins"; // Defaults to weight 400.
 
 // const Footer = dynamic(() => import("../src/components/organisms/Footer"));
 // const Container = dynamic(() => import("../src/components/atoms/Container"));

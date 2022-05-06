@@ -1,10 +1,10 @@
-import { useState, useRef, useEffect, memo } from "react";
+import { useState, useRef, useEffect } from "react";
 import { bool } from "prop-types";
 import Accordion from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
 import AccordionHeader from "../../../../../styles/MameStyled/core/components/accordion/AccordionHeader";
 import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
 
-const MameAccordion = memo(function MameAccordion({ 
+function MameAccordion({ 
   isAlwaysOpen = false, 
 }) {
   const [isContentOpen, setIsContentOpen] = useState(isAlwaysOpen);
@@ -56,7 +56,7 @@ const MameAccordion = memo(function MameAccordion({
       </AccordionBody>
     </Accordion>
   </>;
-});
+}
 
 MameAccordion.propTypes = {
   isAlwaysOpen: bool,

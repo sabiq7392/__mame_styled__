@@ -3,7 +3,7 @@ import { createElement, memo } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { node } from "prop-types";
 
-const Accordion = memo(function Accordion({ 
+function Accordion({ 
   children,
   _ref,
   ...props
@@ -21,7 +21,7 @@ const Accordion = memo(function Accordion({
     },
     children,
   );
-});
+}
 
 Accordion.propTypes = {
   children: node.isRequired,

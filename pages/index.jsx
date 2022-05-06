@@ -1,19 +1,20 @@
 import stylesConfig from "../styles.config";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 
-// const H2 = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.H2));
-// const Figure = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Figure));
-// const Grid = dynamic(() => import("../styles/MameStyled/core/display/Grid").then(mod => mod.Grid));
-// const Description = dynamic(() => import("../src/components/atoms/Description"));
-// const Container = dynamic(() => import("../src/components/atoms/Container"));
-// const HtmlTag = dynamic(() => import("./html-tag"));
-// const Welcome = dynamic(() => import("../src/components/organisms/Welcome"));
-import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
-import Description from "../src/components/atoms/Description";
-import Container from "../src/components/atoms/Container";
-import { Grid } from "../styles/MameStyled/core/display/Grid";
-import HtmlTag from "./html-tag";
-import Welcome from "../src/components/organisms/Welcome";
+const H2 = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.H2));
+const Figure = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Figure));
+const Grid = dynamic(() => import("../styles/MameStyled/core/display/Grid").then(mod => mod.Grid));
+const Description = dynamic(() => import("../src/components/atoms/Description"));
+const Container = dynamic(() => import("../src/components/atoms/Container"));
+const HtmlTag = dynamic(() => import("./html-tag"));
+const Welcome = dynamic(() => import("../src/components/organisms/Welcome"));
+// import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
+// import Description from "../src/components/atoms/Description";
+// import Container from "../src/components/atoms/Container";
+// import { Grid } from "../styles/MameStyled/core/display/Grid";
+// import HtmlTag from "./html-tag";
+// import Welcome from "../src/components/organisms/Welcome";
 
 export default function Home() {
   const { spacing } = stylesConfig;

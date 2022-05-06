@@ -10,9 +10,3 @@ export default function ResultPreview() {
     </Preview>
   </>;
 }
-
-
-
-
-
-

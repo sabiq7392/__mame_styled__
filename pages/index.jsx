@@ -1,4 +1,7 @@
 import stylesConfig from "../styles.config";
+import dynamic from "next/dynamic";
+
+
 import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
 import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";

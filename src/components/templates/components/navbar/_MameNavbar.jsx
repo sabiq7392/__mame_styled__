@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect, memo } from "react";
-
 import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
 import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
 import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";

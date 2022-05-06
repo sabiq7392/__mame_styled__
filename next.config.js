@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+let nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   compiler: {
@@ -9,5 +9,11 @@ const nextConfig = {
     // },
   },
 };
+
+// const withBundleAnalyzer = require("@next/bundle-analyzer")({
+//   // enabled: process.env.ANALYZE === "true",
+//   enabled: true,
+// });
+// nextConfig = withBundleAnalyzer(nextConfig);
 
 module.exports = nextConfig;

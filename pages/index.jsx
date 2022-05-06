@@ -1,8 +1,9 @@
 import stylesConfig from "../styles.config";
 import dynamic from "next/dynamic";
 
-
-import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
+const H2 = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.H2));
+const Figure = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Figure));
+// import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
 import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";

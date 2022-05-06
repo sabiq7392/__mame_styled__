@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build ",
+    "build": "next build",
     "start": "next start",
+    "audit": "lighthouse http://localhost:3000/ --view",
     "lint": "next lint",
     "doc": "jsdoc -c jsdoc.json"
   },
@@ -27,6 +28,7 @@
     "eslint-config-next": "12.1.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "jsdocs": "^1.0.0"
+    "jsdocs": "^1.0.0",
+    "lighthouse": "^9.5.0"
   }
 }

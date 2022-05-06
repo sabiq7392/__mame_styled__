@@ -1,28 +1,27 @@
 /* eslint-disable react/prop-types */
-// import Head from "next/head";
-// import { GlobalStyles } from "../styles/GlobalStyles";
-// import { Main } from "../styles/MameStyled/core/HtmlTag";
-// import AsideLeft from "../src/components/organisms/AsideLeft";
-// import Container from "../src/components/atoms/Container";
-// import { Grid } from "../styles/MameStyled/core/display/Grid";
-// import Footer from "../src/components/organisms/Footer";
+import Head from "next/head";
+import { GlobalStyles } from "../styles/GlobalStyles";
+import { Main } from "../styles/MameStyled/core/HtmlTag";
+import AsideLeft from "../src/components/organisms/AsideLeft";
+import Container from "../src/components/atoms/Container";
+import { Grid } from "../styles/MameStyled/core/display/Grid";
+import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
 import dynamic from "next/dynamic";
 
-const Head = dynamic(() => import("next/head"));
-const Footer = dynamic(() => import("../src/components/organisms/Footer"));
-const Container = dynamic(() => import("../src/components/atoms/Container"));
-const AsideLeft = dynamic(() => import("../src/components/organisms/AsideLeft"));
-const GlobalStyles = dynamic(() => 
-  import("../styles/GlobalStyles").then(mod => mod.GlobalStyles),
-);
-const Main = dynamic(() => 
-  import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Main),
-);
-const Grid = dynamic(() => 
-  import("../styles/MameStyled/core/display/Grid").then(mod => mod.Grid),
-);
+// const Footer = dynamic(() => import("../src/components/organisms/Footer"));
+// const Container = dynamic(() => import("../src/components/atoms/Container"));
+// const AsideLeft = dynamic(() => import("../src/components/organisms/AsideLeft"));
+// const GlobalStyles = dynamic(() => 
+//   import("../styles/GlobalStyles").then(mod => mod.GlobalStyles),
+// );
+// const Main = dynamic(() => 
+//   import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Main),
+// );
+// const Grid = dynamic(() => 
+//   import("../styles/MameStyled/core/display/Grid").then(mod => mod.Grid),
+// );
 
 // import Appbar from "../src/components/organisms/Appbar";
 

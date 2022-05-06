@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "audit": "lighthouse http://localhost:3000/ --view",
+    "audit": "lighthouse http://localhost:3000/components/accordion/ --view",
     "lint": "next lint",
     "doc": "jsdoc -c jsdoc.json"
   },

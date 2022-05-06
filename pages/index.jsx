@@ -1,13 +1,18 @@
 import stylesConfig from "../styles.config";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
-const H2 = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.H2));
-const Figure = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Figure));
-// import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
+// const H2 = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.H2));
+// const Figure = dynamic(() => import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Figure));
+// const Grid = dynamic(() => import("../styles/MameStyled/core/display/Grid").then(mod => mod.Grid));
+// const Description = dynamic(() => import("../src/components/atoms/Description"));
+// const Container = dynamic(() => import("../src/components/atoms/Container"));
+// const HtmlTag = dynamic(() => import("./html-tag"));
+// const Welcome = dynamic(() => import("../src/components/organisms/Welcome"));
+import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
 import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
-import Image from "next/image";
 import HtmlTag from "./html-tag";
 import Welcome from "../src/components/organisms/Welcome";
 
@@ -28,8 +33,8 @@ export default function Home() {
         <H2 cssXs={{ color: "white" }} fontSize={{ lg: 32 }}>Installation</H2>
         <Description 
           text="
-            install Bootstrap’s source Sass and JavaScript files via npm, Composer, or Meteor. 
-            Package managed installs don’t include documentation or our full build scripts. 
+            install Bootstrap's source Sass and JavaScript files via npm, Composer, or Meteor. 
+            Package managed installs don't include documentation or our full build scripts. 
             You can also use our npm template repo to quickly generate a Bootstrap project via npm.
           " 
           fontSize={{ xs: 12, md: 14, lg: 16 }}

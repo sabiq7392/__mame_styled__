@@ -22,7 +22,7 @@ export default function MameCarousel() {
         cssXs={{ 
           display: "flex",
           background: "#222",
-          width: 1000,
+          width: "100%",
           // height: 400,
           overflowX: "hidden",
         }}

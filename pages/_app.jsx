@@ -9,7 +9,6 @@ import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
 import "@fontsource/poppins"; // Defaults to weight 400.
-import dynamic from "next/dynamic";
 
 const { spacing, color } = stylesConfig;
 

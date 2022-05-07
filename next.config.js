@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -8,6 +8,13 @@ let nextConfig = {
     //   exclude: ["error"],
     // },
   },
+  exportPathMap: async (
+    defaultPathMap, 
+    { dev, dir, outDir, distDir, buildId },
+  ) => ({
+    "/": { page: "/", },
+    "/html-tag": { page: "/html-tag", },
+  }),
 };
 
 // const withBundleAnalyzer = require("@next/bundle-analyzer")({

@@ -13,8 +13,6 @@ import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
 import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
-// import HtmlTag from "./html-tag";
-// import Welcome from "../src/components/organisms/Welcome";
 
 export default function Home() {
   const { spacing } = stylesConfig;

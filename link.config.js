@@ -39,12 +39,16 @@ const link = {
       href: "/screen",
     },
     {
-      title: "Navbar",
-      href: "/components/navbar",
-    },
-    {
       title: "Accordion",
       href: "/components/accordion",
+    },
+    {
+      title: "Carousel",
+      href: "/components/carousel",
+    },
+    {
+      title: "Navbar",
+      href: "/components/navbar",
     },
   ],
 };

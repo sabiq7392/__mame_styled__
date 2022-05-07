@@ -9,6 +9,7 @@ import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
 import "@fontsource/poppins"; // Defaults to weight 400.
+import dynamic from "next/dynamic";
 
 // const Footer = dynamic(() => import("../src/components/organisms/Footer"));
 // const Container = dynamic(() => import("../src/components/atoms/Container"));
@@ -27,7 +28,7 @@ import "@fontsource/poppins"; // Defaults to weight 400.
 
 const { spacing, color } = stylesConfig;
 
-export default function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return (
@@ -70,3 +71,5 @@ export default function MyApp({ Component, pageProps }) {
   );
 }
 
+// eslint-disable-next-line no-undef
+export default dynamic(() => Promise.resolve(MyApp));

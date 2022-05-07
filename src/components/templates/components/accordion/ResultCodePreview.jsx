@@ -1,6 +1,3 @@
-// import dynamic from "next/dynamic";
-
-// const CodePreview = dynamic(() => import("../../../organisms/CodePreview"));
 import CodePreview from "../../../organisms/CodePreview";
 
 export default function ResultCodePreview() {

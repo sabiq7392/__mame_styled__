@@ -14,7 +14,7 @@ import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
 
-export default function Home() {
+function Home() {
   const { spacing } = stylesConfig;
 
   return (
@@ -59,3 +59,6 @@ export default function Home() {
     </Grid>
   );
 }
+
+// eslint-disable-next-line no-undef
+export default Home;

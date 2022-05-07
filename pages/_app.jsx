@@ -11,24 +11,9 @@ import { useRouter } from "next/router";
 import "@fontsource/poppins"; // Defaults to weight 400.
 import dynamic from "next/dynamic";
 
-// const Footer = dynamic(() => import("../src/components/organisms/Footer"));
-// const Container = dynamic(() => import("../src/components/atoms/Container"));
-// const AsideLeft = dynamic(() => import("../src/components/organisms/AsideLeft"));
-// const GlobalStyles = dynamic(() => 
-//   import("../styles/GlobalStyles").then(mod => mod.GlobalStyles),
-// );
-// const Main = dynamic(() => 
-//   import("../styles/MameStyled/core/HtmlTag").then(mod => mod.Main),
-// );
-// const Grid = dynamic(() => 
-//   import("../styles/MameStyled/core/display/Grid").then(mod => mod.Grid),
-// );
-
-// import Appbar from "../src/components/organisms/Appbar";
-
 const { spacing, color } = stylesConfig;
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return (
@@ -72,4 +57,4 @@ function MyApp({ Component, pageProps }) {
 }
 
 // eslint-disable-next-line no-undef
-export default dynamic(() => Promise.resolve(MyApp));
+// export default dynamic(() => Promise.resolve(MyAepp));

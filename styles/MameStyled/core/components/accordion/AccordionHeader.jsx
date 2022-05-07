@@ -6,9 +6,10 @@ import { oneOf } from "prop-types";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 
 const AccordionHeader = memo(function AccordionHeader({ 
-  refButtonAccordion, 
-  setIsContentOpen, 
+  // refButtonAccordion, 
+  _ref,
   isContentOpen, 
+  setIsContentOpen, 
   transitionSpeed = 400, 
   title, 
   icon,
@@ -26,7 +27,7 @@ const AccordionHeader = memo(function AccordionHeader({
       }),
     },
     <Button 
-      ref={refButtonAccordion}
+      ref={_ref}
       cssXs={{ 
         display: "flex", 
         width: "100%", 
@@ -59,7 +60,7 @@ const AccordionHeader = memo(function AccordionHeader({
 });
 
 AccordionHeader.propTypes = {
-  refButtonAccordion: any.isRequired,
+  _ref: any,
   setIsContentOpen: func.isRequired,
   isContentOpen: bool.isRequired,
   transitionSpeed: number,

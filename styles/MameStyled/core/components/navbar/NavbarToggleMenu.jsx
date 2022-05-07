@@ -1,17 +1,18 @@
 import { Button } from "../../HtmlTag";
-import { any, bool, func, node } from "prop-types";
-import { createElement, memo } from "react";
+import { bool, func, node } from "prop-types";
+import { createElement, memo, useRef } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import MenuIcon from "../icons/MenuIcon";
 import CloseIcon from "../icons/CloseIcon";
 
 const NavbarToggleMenu = memo(function NavbarToggleMenu({ 
-  menuButton, 
   isMenuOpen, 
   setIsMenuOpen, 
   icon,
   ...props
 }) {
+  const menuButton = useRef();
+
   return createElement(
     Button,
     {
@@ -25,7 +26,6 @@ const NavbarToggleMenu = memo(function NavbarToggleMenu({
           minWidth: 44,
           minHeight: 44,
           marginLeft: "auto",
-          // border: "1px solid rgba(255,255,255, 0.1)",
           border: "none",
           borderRadius: 2,
           cursor: "pointer",
@@ -40,7 +40,6 @@ const NavbarToggleMenu = memo(function NavbarToggleMenu({
 });
 
 NavbarToggleMenu.propTypes = {
-  menuButton: any.isRequired,
   isMenuOpen: bool.isRequired,
   setIsMenuOpen: func.isRequired,
   icon: node,

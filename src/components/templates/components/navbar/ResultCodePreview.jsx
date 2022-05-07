@@ -7,51 +7,36 @@ export default function ResultCodePreview() {
   return <>
     <CodePreview title="Result Code Preview" member="Navbar">
       {`
-        import { useState, useRef, useEffect } from "react";
-        import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
+        import { useState, useRef, memo } from "react";
         import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
         import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
         import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
         import NavbarNav from "../../../../../styles/MameStyled/core/components/navbar/NavbarNav";
         import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
         import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
+        import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
         
-        export default function Appbar() {
-          const [isMenuOpen, setIsMenuOpen] = useState(false);
-          const [navbarHeight, setNavbarHeight] = useState(0);
-          const menuButton = useRef();
+        const MameNavbar = memo(function MameNavbar() {
+          const [isMenuOpen, setIsMenuOpen] = useState(false); 
           const navbar = useRef();
         
-          const getNavbarHeight = () => {
-            const observer = new ResizeObserver((entries) => {
-              const navbarHeight = entries[0].target.offsetHeight;
-        
-              return setNavbarHeight(navbarHeight);
-            });
-        
-            observer.observe(navbar.current);
-          };
-        
-          useEffect(() => {
-            getNavbarHeight();
-          });
-        
           return (
-            <Navbar navbar={navbar}> 
+            <Navbar _ref={navbar}> 
               <NavbarContentWrapper> 
                 <Flex vCenter>
                   <NavbarBrand 
                     src="/images/logo/mame.svg"
                     alt="MAME"
+                    width={146}
+                    height={36}
                   />
                   <NavbarToggleMenu 
-                    menuButton={menuButton} 
                     isMenuOpen={isMenuOpen} 
                     setIsMenuOpen={setIsMenuOpen} 
                   />
                 </Flex>
         
-                <NavbarNav navbarHeight={navbarHeight} isMenuOpen={isMenuOpen}>
+                <NavbarNav isMenuOpen={isMenuOpen} refNavbar={navbar}>
                   <NavLink title="Home" href="#home" />
                   <NavLink title="About" href="#about" />
                   <NavLink title="Contact" href="#contact" />
@@ -60,7 +45,9 @@ export default function ResultCodePreview() {
               </NavbarContentWrapper>
             </Navbar>
           );
-        }
+        });
+        
+        export default MameNavbar;
       `}
     </CodePreview>
   </>;

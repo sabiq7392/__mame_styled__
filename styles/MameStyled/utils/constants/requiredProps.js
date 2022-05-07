@@ -1,4 +1,3 @@
-import { any } from "prop-types";
 import { object, string } from "prop-types";
 
 export const requiredProps = (props, { 
@@ -42,5 +41,5 @@ export const requiredPropTypes = {
   cssXxl: object,
   className: string,
   id: string,
-  ref: any,
+  // ref: any,
 };

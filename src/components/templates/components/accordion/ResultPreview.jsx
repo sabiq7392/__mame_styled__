@@ -10,7 +10,7 @@ export default function ResultPreview() {
   return <>
     <Preview member="Accordion" noLandfield>
       <MameAccordion isAlwaysOpen={true} />
-      <MameAccordion isAlwaysOpen={true} />
+      <MameAccordion isAlwaysOpen={false} />
     </Preview>
   </>;
 }

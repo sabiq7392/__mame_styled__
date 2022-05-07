@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, memo } from "react";
+import { useState, useRef, memo } from "react";
 import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
 import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
 import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
@@ -9,23 +9,7 @@ import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
 
 const MameNavbar = memo(function MameNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
-  const [navbarHeight, setNavbarHeight] = useState(0);
-  const menuButton = useRef();
   const navbar = useRef();
-
-  const getNavbarHeight = () => {
-    const observer = new ResizeObserver((entries) => {
-      const navbarHeight = entries[0].target.offsetHeight;
-
-      return setNavbarHeight(navbarHeight);
-    });
-
-    observer.observe(navbar.current);
-  };
-
-  useEffect(() => {
-    getNavbarHeight();
-  }, []);
 
   return (
     <Navbar _ref={navbar}> 
@@ -38,13 +22,12 @@ const MameNavbar = memo(function MameNavbar() {
             height={36}
           />
           <NavbarToggleMenu 
-            menuButton={menuButton} 
             isMenuOpen={isMenuOpen} 
             setIsMenuOpen={setIsMenuOpen} 
           />
         </Flex>
 
-        <NavbarNav navbarHeight={navbarHeight} isMenuOpen={isMenuOpen}>
+        <NavbarNav isMenuOpen={isMenuOpen} refNavbar={navbar}>
           <NavLink title="Home" href="#home" />
           <NavLink title="About" href="#about" />
           <NavLink title="Contact" href="#contact" />

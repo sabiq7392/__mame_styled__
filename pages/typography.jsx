@@ -7,7 +7,6 @@ import LineHeight from "../src/components/templates/typography/LineHeight";
 import Color from "../src/components/templates/typography/Color";
 import FontVariant from "../src/components/templates/typography/FontVariant";
 import Harbor from "../src/components/organisms/Harbor";
-import dynamic from "next/dynamic";
 
 // const Properties = dynamic(() => import("../src/components/templates/typography/Properties"));
 // const FontSize = dynamic(() => import("../src/components/templates/typography/FontSize"));

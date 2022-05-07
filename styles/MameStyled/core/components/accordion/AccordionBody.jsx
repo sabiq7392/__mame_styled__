@@ -1,35 +1,49 @@
 import { Div } from "../../HtmlTag";
-import { createElement, memo } from "react";
+import { createElement, memo, useRef, useEffect, useState } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
-import { bool } from "prop-types";
-import { number } from "prop-types";
-import { any } from "prop-types";
-import { node } from "prop-types";
+import { bool, number, any, node } from "prop-types";
 
 const AccordionBody = memo(function AccordionBody({ 
   isContentOpen, 
   transitionSpeed, 
-  heightContent, 
   _ref,
   children,
   ...props
 }) {
+  const [heightContent, setHeightContent] = useState();
+  const content = useRef();
+
+  const getHeightContent = () => {
+    const observer = new ResizeObserver((entries) => {
+      const contentHeight = entries[0].target.offsetHeight;
+
+      return setHeightContent(contentHeight);
+    });
+
+    observer.observe(content.current);
+  };
+
+  useEffect(() => {
+    getHeightContent();
+  }, []);
+
   return createElement(
     Div,
     {
+      ref: _ref,
       ...requiredProps(props, {
-      cssXs: { 
-        display: isContentOpen ? "grid" : setTimeout(() => "none", transitionSpeed),
-        background: "#222", 
-        color: "white", 
-        overflow: "hidden", 
-        transition: `height ${transitionSpeed}ms ease!important`,
-        height: isContentOpen ? heightContent : 0,
-      }
+        cssXs: { 
+          display: isContentOpen && "grid",
+          background: "#222", 
+          color: "white", 
+          overflow: "hidden", 
+          transition: `height ${transitionSpeed}ms ease!important`,
+          height: isContentOpen ? heightContent : 0,
+        }
       }),
     },
     <Div
-      ref={_ref}
+      ref={content}
       cssXs={{ padding: "1rem" }}
     >
       {children}
@@ -39,8 +53,7 @@ const AccordionBody = memo(function AccordionBody({
 
 AccordionBody.propTypes = {
   isContentOpen: bool.isRequired,
-  heightContent: number.isRequired,
-  _ref: any.isRequired,
+  _ref: any,
   children: node.isRequired,
   transitionSpeed: number,
   ...requiredPropTypes,

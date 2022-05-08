@@ -28,7 +28,7 @@ export default function MameCarousel() {
             <Img 
               src="/images/photos/example-1.jpg"
               alt="example-1"
-              style={{ width: "100%", height: 300, objectFit: "cover" }}
+              cssXs={{ width: "100%", height: 300, objectFit: "cover" }}
             />
             <Figcaption cssXs={{ color: "#00B4D8" }}>
               <H2>Example 1</H2>
@@ -44,7 +44,7 @@ export default function MameCarousel() {
             <Img 
               src="/images/photos/example-2.jpg"
               alt="example-1"
-              style={{ width: "100%", height: 300, objectFit: "cover" }}
+              cssXs={{ width: "100%", height: 300, objectFit: "cover" }}
             />
             <Figcaption cssXs={{ color: "#00B4D8" }}>
               <H2>Example 2</H2>
@@ -60,7 +60,7 @@ export default function MameCarousel() {
             <Img 
               src="/images/photos/example-3.jpg"
               alt="example-1"
-              style={{ width: "100%", height: 300, objectFit: "cover" }}
+              cssXs={{ width: "100%", height: 300, objectFit: "cover" }}
             />
             <Figcaption cssXs={{ color: "#00B4D8" }}>
               <H2>Example 3</H2>

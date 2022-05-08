@@ -3,7 +3,7 @@ import { Div, Button } from "../../HtmlTag";
 import { createElement } from "react";
 import { func, number, array } from "prop-types";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
-import { useMemo, memo } from "react";
+import { memo } from "react";
 
 export default function CarouselIndicatorButtons({ 
   carouselItems, 
@@ -41,7 +41,6 @@ const IndicatorsButtons = memo(function IndicatorsButtons({
   carouselItem, 
   ...props 
 }) {
-  useMemo(() => console.log(isActive), [isActive]);
   return createElement(
     Button,
     {

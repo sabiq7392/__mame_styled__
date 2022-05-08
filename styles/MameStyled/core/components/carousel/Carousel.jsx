@@ -1,9 +1,9 @@
 import { node, any, number, array, func } from "prop-types";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { Div } from "../../HtmlTag";
-import { createElement, useCallback, useEffect } from "react";
+import { createElement, useCallback, useEffect, memo } from "react";
 
-export default function Carousel({ 
+const Carousel = memo(function Carousel({ 
   children, 
   _ref, 
   isActive, 
@@ -75,7 +75,7 @@ export default function Carousel({
     },
     children,
   );
-}
+});
 
 Carousel.propTypes = {
   children: node.isRequired,
@@ -88,3 +88,5 @@ Carousel.propTypes = {
   _ref: any,
   ...requiredPropTypes,
 };
+
+export default Carousel;

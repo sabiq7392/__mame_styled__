@@ -15,11 +15,11 @@ export default function ResultCodePreview() {
         import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
         import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
         import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
-        
+
         const MameNavbar = memo(function MameNavbar() {
           const [isMenuOpen, setIsMenuOpen] = useState(false); 
           const navbar = useRef();
-        
+
           return (
             <Navbar _ref={navbar}> 
               <NavbarContentWrapper> 
@@ -35,7 +35,7 @@ export default function ResultCodePreview() {
                     setIsMenuOpen={setIsMenuOpen} 
                   />
                 </Flex>
-        
+
                 <NavbarNav isMenuOpen={isMenuOpen} refNavbar={navbar}>
                   <NavLink title="Home" href="#home" />
                   <NavLink title="About" href="#about" />
@@ -46,8 +46,9 @@ export default function ResultCodePreview() {
             </Navbar>
           );
         });
-        
+
         export default MameNavbar;
+
       `}
     </CodePreview>
   </>;

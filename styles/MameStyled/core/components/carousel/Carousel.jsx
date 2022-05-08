@@ -18,10 +18,12 @@ export default function Carousel({
     const observer = new ResizeObserver(() => (
       document
         .getElementsByClassName("mame-carousel-item")[isActive]
-        .scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+        ?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
     ));
 
-    observer.observe(document.querySelector("body"));
+    if (document.getElementsByClassName("mame-carousel-item")) {
+      observer.observe(document.querySelector("body"));
+    }
   }, [isActive]);
 
   const autoSwitchSlide = useCallback((timing) => {

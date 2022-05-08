@@ -1,5 +1,9 @@
-import { Div, H2, P, Button, Img, Figure, Figcaption } from "../../../../../styles/MameStyled/core/HtmlTag";
+import { H2, P, Img, Figure, Figcaption } from "../../../../../styles/MameStyled/core/HtmlTag";
 import { useRef, useEffect, useState, useCallback } from "react";
+import Carousel from "../../../../../styles/MameStyled/core/components/carousel/Carousel";
+import CarouselItemsContainer from "../../../../../styles/MameStyled/core/components/carousel/CarouselItemsContainer";
+import CarouselIndicatorButtons from "../../../../../styles/MameStyled/core/components/carousel/CarouselIndicatorButtons";
+import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
 
 export default function MameCarousel() {
   const carouselContainer = useRef();
@@ -79,83 +83,5 @@ export default function MameCarousel() {
         setIsActive={setIsActive}
       />
     </Carousel>
-  </>;
-}
-
-function Carousel({ children }) {
-  return <>
-    <Div
-      cssXs={{ 
-        display: "grid",
-        gap: "1rem"
-      }}
-    >
-      {children}
-    </Div>
-  </>;
-}
-
-function CarouselItemsContainer({ children, _ref }) {
-  return <>
-    <Div 
-      ref={_ref}
-      cssXs={{ 
-        display: "flex",
-        background: "#222",
-        width: "100%",
-        // height: 400,
-        overflowX: "hidden",
-      }}
-    >
-      {children}
-    </Div>
-  </>;
-}
-
-function CarouselIndicatorButtons({ carouselItems, isActive, setIsActive }) {
-  return <>
-    <Div cssXs={{ display: "flex", gap: 3 }}>
-      {carouselItems.map((carouselItem, index) => 
-        <Button
-          key={index}
-          cssXs={{
-            width: 16,
-            aspectRatio: "1 / 1",
-            background: isActive === index ? "#00B4D8" : "rgba(0,0,0,0)",
-            border: "2px solid #00B4D8",
-            borderRadius: "50%",
-            cursor: "pointer",
-          }} 
-          onClick={() => {
-            setIsActive(index);
-            carouselItem.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-          }}
-        />  
-      )}
-    </Div>
-  </>;
-}
-
-function CarouselItem({ children }) {
-  
-  useEffect(() => {
-
-  }, []);
-  return <>
-    <Div 
-      className="mame-carousel-item"
-      cssXs={{ 
-        display: "flex",
-        flexShrink: 0,
-        width: "100%",
-        gap: 10, 
-        height: "100%", 
-        padding: "2rem" 
-      }}
-    >
-      <Div>
-        {children}
-      </Div>
-    </Div>
   </>;
 }

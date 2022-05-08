@@ -1,5 +1,5 @@
 import { H2, P, Img, Figure, Figcaption } from "../../../../../styles/MameStyled/core/HtmlTag";
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useState } from "react";
 import Carousel from "../../../../../styles/MameStyled/core/components/carousel/Carousel";
 import CarouselItemsContainer from "../../../../../styles/MameStyled/core/components/carousel/CarouselItemsContainer";
 import CarouselIndicatorButtons from "../../../../../styles/MameStyled/core/components/carousel/CarouselIndicatorButtons";
@@ -10,23 +10,15 @@ export default function MameCarousel() {
   const [carouselItems, setCarouselItems] = useState([]);
   const [isActive, setIsActive] = useState(0);
 
-  const repositionCarouselItemsWhenResize = useCallback(() => {
-    const observer = new ResizeObserver(() => (
-      document
-        .getElementsByClassName("mame-carousel-item")[isActive]
-        .scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
-    ));
-
-    observer.observe(document.querySelector("body"));
-  }, [isActive]);
-
-  useEffect(() => {
-    setCarouselItems([...carouselContainer.current.children]);
-    repositionCarouselItemsWhenResize();
-  }, [repositionCarouselItemsWhenResize]);
-
   return <>
-    <Carousel>
+    <Carousel
+      isActive={isActive}
+      carouselItems={carouselItems}
+      setCarouselItems={setCarouselItems}
+      setIsActive={setIsActive}
+      carouselContainer={carouselContainer}
+      timingAutoSwitchSlide={3000}
+    >
       <CarouselItemsContainer _ref={carouselContainer}>
         <CarouselItem>
           <Figure>

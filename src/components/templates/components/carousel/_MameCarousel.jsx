@@ -11,13 +11,13 @@ export default function MameCarousel() {
   const [isActive, setIsActive] = useState(0);
 
   const repositionCarouselItemsWhenResize = useCallback(() => {
-    const observer = new ResizeObserver(entries => {
-      const entry = entries[0].target.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+    const observer = new ResizeObserver(() => (
+      document
+        .getElementsByClassName("mame-carousel-item")[isActive]
+        .scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+    ));
 
-      return entry;
-    });
-
-    observer.observe(document.getElementsByClassName("mame-carousel-item")[isActive]);
+    observer.observe(document.querySelector("body"));
   }, [isActive]);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function MameCarousel() {
             </Figcaption>
           </Figure>
         </CarouselItem>
-        <CarouselItem>
+        <CarouselItem> 
           <Figure>
             <Img 
               src="/images/photos/example-2.jpg"

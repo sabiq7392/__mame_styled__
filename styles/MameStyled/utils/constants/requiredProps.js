@@ -13,6 +13,7 @@ export const requiredProps = (props, {
   hoverLg,
   hoverXl,
   hoverXxl,
+  className,
 }) => ({
   cssXs: { ...cssXs, ...props.cssXs },
   cssSm: { ...cssSm, ...props.cssSm },
@@ -28,7 +29,7 @@ export const requiredProps = (props, {
   hoverXxl: { ...hoverXxl, ...props.hoverXxl },
   // ref: props._ref,
   debug: props.debug && true,
-  className: props.className,
+  className: (className ??= "") + " " + (props.className ??= ""),
   id: props.id,
 });
 

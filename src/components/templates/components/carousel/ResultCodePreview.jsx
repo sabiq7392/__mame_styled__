@@ -10,12 +10,13 @@ export default function ResultCodePreview() {
         import CarouselItemsContainer from "../../../../../styles/MameStyled/core/components/carousel/CarouselItemsContainer";
         import CarouselIndicatorButtons from "../../../../../styles/MameStyled/core/components/carousel/CarouselIndicatorButtons";
         import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
-        
+
         export default function MameCarousel() {
           const carouselContainer = useRef();
           const [carouselItems, setCarouselItems] = useState([]);
           const [isActive, setIsActive] = useState(0);
-        
+          const [isClicked, setIsClicked] = useState(false);
+
           return <>
             <Carousel
               isActive={isActive}
@@ -23,6 +24,8 @@ export default function ResultCodePreview() {
               setCarouselItems={setCarouselItems}
               setIsActive={setIsActive}
               carouselContainer={carouselContainer}
+              isClicked={isClicked}
+              setIsClicked={setIsClicked}
               timingAutoSwitchSlide={3000}
             >
               <CarouselItemsContainer _ref={carouselContainer}>
@@ -31,7 +34,7 @@ export default function ResultCodePreview() {
                     <Img 
                       src="/images/photos/example-1.jpg"
                       alt="example-1"
-                      style={{ width: "100%", height: 300, objectFit: "cover" }}
+                      cssXs={{ width: "100%", height: 300, objectFit: "cover" }}
                     />
                     <Figcaption cssXs={{ color: "#00B4D8" }}>
                       <H2>Example 1</H2>
@@ -47,7 +50,7 @@ export default function ResultCodePreview() {
                     <Img 
                       src="/images/photos/example-2.jpg"
                       alt="example-1"
-                      style={{ width: "100%", height: 300, objectFit: "cover" }}
+                      cssXs={{ width: "100%", height: 300, objectFit: "cover" }}
                     />
                     <Figcaption cssXs={{ color: "#00B4D8" }}>
                       <H2>Example 2</H2>
@@ -63,7 +66,7 @@ export default function ResultCodePreview() {
                     <Img 
                       src="/images/photos/example-3.jpg"
                       alt="example-1"
-                      style={{ width: "100%", height: 300, objectFit: "cover" }}
+                      cssXs={{ width: "100%", height: 300, objectFit: "cover" }}
                     />
                     <Figcaption cssXs={{ color: "#00B4D8" }}>
                       <H2>Example 3</H2>

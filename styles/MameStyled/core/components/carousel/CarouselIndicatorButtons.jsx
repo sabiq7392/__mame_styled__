@@ -3,8 +3,14 @@ import { Div, Button } from "../../HtmlTag";
 import { createElement } from "react";
 import { func, number, array } from "prop-types";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import { useMemo, memo } from "react";
 
-export default function CarouselIndicatorButtons({ carouselItems, isActive, setIsActive, ...props }) {
+export default function CarouselIndicatorButtons({ 
+  carouselItems, 
+  isActive, 
+  setIsActive, 
+  ...props 
+}) {
   return createElement(
     Div,
     {
@@ -28,15 +34,27 @@ export default function CarouselIndicatorButtons({ carouselItems, isActive, setI
   );
 }
 
-function IndicatorsButtons({ isActive, index, setIsActive, carouselItem, ...props }) {
+const IndicatorsButtons = memo(function IndicatorsButtons({ 
+  isActive, 
+  index, 
+  setIsActive, 
+  carouselItem, 
+  ...props 
+}) {
+  useMemo(() => console.log(isActive), [isActive]);
   return createElement(
     Button,
     {
       onClick: () => {
         setIsActive(index);
-        carouselItem.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+        carouselItem.scrollIntoView({ 
+          behavior: "smooth", 
+          block: "center", 
+          inline: "center" 
+        });
       },
       ...requiredProps(props, {
+        className: "mame-carousel-indicator-button",
         cssXs: {
           width: 16,
           aspectRatio: "1 / 1",
@@ -49,7 +67,7 @@ function IndicatorsButtons({ isActive, index, setIsActive, carouselItem, ...prop
     },
     <></>,
   );
-}
+});
 
 CarouselIndicatorButtons.propTypes = {
   carouselItems: array.isRequired,

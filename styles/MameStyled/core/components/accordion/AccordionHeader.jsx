@@ -6,7 +6,6 @@ import { oneOf } from "prop-types";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 
 const AccordionHeader = memo(function AccordionHeader({ 
-  // refButtonAccordion, 
   _ref,
   isContentOpen, 
   setIsContentOpen, 

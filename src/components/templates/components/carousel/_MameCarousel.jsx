@@ -9,6 +9,7 @@ export default function MameCarousel() {
   const carouselContainer = useRef();
   const [carouselItems, setCarouselItems] = useState([]);
   const [isActive, setIsActive] = useState(0);
+  const [isClicked, setIsClicked] = useState(false);
 
   return <>
     <Carousel
@@ -17,6 +18,8 @@ export default function MameCarousel() {
       setCarouselItems={setCarouselItems}
       setIsActive={setIsActive}
       carouselContainer={carouselContainer}
+      isClicked={isClicked}
+      setIsClicked={setIsClicked}
       timingAutoSwitchSlide={3000}
     >
       <CarouselItemsContainer _ref={carouselContainer}>

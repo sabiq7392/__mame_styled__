@@ -24,28 +24,41 @@ export default function Carousel({
     observer.observe(document.querySelector("body"));
   }, [isActive]);
 
-  if (timingAutoSwitchSlide) {
-    const autoSwitchSlide = (timing) => {
-      setTimeout(() => {
-        const carouselItemsProgrammingLength = carouselItems.length - 1;
-    
-        if (isActive < carouselItemsProgrammingLength) {
-          setIsActive(isActive + 1);
-        }
-    
-        if (isActive === carouselItemsProgrammingLength) {
-          setIsActive(0);
-        }
-      }, timing);
-    };
+  const autoSwitchSlide = useCallback((timing) => {
+    const setTiming = setTimeout(() => {
+      const carouselItemsProgrammingLength = carouselItems.length - 1;
   
-    autoSwitchSlide(timingAutoSwitchSlide);
-  }
+      // sepertinya disini ada bug ketika button di klik
+      if (isActive < carouselItemsProgrammingLength) {
+        setIsActive(isActive + 1);
+      }
+  
+      if (isActive === carouselItemsProgrammingLength) {
+        setIsActive(0);
+      }
+    }, timing);
+
+    const clearTimingWhenClickedIndicatorButtons = () => {
+      document
+        .querySelectorAll(".mame-carousel-indicator-button")
+        .forEach((indicatorButton) => {
+          indicatorButton.onclick = () => {
+            clearTimeout(setTiming);
+          };
+        });
+    };
+
+    clearTimingWhenClickedIndicatorButtons();
+
+  }, [carouselItems.length, isActive, setIsActive]);
 
   useEffect(() => {
     setCarouselItems([...carouselContainer.current.children]);
     repositionCarouselItemsWhenResize();
-  }, [carouselContainer, repositionCarouselItemsWhenResize, setCarouselItems]);
+    if (timingAutoSwitchSlide) {
+      autoSwitchSlide(timingAutoSwitchSlide);
+    }
+  }, [autoSwitchSlide, carouselContainer, repositionCarouselItemsWhenResize, setCarouselItems, timingAutoSwitchSlide]);
   
   return createElement(
     Div,

@@ -47,6 +47,10 @@ const link = {
       href: "/components/carousel",
     },
     {
+      title: "Dropdown",
+      href: "/components/dropdown",
+    },
+    {
       title: "Navbar",
       href: "/components/navbar",
     },

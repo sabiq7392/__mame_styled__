@@ -15,9 +15,9 @@ const AccordionBody = memo(function AccordionBody({
 
   const getHeightContent = () => {
     const observer = new ResizeObserver((entries) => {
-      const contentHeight = entries[0].target.offsetHeight;
+      const entry = entries[0].target.offsetHeight;
 
-      return setHeightContent(contentHeight);
+      return setHeightContent(entry);
     });
 
     observer.observe(content.current);

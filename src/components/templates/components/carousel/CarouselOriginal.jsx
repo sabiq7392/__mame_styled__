@@ -1,8 +1,14 @@
 import CodePreview from "../../../organisms/CodePreview";
+import Preview from "../../../organisms/Preview";
+import MameCarousel from "./_MameCarousel";
 
-export default function ResultCodePreview() {
+export default function CarouselOriginal() {
   return <>
-    <CodePreview member="Carousel">
+    <Preview title="Carousel" noLandfield>
+      <MameCarousel />
+    </Preview>
+
+    {/* <CodePreview member="Carousel">
       {`
         import { H2, P, Img, Figure, Figcaption } from "../../../../../styles/MameStyled/core/HtmlTag";
         import { useRef, useState } from "react";
@@ -87,6 +93,6 @@ export default function ResultCodePreview() {
           </>;
         }
       `}
-    </CodePreview>
+    </CodePreview> */}
   </>;
 }

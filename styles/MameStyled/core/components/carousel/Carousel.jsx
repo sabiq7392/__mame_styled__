@@ -1,9 +1,9 @@
 import { node, any, number, array, func } from "prop-types";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { Div } from "../../HtmlTag";
-import { createElement, useCallback, useEffect, memo } from "react";
+import { createElement, useCallback, useEffect, memo , useRef} from "react";
 
-const Carousel = memo(function Carousel({ 
+function Carousel({ 
   children, 
   _ref, 
   isActive, 
@@ -14,11 +14,14 @@ const Carousel = memo(function Carousel({
   timingAutoSwitchSlide,
   ...props 
 }) {
+
+  /** @masih_bermasalah */
   const repositionCarouselItemsWhenResize = useCallback(() => {
     const observer = new ResizeObserver(() => (
       document
+        // .querySelectorAll(`${props.id} .mame-carousel-item`)[isActive]
         .getElementsByClassName("mame-carousel-item")[isActive]
-        ?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+        // ?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
     ));
 
     if (document.getElementsByClassName("mame-carousel-item")) {
@@ -30,7 +33,6 @@ const Carousel = memo(function Carousel({
     const setTiming = setTimeout(() => {
       const carouselItemsProgrammingLength = carouselItems.length - 1;
   
-      // sepertinya disini ada bug ketika button di klik
       if (isActive < carouselItemsProgrammingLength) {
         setIsActive(isActive + 1);
       }
@@ -41,8 +43,8 @@ const Carousel = memo(function Carousel({
     }, timing);
 
     const clearTimingWhenClickedIndicatorButtons = () => {
-      document
-        .querySelectorAll(".mame-carousel-indicator-button")
+      const carouselIndicatorsContainer = 1;
+      _ref.current.children[carouselIndicatorsContainer].children
         .forEach((indicatorButton) => {
           indicatorButton.onclick = () => {
             clearTimeout(setTiming);
@@ -52,16 +54,17 @@ const Carousel = memo(function Carousel({
 
     clearTimingWhenClickedIndicatorButtons();
 
-  }, [carouselItems.length, isActive, setIsActive]);
+  }, [_ref, carouselItems.length, isActive, setIsActive]);
 
   useEffect(() => {
     setCarouselItems([...carouselContainer.current.children]);
     repositionCarouselItemsWhenResize();
-    if (timingAutoSwitchSlide) {
+    if (timingAutoSwitchSlide || timingAutoSwitchSlide === 0) {
       autoSwitchSlide(timingAutoSwitchSlide);
     }
+
   }, [autoSwitchSlide, carouselContainer, repositionCarouselItemsWhenResize, setCarouselItems, timingAutoSwitchSlide]);
-  
+
   return createElement(
     Div,
     {
@@ -75,7 +78,7 @@ const Carousel = memo(function Carousel({
     },
     children,
   );
-});
+}
 
 Carousel.propTypes = {
   children: node.isRequired,

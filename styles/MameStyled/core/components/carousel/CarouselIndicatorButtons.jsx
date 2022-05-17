@@ -4,11 +4,13 @@ import { createElement } from "react";
 import { func, number, array } from "prop-types";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 import { memo } from "react";
+import { useEffect, useCallback, useState } from "react";
 
 export default function CarouselIndicatorButtons({ 
   carouselItems, 
   isActive, 
   setIsActive, 
+  carousel,
   ...props 
 }) {
   return createElement(
@@ -27,6 +29,7 @@ export default function CarouselIndicatorButtons({
           isActive={isActive}
           setIsActive={setIsActive}
           carouselItem={carouselItem}
+          carousel={carousel}
           {...props}
         />
       )}
@@ -39,18 +42,42 @@ const IndicatorsButtons = memo(function IndicatorsButtons({
   index, 
   setIsActive, 
   carouselItem, 
+  carousel,
   ...props 
 }) {
+  const [positionActiveElement, setPositionActiveElement] = useState(0);
+
+  const scrollToActiveElement = useCallback(() => {
+    const observer = new ResizeObserver(entries => {
+      const getWidthElementAsPositionLeft = entries[0].target.getBoundingClientRect().width;
+
+      return setPositionActiveElement(getWidthElementAsPositionLeft);
+    });
+
+    observer.observe(carouselItem);
+  }, [carouselItem]);
+
+  useEffect(() => {
+    scrollToActiveElement();
+  }, [scrollToActiveElement]);
+
   return createElement(
     Button,
     {
       onClick: () => {
         setIsActive(index);
-        carouselItem.scrollIntoView({ 
-          behavior: "smooth", 
-          block: "center", 
-          inline: "center" 
-        });
+        // document
+          // .querySelector(`#${carouselId} .mame-carousel-items-container`)
+        carousel.current.children[0]
+          .scrollTo({ 
+            left: positionActiveElement * index, 
+            behavior: "smooth" 
+          });
+        // carouselItem.scrollIntoView({ 
+        //   behavior: "smooth", 
+        //   block: "center", 
+        //   inline: "center" 
+        // });
       },
       ...requiredProps(props, {
         className: "mame-carousel-indicator-button",

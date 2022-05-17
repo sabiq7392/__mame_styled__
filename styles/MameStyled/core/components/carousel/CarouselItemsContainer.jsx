@@ -9,6 +9,7 @@ export default function CarouselItemsContainer({ children, _ref, ...props }) {
     {
       ref: _ref,
       ...requiredProps(props, {
+        className: "mame-carousel-items-container",
         cssXs: {
           display: "flex",
           background: "#222",

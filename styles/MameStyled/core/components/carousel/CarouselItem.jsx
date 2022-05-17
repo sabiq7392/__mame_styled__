@@ -15,7 +15,7 @@ export default function CarouselItem({ children, ...props }) {
           width: "100%",
           gap: 10, 
           height: "100%", 
-          padding: "2rem" 
+          // padding: "2rem" 
         },
       }),
     },

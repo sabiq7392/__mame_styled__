@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { P, Span } from "../../styles/MameStyled/core/HtmlTag";
+import { P, Span } from "../../styles/MameStyled/core/HtmlTag.ts";
 import propTypes from "prop-types";
 
 export const mustBeString = (props, propName, componentName) => {

@@ -1,5 +1,5 @@
 import { oneOf, node, string } from "prop-types";
-import { Nav } from "../../HtmlTag";
+import { Nav } from "../../HtmlTag.ts";
 import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 

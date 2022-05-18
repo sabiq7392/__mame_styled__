@@ -1,21 +1,21 @@
-import { node } from "prop-types";
+import { any, node } from "prop-types";
 import { Div } from "../../HtmlTag.ts";
 import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 
-export default function NavbarContentWrapper({ children, ...props }) {
+export default function CarouselItemsContainer({ children, _ref, ...props }) {
   return createElement(
     Div,
     {
+      ref: _ref,
       ...requiredProps(props, {
+        className: "mame-carousel-items-container",
         cssXs: {
-          display: "grid",
-          height: "100%",
-          transition: "200ms",
-          background: "inherit",
-        },
-        cssLg: {
           display: "flex",
+          background: "#222",
+          width: "100%",
+          // height: 400,
+          overflowX: "hidden",
         },
       }),
     },
@@ -23,7 +23,8 @@ export default function NavbarContentWrapper({ children, ...props }) {
   );
 }
 
-NavbarContentWrapper.propTypes = {
+CarouselItemsContainer.propTypes = {
   children: node.isRequired,
+  _ref: any.isRequired,
   ...requiredPropTypes,
 };

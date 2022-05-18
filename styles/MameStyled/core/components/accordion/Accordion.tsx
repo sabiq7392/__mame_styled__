@@ -1,21 +1,21 @@
-import { node } from "prop-types";
 import { Div } from "../../HtmlTag.ts";
 import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import { node } from "prop-types";
 
-export default function NavbarContentWrapper({ children, ...props }) {
+function Accordion({ 
+  children,
+  _ref,
+  ...props
+}) {
   return createElement(
     Div,
     {
+      ref: _ref,
       ...requiredProps(props, {
         cssXs: {
-          display: "grid",
-          height: "100%",
-          transition: "200ms",
-          background: "inherit",
-        },
-        cssLg: {
           display: "flex",
+          flexDirection: "column",
         },
       }),
     },
@@ -23,7 +23,9 @@ export default function NavbarContentWrapper({ children, ...props }) {
   );
 }
 
-NavbarContentWrapper.propTypes = {
+Accordion.propTypes = {
   children: node.isRequired,
   ...requiredPropTypes,
 };
+
+export default Accordion;

@@ -1,7 +1,7 @@
 import { oneOfType, node, string } from "prop-types";
 import { createElement } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
-import { A } from "../../HtmlTag";
+import { A } from "../../HtmlTag.ts";
 
 export default function NavLink({ 
   title, 

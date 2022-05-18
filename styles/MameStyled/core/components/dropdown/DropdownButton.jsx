@@ -1,6 +1,6 @@
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import { createElement } from "react";
-import { Button, Span } from "../../HtmlTag";
+import { Button, Span } from "../../HtmlTag.ts";
 import { requiredProps } from "../../../utils/constants/requiredProps";
 import { string, oneOfType, node, func, bool, element, shape, object } from "prop-types";
 

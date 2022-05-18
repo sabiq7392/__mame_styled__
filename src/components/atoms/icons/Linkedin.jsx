@@ -1,4 +1,4 @@
-import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
+import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 import { BsLinkedin } from "react-icons/bs";
 import propTypes from "prop-types";
 

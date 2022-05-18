@@ -1,5 +1,5 @@
 import { bool, node } from "prop-types";
-import { Div } from "../../HtmlTag";
+import { Div } from "../../HtmlTag.ts";
 import { createElement, memo, useEffect, useState } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
 

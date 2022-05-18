@@ -428,6 +428,14 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/hoist-non-react-statics@*":
+  "integrity" "sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA=="
+  "resolved" "https://registry.npmjs.org/@types/hoist-non-react-statics/-/hoist-non-react-statics-3.3.1.tgz"
+  "version" "3.3.1"
+  dependencies:
+    "@types/react" "*"
+    "hoist-non-react-statics" "^3.3.0"
+
 "@types/istanbul-lib-coverage@^2.0.1":
   "integrity" "sha512-z/QT1XN4K4KYuslS23k62yDIDLwLFkzxOuMplDtObz0+y7VqJCaO2o+SPwHCvLFZh7xazvvoor2tA/hPz9ee7g=="
   "resolved" "https://registry.npmjs.org/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz"
@@ -438,10 +446,38 @@
   "resolved" "https://registry.npmjs.org/@types/json5/-/json5-0.0.29.tgz"
   "version" "0.0.29"
 
-"@types/node@*":
-  "integrity" "sha512-AR0x5HbXGqkEx9CadRH3EBYx/VkiUgZIhP4wvPn/+5KIsgpNoyFaRlVe0Zlx9gRtg8fA06a9tskE2MSN7TcG4Q=="
-  "resolved" "https://registry.npmjs.org/@types/node/-/node-17.0.31.tgz"
-  "version" "17.0.31"
+"@types/node@*", "@types/node@^17.0.34":
+  "integrity" "sha512-XImEz7XwTvDBtzlTnm8YvMqGW/ErMWBsKZ+hMTvnDIjGCKxwK5Xpc+c/oQjOauwq8M4OS11hEkpjX8rrI/eEgA=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-17.0.34.tgz"
+  "version" "17.0.34"
+
+"@types/prop-types@*":
+  "integrity" "sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w=="
+  "resolved" "https://registry.npmjs.org/@types/prop-types/-/prop-types-15.7.5.tgz"
+  "version" "15.7.5"
+
+"@types/react@*", "@types/react@^18.0.9":
+  "integrity" "sha512-9bjbg1hJHUm4De19L1cHiW0Jvx3geel6Qczhjd0qY5VKVE2X5+x77YxAepuCwVh4vrgZJdgEJw48zrhRIeF4Nw=="
+  "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.9.tgz"
+  "version" "18.0.9"
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    "csstype" "^3.0.2"
+
+"@types/scheduler@*":
+  "integrity" "sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew=="
+  "resolved" "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
+  "version" "0.16.2"
+
+"@types/styled-components@^5.1.25":
+  "integrity" "sha512-fgwl+0Pa8pdkwXRoVPP9JbqF0Ivo9llnmsm+7TCI330kbPIFd9qv1Lrhr37shf4tnxCOSu+/IgqM7uJXLWZZNQ=="
+  "resolved" "https://registry.npmjs.org/@types/styled-components/-/styled-components-5.1.25.tgz"
+  "version" "5.1.25"
+  dependencies:
+    "@types/hoist-non-react-statics" "*"
+    "@types/react" "*"
+    "csstype" "^3.0.2"
 
 "@types/unist@*":
   "integrity" "sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ=="
@@ -1108,6 +1144,11 @@
   "version" "1.2.1"
   dependencies:
     "cssom" "0.3.x"
+
+"csstype@^3.0.2":
+  "integrity" "sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA=="
+  "resolved" "https://registry.npmjs.org/csstype/-/csstype-3.1.0.tgz"
+  "version" "3.1.0"
 
 "damerau-levenshtein@^1.0.7":
   "integrity" "sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA=="
@@ -1821,7 +1862,7 @@
   "resolved" "https://registry.npmjs.org/highlight.js/-/highlight.js-10.7.3.tgz"
   "version" "10.7.3"
 
-"hoist-non-react-statics@^3.0.0":
+"hoist-non-react-statics@^3.0.0", "hoist-non-react-statics@^3.3.0":
   "integrity" "sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw=="
   "resolved" "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz"
   "version" "3.3.2"

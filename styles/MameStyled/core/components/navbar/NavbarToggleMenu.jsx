@@ -1,4 +1,4 @@
-import { Button } from "../../HtmlTag";
+import { Button } from "../../HtmlTag.ts";
 import { bool, func, node } from "prop-types";
 import { createElement, memo, useRef } from "react";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";

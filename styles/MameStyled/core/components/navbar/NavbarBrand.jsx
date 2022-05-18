@@ -1,4 +1,4 @@
-import { A, Img } from "../../HtmlTag";
+import { A, Img } from "../../HtmlTag.ts";
 import { string, node } from "prop-types";
 import { requiredPropTypes, requiredProps } from "../../../utils/constants/requiredProps";
 import { createElement } from "react";

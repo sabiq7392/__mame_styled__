@@ -4,17 +4,7 @@ let nextConfig = {
   swcMinify: true,
   compiler: {
     styledComponents: true,
-    // removeConsole: {
-    //   exclude: ["error"],
-    // },
   },
-  exportPathMap: async (
-    defaultPathMap, 
-    { dev, dir, outDir, distDir, buildId },
-  ) => ({
-    "/": { page: "/", },
-    "/html-tag": { page: "/html-tag", },
-  }),
 };
 
 // const withBundleAnalyzer = require("@next/bundle-analyzer")({

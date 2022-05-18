@@ -1,6 +1,6 @@
 import propTypes from "prop-types";
 import { AiOutlineGithub } from "react-icons/ai";
-import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
+import ErrorUnexpectedProps from "../../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 
 export default function Github({ size, ...props }) {
   ErrorUnexpectedProps({ props, component: "Github" });

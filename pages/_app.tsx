@@ -1,18 +1,19 @@
 /* eslint-disable react/prop-types */
 import Head from "next/head";
 import { GlobalStyles } from "../styles/GlobalStyles";
-import { Main } from "../styles/MameStyled/core/HtmlTag.ts";
+import { Main } from "../styles/MameStyled/core/HtmlTag";
 import AsideLeft from "../src/components/organisms/AsideLeft";
-import Container from "../src/components/atoms/Container.tsx";
+import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Footer from "../src/components/organisms/Footer";
 import stylesConfig from "../styles.config";
 import { useRouter } from "next/router";
 import "@fontsource/poppins"; // Defaults to weight 400.
+import { AppProps } from "next/app";
 
 const { spacing, color } = stylesConfig;
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (

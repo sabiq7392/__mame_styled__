@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import attributes from "../../utils/constants/attributes";
+import { FlexDirection } from "../utils/types";
 
 type Props = {
   container?: true,
@@ -10,7 +11,7 @@ type Props = {
   hCenter?: true,
   justifyContent?: string,
   gap?: number,
-  direction?: "column" | "inherit" | "-moz-initial" | "initial" | "revert" | "unset" | "column-reverse" | "row" | "row-reverse" | undefined,
+  direction?: FlexDirection
 };
 
 export const Flex = styled.div<Props>(

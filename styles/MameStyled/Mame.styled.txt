@@ -1,0 +1,18 @@
+@author 
+  Sabiq Muhammad Antebing Mame
+
+@contacts
+  github: sabiq7392 || https://github.com/sabiq7392
+  linkedin: Sabiq Muhammad || https://www.linkedin.com/in/sabiq-muhammad-6b314a210/
+  email: sabiqmuhammad98@gmail.com
+
+@info
+  website: mame-styled.vercel.app
+  github: https://github.com/sabiq7392/__mame_styled__
+
+WHAT IS MAME STYLED?
+  JavaScript Library where is focusing to build UI, You can write 
+  CSS like pseudo selector, Media Queries, etc in inline css style. 
+  Also there are components
+  
+  Mame Styled based by Styled Components

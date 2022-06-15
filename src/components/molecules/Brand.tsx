@@ -1,5 +1,5 @@
 import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 import propTypes from "prop-types";
 import Link from "next/link";
@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Brand({ as, ...props }) {
   ErrorUnexpectedProps({ props, component: "Brand" });
 
-  const { color } = stylesConfig;
+  const { color } = STYLES_CONFIG;
   const css = { 
     fontWeight: "bold", 
     color: color.primary, 

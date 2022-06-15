@@ -1,6 +1,23 @@
 import { object, string } from "prop-types";
+import { HTMLTag } from "../../core/utils/types";
 
-export const requiredProps = (props, { 
+interface RequiredProps extends HTMLTag {
+  cssXs?: object;
+  cssSm?: object; 
+  cssMd?: object;
+  cssLg?: object;
+  cssXl?: object;
+  cssXxl?: object;
+  hover?: object;
+  hoverXs?: object;
+  hoverSm?: object;
+  hoverMd?: object;
+  hoverLg?: object;
+  hoverXl?: object;
+  hoverXxl?: object;
+}
+
+export const requiredProps = (props: any, { 
   cssXs, 
   cssSm, 
   cssMd, 
@@ -14,7 +31,7 @@ export const requiredProps = (props, {
   hoverXl,
   hoverXxl,
   className,
-}) => ({
+}: RequiredProps) => ({
   cssXs: { ...cssXs, ...props.cssXs },
   cssSm: { ...cssSm, ...props.cssSm },
   cssMd: { ...cssMd, ...props.cssMd },
@@ -31,6 +48,7 @@ export const requiredProps = (props, {
   debug: props.debug && true,
   className: (className ??= "") + " " + (props.className ??= ""),
   id: props.id,
+  fontSize: props.fontSize,
 });
 
 export const requiredPropTypes = {

@@ -3,11 +3,11 @@ import Preview from "../../organisms/Preview";
 import nextJsExample from "../../../data/nextJsExample";
 import ItemExample from "../../molecules/ItemExample";
 import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
-import stylesConfig from "../../../../styles.config";
+import STYLES_CONFIG from "../../../../styles.config";
 import CodePreview from "../../organisms/CodePreview";
 
 export default function GridTemplateColumns() {
-  const { spacing } = stylesConfig;
+  const { spacing } = STYLES_CONFIG;
 
   return (
     <Harbor title="Grid Template Columns">

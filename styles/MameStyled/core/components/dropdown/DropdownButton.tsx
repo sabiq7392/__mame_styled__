@@ -1,17 +1,28 @@
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import { createElement } from "react";
-import { Button, Span } from "../../HtmlTag.ts";
+import { Button, Span } from "../../HtmlTag";
 import { requiredProps } from "../../../utils/constants/requiredProps";
-import { string, oneOfType, node, func, bool, element, shape, object } from "prop-types";
+import type { ReactNode, ReactElement, SetStateAction,  MutableRefObject } from "react";
+
+// eslint-disable-next-line no-unused-vars
+
+interface Props {
+  title: string | ReactNode | ReactNode[];
+  icon: ReactNode | ReactNode[];
+  isOpen: boolean;
+  // eslint-disable-next-line no-unused-vars
+  setIsOpen: (value: SetStateAction<boolean>) => void;
+  _ref?: MutableRefObject<HTMLElement | undefined>;
+}
 
 export default function DropdownButton({ 
   title = "Dropdown", 
   setIsOpen, 
   isOpen, 
   icon = <ChevronDownIcon size={18} />, 
-  _ref,
+  _ref, 
   ...props 
-}) {
+}: Props): ReactElement {
   return createElement(
     Button,
     {
@@ -55,11 +66,3 @@ export default function DropdownButton({
     </>,
   );
 }
-
-DropdownButton.propTypes = {
-  title: oneOfType([string, node]).isRequired,
-  setIsOpen: func.isRequired,
-  isOpen: bool.isRequired,
-  icon: oneOfType([node, element]).isRequired,
-  _ref: shape({ current: object }),
-};

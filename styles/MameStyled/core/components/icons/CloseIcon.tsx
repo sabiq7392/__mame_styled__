@@ -1,6 +1,7 @@
-import { number, string } from "prop-types";
+import { ReactElement } from "react";
+import { IconProps } from "../../utils/types";
 
-export default function CloseIcon({ size = 24, color = "white" }) {
+export default function CloseIcon({ size = 24, color = "white" }: IconProps): ReactElement {
   return <>
     <svg 
       width={size} 
@@ -16,8 +17,3 @@ export default function CloseIcon({ size = 24, color = "white" }) {
     </svg>
   </>;
 }
-
-CloseIcon.propTypes = {
-  size: number,
-  color: string,
-};

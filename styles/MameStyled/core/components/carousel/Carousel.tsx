@@ -1,9 +1,38 @@
 import { node, any, number, array, func } from "prop-types";
 import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
-import { Div } from "../../HtmlTag.ts";
-import { createElement, useCallback, useEffect, memo , useRef} from "react";
+import { Div } from "../../HtmlTag";
+import { createElement, MutableRefObject, useCallback, useEffect } from "react";
+import type { ReactElement, ReactNode, SetStateAction } from "react";
 
-function Carousel({ 
+interface Props {
+  children: ReactNode | ReactNode[];
+  carouselItems: HTMLCollection[] | never[];
+  // eslint-disable-next-line no-unused-vars
+  setCarouselItems: (value: SetStateAction<HTMLCollection[] | never[]>) => void;
+  _ref: MutableRefObject<HTMLElement | undefined>;
+  isActive: number;
+  // eslint-disable-next-line no-unused-vars
+  setIsActive: (value: SetStateAction<number>) => void;
+  isClicked: boolean;
+  // eslint-disable-next-line no-unused-vars
+  setIsClicked: (value: SetStateAction<boolean>) => void;
+  carouselContainer: MutableRefObject<HTMLElement | undefined>;
+  timingAutoSwitchSlide?: number;
+}
+
+// Carousel.propTypes = {
+//   children: node.isRequired,
+//   isActive: number.isRequired,
+//   carouselItems: array.isRequired,
+//   setCarouselItems: func.isRequired,
+//   setIsActive: func.isRequired,
+//   carouselContainer: any.isRequired,
+//   timingAutoSwitchSlide: number,
+//   _ref: any,
+//   ...requiredPropTypes,
+// };
+
+export default function Carousel({ 
   children, 
   _ref, 
   isActive, 
@@ -13,7 +42,7 @@ function Carousel({
   carouselContainer,
   timingAutoSwitchSlide,
   ...props 
-}) {
+}: Props): ReactElement {
 
   /** @masih_bermasalah */
   const repositionCarouselItemsWhenResize = useCallback(() => {
@@ -25,11 +54,11 @@ function Carousel({
     ));
 
     if (document.getElementsByClassName("mame-carousel-item")) {
-      observer.observe(document.querySelector("body"));
+      observer.observe(document.querySelector("body") as Element);
     }
   }, [isActive]);
 
-  const autoSwitchSlide = useCallback((timing) => {
+  const autoSwitchSlide = useCallback((timing: number) => {
     const setTiming = setTimeout(() => {
       const carouselItemsProgrammingLength = carouselItems.length - 1;
   
@@ -43,9 +72,9 @@ function Carousel({
     }, timing);
 
     const clearTimingWhenClickedIndicatorButtons = () => {
-      const carouselIndicatorsContainer = 1;
-      _ref.current.children[carouselIndicatorsContainer].children
-        .forEach((indicatorButton) => {
+      const carouselIndicatorsContainer: number = 1;
+      (_ref.current as HTMLElement).children[carouselIndicatorsContainer].children
+        .forEach((indicatorButton: HTMLElement) => {
           indicatorButton.onclick = () => {
             clearTimeout(setTiming);
           };
@@ -57,7 +86,7 @@ function Carousel({
   }, [_ref, carouselItems.length, isActive, setIsActive]);
 
   useEffect(() => {
-    setCarouselItems([...carouselContainer.current.children]);
+    setCarouselItems([...(carouselContainer.current as any).children]);
     repositionCarouselItemsWhenResize();
     if (timingAutoSwitchSlide || timingAutoSwitchSlide === 0) {
       autoSwitchSlide(timingAutoSwitchSlide);
@@ -80,16 +109,4 @@ function Carousel({
   );
 }
 
-Carousel.propTypes = {
-  children: node.isRequired,
-  isActive: number.isRequired,
-  carouselItems: array.isRequired,
-  setCarouselItems: func.isRequired,
-  setIsActive: func.isRequired,
-  carouselContainer: any.isRequired,
-  timingAutoSwitchSlide: number,
-  _ref: any,
-  ...requiredPropTypes,
-};
 
-export default Carousel;

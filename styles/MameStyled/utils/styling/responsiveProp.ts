@@ -1,6 +1,6 @@
 import screen from "../../config/screen.config";
 
-function setResponsiveProp(props , originalNameProp, customNameProp) {
+function setResponsiveProp(props: any , originalNameProp: string, customNameProp?: string) {
   const value  = props[customNameProp || originalNameProp];
 
   return (
@@ -34,12 +34,12 @@ function setResponsiveProp(props , originalNameProp, customNameProp) {
 }
 
 /** choosen */
-export const gap = (props) => setResponsiveProp(props, "gap");
+export const gap = (props: any) => setResponsiveProp(props, "gap");
 
 /** global */
-export const fontSize = (props) => setResponsiveProp(props, "fontSize");
-export const width = (props) => setResponsiveProp(props, "width");
-export const height = (props) => setResponsiveProp(props, "height)");
-export const padding = (props) => setResponsiveProp(props, "padding");
-export const display = (props) => setResponsiveProp(props, "display");
-export const background = (props) => setResponsiveProp(props, "background");
+export const fontSize = (props: any) => setResponsiveProp(props, "fontSize");
+export const width = (props: any) => setResponsiveProp(props, "width");
+export const height = (props: any) => setResponsiveProp(props, "height)");
+export const padding = (props: any) => setResponsiveProp(props, "padding");
+export const display = (props: any) => setResponsiveProp(props, "display");
+export const background = (props: any) => setResponsiveProp(props, "background");

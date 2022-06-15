@@ -1,11 +1,15 @@
-import { string } from "prop-types";
 import { useEffect } from "react";
 import ErrorMessage from "./ErrorMessage";
+
+type Props = {
+  componentName: string,
+  note: string,
+};
 
 export default function ErrorCannotCombinedProps({
   componentName, 
   note,
-}) {
+}: Props) {
   useEffect(() => {
     ErrorMessage({ 
       description: "Cannot Combined Props with Another Props", 
@@ -14,8 +18,3 @@ export default function ErrorCannotCombinedProps({
     });
   }, [componentName, note]); 
 }
-
-ErrorCannotCombinedProps.propTypes = {
-  componentName: string.isRequired,
-  note: string.isRequired
-};

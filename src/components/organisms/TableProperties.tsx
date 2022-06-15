@@ -1,12 +1,20 @@
-import stylesConfig from "../../../styles.config";
-import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
+import STYLES_CONFIG from "../../../styles.config";
+import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag";
 import propTypes from "prop-types";
+import type { ReactElement } from "react";
 
-export default function TableProperties({ data, ...props }) {
-  ErrorUnexpectedProps({ props, component: "TableProperties" });
-  
-  const { spacing, color, radius } = stylesConfig;
+interface Props {
+  data: {
+    name: string;
+    default: string;
+    type: any;
+    value: string;
+    description: any;
+  }[]
+}
+
+export default function TableProperties({ data }: Props): ReactElement {
+  const { spacing, color, radius } = STYLES_CONFIG;
   const cssThThead = {
     textAlign: "left", 
     padding: `${spacing.xs}px ${spacing.sm}px`,

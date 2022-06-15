@@ -1,4 +1,4 @@
-const stylesConfig = {
+const STYLES_CONFIG = {
   color: {
     primary: "#00B4D8",
     secondary: "#90E0EF",
@@ -50,4 +50,4 @@ const stylesConfig = {
   },
 };
 
-export default stylesConfig;
+export default STYLES_CONFIG;

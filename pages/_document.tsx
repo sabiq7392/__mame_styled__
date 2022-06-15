@@ -1,8 +1,8 @@
 import { Head, Html, Main, NextScript } from "next/document";
-import stylesConfig from "../styles.config";
+import STYLES_CONFIG from "../styles.config";
 
 export default function Document() {
-  const { color } = stylesConfig;
+  const { color } = STYLES_CONFIG;
   
   return (
     <Html lang="en">

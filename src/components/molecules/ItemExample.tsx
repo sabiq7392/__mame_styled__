@@ -1,13 +1,13 @@
 import { Grid, Flex } from "../../../styles/MameStyled/core/display/_display";
 import PropTypes from "prop-types";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import { A, H2, P, Div } from "../../../styles/MameStyled/core/HtmlTag";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 
 export default function ItemExample({  item, title, href, description, ...props }) {
   ErrorUnexpectedProps({ props, component: "ItemExample.jsx" });
   
-  const { radius, spacing, color, timing } = stylesConfig;
+  const { radius, spacing, color, timing } = STYLES_CONFIG;
 
   const css = {
     padding: spacing.md, 
@@ -38,7 +38,7 @@ export default function ItemExample({  item, title, href, description, ...props 
 
 // eslint-disable-next-line react/prop-types
 function Item({ href, title, description }) {
-  const { spacing, color } = stylesConfig;
+  const { spacing, color } = STYLES_CONFIG;
 
   return (
     <A href={href} cssXs={{ display: "grid", gap: spacing.sm, color: color.white }}>

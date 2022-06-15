@@ -1,4 +1,4 @@
-import { ResponsiveCss, Attributes } from "./../utils/types/index.d";
+import { ResponsiveCss, Attributes } from "../utils/types";
 import styled from "styled-components";
 import screen from "../../config/screen.config";
 import attributes from "../../utils/constants/attributes";

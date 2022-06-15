@@ -35,7 +35,7 @@ export default function ErrorMessage({
   };
 
   const container = document.querySelector("body");
-  const root = createRoot(container);
+  const root = createRoot(container as Element);
   root.render(
     <P debug cssXs={css}>
       <Span cssXs={{ display: "grid", gap: "1rem" }}>

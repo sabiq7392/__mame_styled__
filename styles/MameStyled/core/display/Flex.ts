@@ -1,8 +1,9 @@
+import { Attributes } from "../utils/types";
 import styled from "styled-components";
 import attributes from "../../utils/constants/attributes";
 import { FlexDirection } from "../utils/types";
 
-type Props = {
+interface Props extends Attributes {
   container?: true,
   item?: true,
   vCenter?: true,
@@ -10,9 +11,9 @@ type Props = {
   alignItems?: string,
   hCenter?: true,
   justifyContent?: string,
-  gap?: number,
-  direction?: FlexDirection
-};
+  gap?: number | string,
+  direction?: FlexDirection,
+}
 
 export const Flex = styled.div<Props>(
   props => (

@@ -1,14 +1,18 @@
 import { useState, memo } from "react";
-import { bool } from "prop-types";
 import Accordion from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
 import AccordionHeader from "../../../../../styles/MameStyled/core/components/accordion/AccordionHeader";
 import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
+import type { ReactElement } from "react";
 
-const MameAccordion = memo(function MameAccordion({ isAlwaysOpen = false }) {
-  const [isContentOpen, setIsContentOpen] = useState(isAlwaysOpen);
+interface Props {
+  isAlwaysOpen?: boolean;
+}
+
+const MameAccordion = memo(function MameAccordion({ isAlwaysOpen = false }: Props): ReactElement {
+  const [isContentOpen, setIsContentOpen] = useState<boolean>(isAlwaysOpen);
 
   /** @in_milisecond */
-  const transitionSpeed = 400;
+  const transitionSpeed: number = 400;
 
   return <>
     <Accordion>
@@ -34,9 +38,5 @@ const MameAccordion = memo(function MameAccordion({ isAlwaysOpen = false }) {
     </Accordion>
   </>;
 });
-
-MameAccordion.propTypes = {
-  isAlwaysOpen: bool,
-};
 
 export default MameAccordion;

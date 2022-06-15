@@ -1,5 +1,5 @@
 import { Strong } from "../../../styles/MameStyled/core/HtmlTag";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import PropTypes from "prop-types";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import { CSSProperties } from "react";
@@ -12,7 +12,7 @@ type Props = {
 export default function Appeal({ text, css, ...props }: Props) {
   ErrorUnexpectedProps({ props, component: "Appeal.jsx" });
 
-  const { color } = stylesConfig;
+  const { color } = STYLES_CONFIG;
 
   const cssDefault = { 
     color: color.warning, 

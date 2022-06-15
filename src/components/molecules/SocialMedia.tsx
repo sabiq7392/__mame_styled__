@@ -1,6 +1,6 @@
 import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 import { A } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 import Linkedin from "../atoms/icons/Linkedin";
 import Github from "../atoms/icons/Github";
@@ -12,7 +12,7 @@ const { authors } = link;
 export default function SocialMedia({ ...props }) {
   ErrorUnexpectedProps({ props, component: "SocialMedia.jsx" });
 
-  const { color, spacing, timing } = stylesConfig;
+  const { color, spacing, timing } = STYLES_CONFIG;
 
   const css = {
     display: "flex",

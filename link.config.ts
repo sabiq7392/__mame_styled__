@@ -1,4 +1,23 @@
-const link = {
+interface Authors {
+  name: string,
+  socialMedia: {
+    instagram: string,
+    linkedin: string,
+    github: string,
+  }
+}
+
+interface Pages {
+  title: string;
+  href: string;
+}
+
+interface Link {
+  authors: Authors[];
+  pages: Pages[]
+}
+
+const link: Link = {
   authors: [
     {
       name: "Sabiq Muhammad Antebing Mame",

@@ -3,7 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Heading from "../molecules/Heading";
 import PropTypes from "prop-types";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 import SetAutoHead from "../../utils/SetAutoHead";
 import { useId } from "react";
@@ -11,7 +11,7 @@ import { useId } from "react";
 export default function CodePreview({ title = "Result Code Preview", member, children, ...props }) {
   ErrorUnexpectedProps({ props, component: "CodePreview.jsx" });
 
-  const { spacing } = stylesConfig;
+  const { spacing } = STYLES_CONFIG;
 
   const id = useId();
 

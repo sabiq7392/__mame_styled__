@@ -1,6 +1,7 @@
-import { string, number } from "prop-types";
+import { ReactElement } from "react";
+import { IconProps } from "../../utils/types";
 
-export default function ChevronDownIcon({ size = 18, color = "white" }) {
+export default function ChevronDownIcon({ size = 18, color = "white" }: IconProps): ReactElement {
   return <>
     <svg 
       width={size} 
@@ -19,9 +20,4 @@ export default function ChevronDownIcon({ size = 18, color = "white" }) {
     </svg>
   </>;
 }
-
-ChevronDownIcon.propTypes = {
-  size: number,
-  color: string,
-};
 

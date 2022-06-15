@@ -1,5 +1,5 @@
 import { P } from "../../../styles/MameStyled/core/HtmlTag";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import { ReactNode } from "react";
 
@@ -11,7 +11,7 @@ type Props = {
   fontSize?: string | number | object,
 };
 
-const { font } = stylesConfig;
+const { font } = STYLES_CONFIG;
 
 export default function Description(
   { textAlign, margin, color, text, fontSize, ...props }: Props
@@ -22,7 +22,7 @@ export default function Description(
     textAlign: textAlign, 
     margin: margin ?? "auto", 
     lineHeight: font.lineHeight, 
-    color: color ?? stylesConfig.color.light
+    color: color ?? STYLES_CONFIG.color.light
   };
 
   return (

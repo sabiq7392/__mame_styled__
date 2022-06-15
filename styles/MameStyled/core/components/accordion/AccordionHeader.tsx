@@ -1,11 +1,23 @@
-import { H2, Button, Div, H1, H3, H4, H5, H6 } from "../../HtmlTag.ts";
-import { any, func, bool, number, oneOfType, string, node, element } from "prop-types";
-import { createElement, memo } from "react";
-import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
-import { oneOf } from "prop-types";
+import { H2, Button, Div, H1, H3, H4, H5, H6 } from "../../HtmlTag";
+// import { any, func, bool, number, oneOfType, string, node, element } from "prop-types";
+import { createElement, ReactNode } from "react";
+import { requiredProps } from "../../../utils/constants/requiredProps";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
+import { HTMLTag } from "../../utils/types";
 
-const AccordionHeader = memo(function AccordionHeader({ 
+interface Props extends HTMLTag {
+  isContentOpen: boolean; 
+  // eslint-disable-next-line no-unused-vars
+  setIsContentOpen(arg0: boolean): void;
+  title: string;
+  as?: typeof H1 | typeof H2 | typeof H3 | typeof H4 | typeof H5 | typeof H6;
+  icon?: Element | ReactNode;
+  transitionSpeed?: number;
+  _ref?: any;
+  iconColor?: string;
+}
+
+export default function AccordionHeader({ 
   _ref,
   isContentOpen, 
   setIsContentOpen, 
@@ -13,8 +25,9 @@ const AccordionHeader = memo(function AccordionHeader({
   title, 
   icon,
   as = H2,
+  iconColor,
   ...props
-}) {
+}: Props) {
   return createElement(
     as, 
     {
@@ -22,6 +35,9 @@ const AccordionHeader = memo(function AccordionHeader({
         cssXs: {
           display: "flex",
           height: "auto",
+          background: "#111",
+          fontSize: 18,
+          padding: "1rem",
         },
       }),
     },
@@ -33,13 +49,14 @@ const AccordionHeader = memo(function AccordionHeader({
         justifyContent: "space-between", 
         alignItems: "center", 
         minHeight: 44, 
+        background: "inherit",
         minWidth: 44,
-        background: "#111",
-        color: "white",
+        color: "inhertit",
         border: "none",
-        padding: "1rem",
-        fontSize: 18,
-        cursor: "pointer"
+        gap: "1rem",
+        fontSize: "inherit",
+        fontFamily: "inherit",
+        cursor: "pointer",
       }}
       onClick={() => setIsContentOpen(!isContentOpen)}
     >
@@ -52,21 +69,8 @@ const AccordionHeader = memo(function AccordionHeader({
           transition: `transform ${transitionSpeed}ms ease!important`, 
         }}
       >
-        {icon || <ChevronDownIcon /> }
+        {icon || <ChevronDownIcon color={iconColor} /> }
       </Div>
     </Button>
   );
-});
-
-AccordionHeader.propTypes = {
-  _ref: any,
-  setIsContentOpen: func.isRequired,
-  isContentOpen: bool.isRequired,
-  transitionSpeed: number,
-  title: oneOfType([string, node]).isRequired,
-  icon: element,
-  as: oneOf([H1, H2, H3, H4, H5, H6]),
-  ...requiredPropTypes,
-};
-
-export default AccordionHeader;
+}

@@ -1,24 +1,25 @@
+import type { ReactElement, ReactNode } from "react";
 import { createElement, useRef, useState, useEffect } from "react";
-import { Div } from "../../HtmlTag.ts";
+import { Div } from "../../HtmlTag";
 import { requiredProps } from "../../../utils/constants/requiredProps";
-import { bool, node } from "prop-types";
 
-export default function DropdownBody({ 
-  isOpen, 
-  children, 
-  ...props 
-}) {
-  const [heightBody, setHeightBody] = useState(0);
-  const body = useRef();
+interface Props {
+  isOpen: boolean;
+  children: ReactNode | ReactNode[];
+}
+
+export default function DropdownBody({ isOpen, children, ...props }: Props): ReactElement {
+  const [heightBody, setHeightBody] = useState<number>(0);
+  const body = useRef<HTMLBodyElement>();
 
   const getHeightBody = () => {
     const observer = new ResizeObserver((entries) => {
-      const entry = entries[0].target.offsetHeight;
+      const entry = (entries[0].target as HTMLBodyElement).offsetHeight;
 
       return setHeightBody(entry);
     });
 
-    observer.observe(body.current);
+    return observer.observe(body.current as HTMLBodyElement);
   };
 
   useEffect(() => {
@@ -51,8 +52,3 @@ export default function DropdownBody({
     </Div>,
   );
 }
-
-DropdownBody.propTypes = {
-  isOpen: bool.isRequired,
-  children: node.isRequired,
-};

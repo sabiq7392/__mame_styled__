@@ -1,12 +1,12 @@
 import { Footer as MameFooter } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import { Grid } from "../../../styles/MameStyled/core/display/Grid";
 import Author from "../molecules/Author";
 import Brand from "../molecules/Brand";
 import SocialMedia from "../molecules/SocialMedia";
 
 export default function Footer() {
-  const { color, spacing } = stylesConfig;
+  const { color, spacing } = STYLES_CONFIG;
 
   return (
     <MameFooter cssXs={{ marginTop: spacing.sxxl, background: color.base.secondary.default }}>

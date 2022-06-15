@@ -1,5 +1,5 @@
 import Container from "../atoms/Container";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Heading from "../molecules/Heading";
 import { H2 } from "../../../styles/MameStyled/core/HtmlTag";
@@ -9,7 +9,7 @@ import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 import { ReactNode } from "react";
 import { ReactElement } from "react";
 
-const { spacing } = stylesConfig;
+const { spacing } = STYLES_CONFIG;
 
 type Props = {
   children: ReactNode,

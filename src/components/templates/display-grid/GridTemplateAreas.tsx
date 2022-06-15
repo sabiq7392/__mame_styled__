@@ -4,9 +4,9 @@ import CodePreview from "../../organisms/CodePreview";
 import Harbor from "../../organisms/Harbor";
 import Preview from "../../organisms/Preview";
 import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
-import stylesConfig from "../../../../styles.config";
+import STYLES_CONFIG from "../../../../styles.config";
 
-const { spacing } = stylesConfig;
+const { spacing } = STYLES_CONFIG;
 
 export default function GridTemplateAreas() {
   return (

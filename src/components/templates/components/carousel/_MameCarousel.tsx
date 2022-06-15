@@ -3,7 +3,7 @@ import Carousel from "../../../../../styles/MameStyled/core/components/carousel/
 import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
 import CarouselIndicatorButtons from "../../../../../styles/MameStyled/core/components/carousel/CarouselIndicatorButtons";
 import CarouselItemsContainer from "../../../../../styles/MameStyled/core/components/carousel/CarouselItemsContainer";
-import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag.ts";
+import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag";
 
 export default function MameCarousel() {
   const carouselContainer = useRef();

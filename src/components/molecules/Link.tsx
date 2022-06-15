@@ -2,7 +2,7 @@ import { default as NextLink } from "next/link";
 import { A } from "../../../styles/MameStyled/core/HtmlTag.ts";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 import propTypes from "prop-types";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import { useRouter } from "next/router";
 
 export default function Link({ href, title, ...props }) {
@@ -10,7 +10,7 @@ export default function Link({ href, title, ...props }) {
 
   const router = useRouter();
 
-  const { color, timing } = stylesConfig;
+  const { color, timing } = STYLES_CONFIG;
 
   return (
     <NextLink href={href} passHref>

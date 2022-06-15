@@ -1,13 +1,13 @@
 import Link from "next/link";
 import propTypes from "prop-types";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag.ts";
 import ErrorUnexpectedProps from "../../utils/ErrorUnexpectedProps";
 
 export default function Button({ text, href, ...props }) {
   ErrorUnexpectedProps({ props, component: "Button" });
   
-  const { color, radius, timing } = stylesConfig;
+  const { color, radius, timing } = STYLES_CONFIG;
 
   const css = {
     background: color.base.secondary.default,

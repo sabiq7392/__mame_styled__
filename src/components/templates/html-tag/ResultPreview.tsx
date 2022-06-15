@@ -1,9 +1,9 @@
-import stylesConfig from "../../../../styles.config";
+import STYLES_CONFIG from "../../../../styles.config";
 import { Figure, Img, Div, Blockquote, Figcaption, H1, Small } from "../../../../styles/MameStyled/core/HtmlTag.ts";
 import Preview from "../../organisms/Preview";
 
 export default function ResultPreview() {
-  const { color } = stylesConfig;
+  const { color } = STYLES_CONFIG;
 
   return (
     <Preview title="Result Preview" member="HTML Tag" noLandfield>

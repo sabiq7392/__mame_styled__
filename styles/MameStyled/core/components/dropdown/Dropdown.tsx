@@ -1,9 +1,14 @@
-import { Div } from "../../HtmlTag.ts";
+import { Div } from "../../HtmlTag";
 import { createElement } from "react";
 import { requiredProps } from "../../../utils/constants/requiredProps";
 import { node } from "prop-types";
+import type { ReactElement, ReactNode } from "react";
 
-export default function Dropdown({ children, ...props }) {
+interface Props {
+  children: ReactNode | ReactNode[];
+}
+
+export default function Dropdown({ children, ...props }: Props): ReactElement {
   return createElement(
     Div,
     {

@@ -6,12 +6,12 @@ import AsideLeft from "../src/components/organisms/AsideLeft";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
 import Footer from "../src/components/organisms/Footer";
-import stylesConfig from "../styles.config";
+import STYLES_CONFIG from "../styles.config";
 import { useRouter } from "next/router";
 import "@fontsource/poppins"; // Defaults to weight 400.
 import { AppProps } from "next/app";
 
-const { spacing, color } = stylesConfig;
+const { spacing, color } = STYLES_CONFIG;
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

@@ -1,4 +1,4 @@
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import { Div } from "../../../styles/MameStyled/core/HtmlTag";
 import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import { ReactNode } from "react";
@@ -14,7 +14,7 @@ type Props = {
   id?: string,
 }
 
-const { color, spacing } = stylesConfig;
+const { color, spacing } = STYLES_CONFIG;
 
 function Container({ 
   children, 
@@ -33,7 +33,7 @@ function Container({
     display: display ?? "grid", 
     gap: standard ? gap || spacing.sm : spacing.md ,
     padding: standard ? 0 : spacing.sm, 
-    borderRadius: standard ? 0 : radius || stylesConfig.radius.md, 
+    borderRadius: standard ? 0 : radius || STYLES_CONFIG.radius.md, 
     border: border ? `1px solid ${color.muted}` : "none", 
   };
 

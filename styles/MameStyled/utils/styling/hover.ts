@@ -1,6 +1,16 @@
 import screen from "../../config/screen.config";
 
-const hover = props => ({
+interface Props {
+  hover?: any,
+  hoverXs?: any,
+  hoverSm?: any,
+  hoverMd?: any,
+  hoverLg?: any,
+  hoverXl?: any,
+  hoverXxl?: any,
+}
+
+const hover = (props: Props) => ({
   ":hover": props.hover || props.hoverXs,
   [`@media (${screen.sm})`]: {
     ":hover": props.hoverSm,

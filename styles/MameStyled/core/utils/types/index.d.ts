@@ -1,5 +1,6 @@
-import { CSSProperties } from "react";
+import { CSSProp } from "styled-components";
 import { H1, H2, H3, H4, H5, H6 } from "../../HtmlTag";
+import type { AriaAttributes, HTMLAttributes, MutableRefObject } from "react";
 
 export type THead = typeof H1 | typeof H2 |  typeof H3 | typeof H4 |  typeof H5 |  typeof H6;
 
@@ -12,28 +13,31 @@ export type ResponsiveCss = {
   xxl?: string | number,
 };
 
-export type MameCss = {
-  css?: CSSProperties,
-  cssXs?: CSSProperties,
-  cssSm?: CSSProperties,
-  cssMd?: CSSProperties,
-  cssLg?: CSSProperties,
-  cssXl?: CSSProperties,
-  cssXxl?: CSSProperties,
-};
+type CSSAllIn = CSSProp | object;
+
+export interface MameCss {
+  css?: CSSAllIn,
+  cssXs?: CSSAllIn,
+  cssSm?: CSSAllIn,
+  cssMd?: CSSAllIn,
+  cssLg?: CSSAllIn,
+  cssXl?: CSSAllIn,
+  cssXxl?: CSSAllIn,
+}
 
 export type MameHover = {
-  hover?: CSSProperties,
-  hoverXs?: CSSProperties,
-  hoverSm?: CSSProperties,
-  hoverMd?: CSSProperties,
-  hoverLg?: CSSProperties,
-  hoverXl?: CSSProperties,
-  hoverXxl?: CSSProperties,
+  hover?: CSSAllIn,
+  hoverXs?: CSSAllIn,
+  hoverSm?: CSSAllIn,
+  hoverMd?: CSSAllIn,
+  hoverLg?: CSSAllIn,
+  hoverXl?: CSSAllIn,
+  hoverXxl?: CSSAllIn,
 }
 
 export interface Attributes extends MameCss, MameHover {
   debug?: true,
+  as?: any,
 }
 
 export type FlexDirection = (
@@ -48,3 +52,40 @@ export type FlexDirection = (
   "row-reverse" | 
   undefined
 );
+
+export type Ref = MutableRefObject<HTMLElement | undefined>
+
+export interface HTMLTag extends 
+HTMLAttributes<HTMLElement>, 
+AriaAttributes<HTMLElement> {
+  cssXs?: CSSAllIn;
+  cssSm?: CSSAllIn; 
+  cssMd?: CSSAllIn;
+  cssLg?: CSSAllIn;
+  cssXl?: CSSAllIn;
+  cssXxl?: CSSAllIn;
+  hover?: CSSAllIn;
+  hoverXs?: CSSAllIn;
+  hoverSm?: CSSAllIn;
+  hoverMd?: CSSAllIn;
+  hoverLg?: CSSAllIn;
+  hoverXl?: CSSAllIn;
+  hoverXxl?: CSSAllIn;
+  as?: any;
+  debug?: true;
+  fontSize?: ResponsiveCss | number; 
+  padding?: ResponsiveCss | number;
+  width?: ResponsiveCss | number;
+  height?: ResponsiveCss | number;
+  display?: ResponsiveCss | number;
+  background?: ResponsiveCss | number;
+  className?: string;
+  onClick?: any;
+  children?: any;
+  ref?: any;
+}
+
+export interface IconProps {
+  color?: string;
+  size?: number;
+}

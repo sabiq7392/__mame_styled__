@@ -1,4 +1,4 @@
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 
 const originalRulesScreen = { 
   xs: "min-width: 1px", 
@@ -9,6 +9,6 @@ const originalRulesScreen = {
   xxl: "min-width: 1400px", 
 };
 
-const screen = stylesConfig.screen || originalRulesScreen;
+const screen = STYLES_CONFIG.screen || originalRulesScreen;
 
 export default screen;

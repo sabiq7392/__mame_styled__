@@ -1,9 +1,9 @@
 import { Header, H1, A } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import stylesConfig from "../../../styles.config";
+import STYLES_CONFIG from "../../../styles.config";
 import Description from "../atoms/Description";
 
 export default function Welcome() {
-  const { color, spacing, radius, timing } = stylesConfig;
+  const { color, spacing, radius, timing } = STYLES_CONFIG;
   
   const cssHeader = { 
     padding: `${spacing.sxxl}px ${spacing.sm}px`, 

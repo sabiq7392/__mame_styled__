@@ -1,17 +1,31 @@
-import propTypes from "prop-types";
-import stylesConfig from "../../../styles.config";
-import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
+import STYLES_CONFIG from "../../../styles.config";
+import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag";
 import SetAutoHead from "../../utils/SetAutoHead";
 import Heading from "../molecules/Heading";
 import Landfield from "../atoms/Landfield";
-import { any } from "prop-types";
-import { useId } from "react";
+import { ReactElement, useId } from "react";
+import type { ReactNode } from "react";
 
-export default function Preview({ member, title = "Result Preview", appeal, description, children, noLandfield, background, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Review", type: "Organisms" });
+interface Props {
+  children: ReactNode | ReactNode[];
+  member?: string;
+  title?: string;
+  appeal?: string;
+  description?: string;
+  noLandfield?: true;
+  background?: string;
+}
 
-  const { spacing } = stylesConfig;
+export default function Preview({ 
+  children, 
+  member, 
+  title = "Result Preview", 
+  appeal, 
+  description, 
+  noLandfield, 
+  background, 
+}: Props): ReactElement {
+  const { spacing } = STYLES_CONFIG;
 
   const id = useId();
 
@@ -22,15 +36,3 @@ export default function Preview({ member, title = "Result Preview", appeal, desc
     </Section>
   );
 }
-
-const { string, node } = propTypes;
-
-Preview.propTypes = {
-  title: string,
-  children: node.isRequired,
-  member: string,
-  appeal: string,
-  description: string,
-  noLandfield: any,
-  background: string,
-};

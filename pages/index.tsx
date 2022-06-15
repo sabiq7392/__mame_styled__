@@ -1,4 +1,4 @@
-import stylesConfig from "../styles.config";
+import STYLES_CONFIG from "../styles.config";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -9,8 +9,8 @@ import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
 
-function Home() {
-  const { spacing } = stylesConfig;
+export default function Home() {
+  const { spacing } = STYLES_CONFIG;
 
   return (
     <Grid>
@@ -55,5 +55,19 @@ function Home() {
   );
 }
 
-// eslint-disable-next-line no-undef
-export default Home;
+// const Test = {
+//   Mame: () => {
+//     return <h1>Mame</h1>
+//   },
+//   Sabiq: () => <h1>Sabiq</h1>
+// };
+
+// function Test() {
+//   return {
+//     Mame: () => {
+//       return <>
+//         <h1>Sabiq</h1>
+//       </>;
+//     },
+//   };
+// }

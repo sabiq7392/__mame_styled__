@@ -1,13 +1,18 @@
-import { Div } from "../../HtmlTag.ts";
+import { Div } from "../../HtmlTag";
 import { createElement } from "react";
-import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
-import { node } from "prop-types";
+import { requiredProps } from "../../../utils/constants/requiredProps";
+import { HTMLTag } from "../../utils/types";
 
-function Accordion({ 
+interface Props extends HTMLTag {
+  children: any;
+  _ref?: any;
+}
+
+export default function Accordion({ 
   children,
   _ref,
   ...props
-}) {
+}: Props) {
   return createElement(
     Div,
     {
@@ -22,10 +27,3 @@ function Accordion({
     children,
   );
 }
-
-Accordion.propTypes = {
-  children: node.isRequired,
-  ...requiredPropTypes,
-};
-
-export default Accordion;

@@ -1,6 +1,16 @@
 import screen from "../../config/screen.config";
 
-const css = props => ({
+interface Props {
+  css?: any,
+  cssXs?: any,
+  cssSm?: any,
+  cssMd?: any,
+  cssLg?: any,
+  cssXl?: any,
+  cssXxl?: any,
+}
+
+const css = (props: Props) => ({
   [`@media (${screen.xs})`]: props.css || props.cssXs,
   [`@media (${screen.sm})`]: props.cssSm,
   [`@media (${screen.md})`]: props.cssMd,

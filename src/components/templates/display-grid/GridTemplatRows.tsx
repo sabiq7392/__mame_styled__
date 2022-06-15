@@ -1,4 +1,4 @@
-import stylesConfig from "../../../../styles.config";
+import STYLES_CONFIG from "../../../../styles.config";
 import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
 import nextJsExample from "../../../data/nextJsExample";
 import ItemExample from "../../molecules/ItemExample";
@@ -7,7 +7,7 @@ import Harbor from "../../organisms/Harbor";
 import Preview from "../../organisms/Preview";
 
 export default function GridTemplateRows() {
-  const { spacing } = stylesConfig;
+  const { spacing } = STYLES_CONFIG;
 
   return (
     <Harbor title="Grid Template Rows"> 

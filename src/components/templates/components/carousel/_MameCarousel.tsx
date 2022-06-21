@@ -6,26 +6,26 @@ import CarouselItemsContainer from "../../../../../styles/MameStyled/core/compon
 import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag";
 
 export default function MameCarousel() {
-  const carouselContainer = useRef();
-  const [carouselItems, setCarouselItems] = useState([]);
-  const [isActive, setIsActive] = useState(0);
-  const [isClicked, setIsClicked] = useState(false);
-  const carousel = useRef();
+  // const carouselContainer = useRef();
+  // const [carouselItems, setCarouselItems] = useState([]);
+  // const [isActive, setIsActive] = useState(0);
+  // const [isClicked, setIsClicked] = useState(false);
+  // const carousel = useRef();
 
   return <>
     <Carousel
-      isActive={isActive}
-      carouselItems={carouselItems}
-      setCarouselItems={setCarouselItems}
-      setIsActive={setIsActive}
-      carouselContainer={carouselContainer}
-      isClicked={isClicked}
-      setIsClicked={setIsClicked}
-      // id={"auto-switch-slide"}
-      _ref={carousel}
+      // isActive={isActive}
+      // carouselItems={carouselItems}
+      // setCarouselItems={setCarouselItems}
+      // setIsActive={setIsActive}
+      // carouselContainer={carouselContainer}
+      // isClicked={isClicked}
+      // setIsClicked={setIsClicked}
+      // // id={"auto-switch-slide"}
+      // _ref={carousel}
       // timingAutoSwitchSlide={3000}
     >
-      <CarouselItemsContainer _ref={carouselContainer} cssXs={{ borderRadius: 10 }}>
+      {/* <CarouselItemsContainer _ref={carouselContainer} cssXs={{ borderRadius: 10 }}> */}
         <CarouselItem>
           <Figure cssXs={{ display: "grid" }}>
             <Img 
@@ -74,15 +74,15 @@ export default function MameCarousel() {
             </Figcaption>
           </Figure>
         </CarouselItem>
-      </CarouselItemsContainer>
-      <CarouselIndicatorButtons 
+      {/* </CarouselItemsContainer> */}
+      {/* <CarouselIndicatorButtons 
         carouselItems={carouselItems}
         isActive={isActive}
         setIsActive={setIsActive}
         // carouselId={"auto-switch-slide"}
         carousel={carousel}
 
-      />
+      /> */}
     </Carousel>
   </>;
 }

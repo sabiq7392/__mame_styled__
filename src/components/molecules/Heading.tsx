@@ -2,7 +2,7 @@ import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-e
 import Description from "../atoms/Description";
 import Appeal from "../atoms/Appeal";
 import STYLES_CONFIG from "../../../styles.config";
-import { H1, H2, H3, H4, H5, H6, Header, Span } from "../../../styles/MameStyled/core/HtmlTag";
+import { H1, Header, Span } from "../../../styles/MameStyled/core/HtmlTag";
 import { ReactElement, ReactNode } from "react";
 import { THead } from "../../../styles/MameStyled/core/utils/types/index";
 
@@ -10,7 +10,7 @@ import { THead } from "../../../styles/MameStyled/core/utils/types/index";
 interface Props {
   head: THead,
   title: string;
-  description: string | ReactNode;
+  description?: string | ReactNode;
   member?: string;
   appeal?: string;
   headWeight?: 500 | 600 | 800 | 900 | "bold" | "normal" | "black";

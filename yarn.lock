@@ -463,6 +463,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-syntax-highlighter@^15.5.2":
+  "integrity" "sha512-cJJvwU8lQv/efGSo/LmPoaOqWi/B0AG4CNKKCn7HPUL25SqiPn1Vl+fV1JiUigJv97ruTZ8mo08+b8/0zoYufA=="
+  "resolved" "https://registry.npmjs.org/@types/react-syntax-highlighter/-/react-syntax-highlighter-15.5.2.tgz"
+  "version" "15.5.2"
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18.0.9":
   "integrity" "sha512-9bjbg1hJHUm4De19L1cHiW0Jvx3geel6Qczhjd0qY5VKVE2X5+x77YxAepuCwVh4vrgZJdgEJw48zrhRIeF4Nw=="
   "resolved" "https://registry.npmjs.org/@types/react/-/react-18.0.9.tgz"

@@ -1,8 +1,9 @@
+import { ReactElement } from "react";
 import CodePreview from "../../../organisms/CodePreview";
 import Preview from "../../../organisms/Preview";
 import MameCarousel from "./_MameCarousel";
 
-export default function CarouselOriginal() {
+export default function CarouselOriginal(): ReactElement {
   return <>
     <Preview title="Carousel" noLandfield>
       <MameCarousel />

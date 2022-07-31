@@ -1,12 +1,13 @@
-import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag.ts";
+import { A, H1 } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
-import propTypes from "prop-types";
 import Link from "next/link";
+import { ReactElement } from "react";
 
-export default function Brand({ as, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Brand" });
+interface Props {
+  as?: "small" | "h1",
+}
 
+export default function Brand({ as }: Props): ReactElement {
   const { color } = STYLES_CONFIG;
   const css = { 
     fontWeight: "bold", 
@@ -23,7 +24,3 @@ export default function Brand({ as, ...props }) {
     </Link>
   );
 }
-
-Brand.propTypes = {
-  as: propTypes.oneOf(["small", "h1"]),
-};

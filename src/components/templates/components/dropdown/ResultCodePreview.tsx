@@ -1,6 +1,7 @@
+import { ReactElement } from "react";
 import CodePreview from "../../../organisms/CodePreview";
 
-export default function ResultCodePreview() {
+export default function ResultCodePreview(): ReactElement {
   return <>
     <CodePreview member="Dropdown">
       {`

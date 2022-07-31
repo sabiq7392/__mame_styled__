@@ -1,11 +1,12 @@
 import { Small } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
-import { string } from "prop-types";
+import { ReactElement } from "react";
 
-export default function Author({ name, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Author.jsx" });
+interface Props {
+  name?: string,
+}
 
+export default function Author({ name }: Props): ReactElement {
   const { color } = STYLES_CONFIG;
 
   const css = { 
@@ -16,10 +17,6 @@ export default function Author({ name, ...props }) {
   };
 
   return (
-    <Small cssXs={css}>Author: {name || "Sabiq Muhammad Antebing Mame"}</Small>
+    <Small cssXs={css}>Authors: {name || "Sabiq Muhammad Antebing Mame"}</Small>
   );
 }
-
-Author.propTypes = {
-  name: string,
-};

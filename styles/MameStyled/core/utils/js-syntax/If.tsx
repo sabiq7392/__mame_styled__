@@ -1,17 +1,13 @@
-import { ReactElement } from "react";
-
-interface PropsMap {
-  data: any[],
-  render: any,
-}
+import { ReactNode, ReactElement } from "react";
 
 /**
- * @example 
- * <Map 
- *  data={["sabiq", "reza", "nabil"]} 
- *  render={(name: string, index: number) => <button key={index}>{name}</button>} 
- * />
+ *  @example 
+ *  <If is={!router.pathname.includes("auth")}>
+ *    <LayoutMain>
+ *      <Component {...pageProps} />
+ *    </LayoutMain> 
+ *  </If>
  */
-export default function Map({ data, render }: PropsMap): ReactElement {
-  return <>{data.map(render)}</>;
+export default function If({ is, children }: { is: any, children: ReactNode }): ReactElement | null {
+  return is ? <>{children}</> : null;
 }

@@ -1,11 +1,11 @@
 import { A } from "../../../../../styles/MameStyled/core/HtmlTag";
 import { BsChevronDown } from "react-icons/bs";
-import { useRef, useState } from "react";
+import { ReactElement, useRef, useState } from "react";
 import Dropdown from "../../../../../styles/MameStyled/core/components/dropdown/Dropdown";
 import DropdownButton from "../../../../../styles/MameStyled/core/components/dropdown/DropdownButton";
 import DropdownBody from "../../../../../styles/MameStyled/core/components/dropdown/DropdownBody";
 
-export default function MameDropdown() {
+export default function MameDropdown(): ReactElement {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const button = useRef<HTMLElement>();
 

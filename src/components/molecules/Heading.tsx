@@ -1,11 +1,12 @@
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Description from "../atoms/Description";
 import Appeal from "../atoms/Appeal";
 import STYLES_CONFIG from "../../../styles.config";
 import { H1, Header, Span } from "../../../styles/MameStyled/core/HtmlTag";
 import { ReactElement, ReactNode } from "react";
 import { THead } from "../../../styles/MameStyled/core/utils/types/index";
+import { CSSProperties } from "styled-components";
 
+const { color, spacing } = STYLES_CONFIG;
 
 interface Props {
   head: THead,
@@ -16,9 +17,6 @@ interface Props {
   headWeight?: 500 | 600 | 800 | 900 | "bold" | "normal" | "black";
 }
 
-
-const { color, spacing } = STYLES_CONFIG;
-
 export default function Heading({ 
   head, 
   title, 
@@ -26,16 +24,13 @@ export default function Heading({
   member, 
   headWeight, 
   description, 
-  ...props 
 }: Props): ReactElement {
-  ErrorUnexpectedProps({ props, componentName: "Header" });
-  
-  const cssHead = {
+  const cssHead: CSSProperties = {
     color: color.white,
     fontWeight: headWeight || "bold",
   };
 
-  const styleMember = {
+  const styleMember: CSSProperties = {
     color: color.light,
     fontSize: 10,
     marginRight: spacing.xs,

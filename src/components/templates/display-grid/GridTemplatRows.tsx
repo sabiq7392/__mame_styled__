@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import STYLES_CONFIG from "../../../../styles.config";
 import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
 import nextJsExample from "../../../data/nextJsExample";
@@ -6,7 +7,7 @@ import CodePreview from "../../organisms/CodePreview";
 import Harbor from "../../organisms/Harbor";
 import Preview from "../../organisms/Preview";
 
-export default function GridTemplateRows() {
+export default function GridTemplateRows(): ReactElement {
   const { spacing } = STYLES_CONFIG;
 
   return (

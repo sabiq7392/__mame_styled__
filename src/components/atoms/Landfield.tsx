@@ -1,12 +1,13 @@
-import { string } from "prop-types";
-import { node } from "prop-types";
+import { ReactNode, ReactElement } from "react";
 import STYLES_CONFIG from "../../../styles.config";
-import { Div } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
+import { Div } from "../../../styles/MameStyled/core/HtmlTag";
 
-export default function Landfield({ children, background, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Landifield", type: "Molecules" });
+interface Props {
+  background?: string,
+  children: ReactNode | ReactNode[],
+}
 
+export default function Landfield({ children, background }: Props): ReactElement {
   const { color, radius, spacing } = STYLES_CONFIG;
 
   return (
@@ -15,8 +16,3 @@ export default function Landfield({ children, background, ...props }) {
     </Div>
   );
 }
-
-Landfield.propTypes = {
-  children: node.isRequired,
-  background: string,
-};

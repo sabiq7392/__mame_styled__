@@ -1,14 +1,16 @@
 import { default as NextLink } from "next/link";
-import { A } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
-import propTypes from "prop-types";
+import { A } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
-import { useRouter } from "next/router";
+import { NextRouter, useRouter } from "next/router";
+import { ReactElement } from "react";
 
-export default function Link({ href, title, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Link" });
+interface Props {
+  href: string,
+  title: string,
+}
 
-  const router = useRouter();
+export default function Link({ href, title }: Props): ReactElement {
+  const router: NextRouter = useRouter();
 
   const { color, timing } = STYLES_CONFIG;
 
@@ -23,12 +25,3 @@ export default function Link({ href, title, ...props }) {
     </NextLink>
   );
 }
-
-const { string } = propTypes;
-
-Link.propTypes = {
-  href: string.isRequired,
-  title: string.isRequired,
-};
-
-

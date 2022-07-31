@@ -1,9 +1,10 @@
 // import dynamic from "next/dynamic";
 
 // const CodePreview = dynamic(() => import("../../../organisms/CodePreview"));
+import { ReactElement } from "react";
 import CodePreview from "../../../organisms/CodePreview";
 
-export default function ResultCodePreview() {
+export default function ResultCodePreview(): ReactElement {
   return <>
     <CodePreview title="Result Code Preview" member="Navbar">
       {`

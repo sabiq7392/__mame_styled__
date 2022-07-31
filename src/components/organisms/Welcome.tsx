@@ -1,4 +1,4 @@
-import { Header, H1, A } from "../../../styles/MameStyled/core/HtmlTag.ts";
+import { Header, H1, A } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
 import Description from "../atoms/Description";
 

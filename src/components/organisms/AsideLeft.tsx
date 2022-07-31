@@ -6,10 +6,11 @@ import Link from "../molecules/Link";
 import Brand from "../molecules/Brand";
 import SocialMedia from "../molecules/SocialMedia";
 import link from "../../../link.config";
+import { ReactElement } from "react";
 
-export default function AsideLeft() {
-  const { spacing } = STYLES_CONFIG;
+const { spacing } = STYLES_CONFIG;
 
+export default function AsideLeft(): ReactElement {
   return (
     <Aside 
       cssXs={{ display: "none", position: "sticky", top: 0, height: "100vh", padding: `${spacing.md}px 20px` }} 

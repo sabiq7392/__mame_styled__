@@ -1,6 +1,5 @@
 import Container from "../atoms/Container";
 import STYLES_CONFIG from "../../../styles.config";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
 import Heading from "../molecules/Heading";
 import { H2 } from "../../../styles/MameStyled/core/HtmlTag";
 import { useId } from "react";
@@ -11,13 +10,13 @@ import { ReactElement } from "react";
 
 const { spacing } = STYLES_CONFIG;
 
-type Props = {
+interface Props {
   children: ReactNode,
   title: string,
   member?: string,
   appeal?: string,
   description?: string,
-};
+}
 
 export default function Harbor({ 
   children, 
@@ -25,10 +24,7 @@ export default function Harbor({
   title, 
   appeal, 
   description, 
-  ...props 
 }: Props): ReactElement {
-  ErrorUnexpectedProps({ props, componentName: "Harbor", type: "organism" });
-
   const id = useId();
 
   return (

@@ -1,23 +1,21 @@
 import { P } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
+import { ResponsiveCss } from "../../../styles/MameStyled/core/utils/types";
 
-type Props = {
+const { font } = STYLES_CONFIG;
+
+interface Props {
   text: string | ReactNode,
   textAlign?: "center" | "left" | "right",
   margin?: string | number,
   color?: string,
-  fontSize?: string | number | object,
-};
-
-const { font } = STYLES_CONFIG;
+  fontSize?: ResponsiveCss,
+}
 
 export default function Description(
-  { textAlign, margin, color, text, fontSize, ...props }: Props
-) {
-  ErrorUnexpectedProps({ props, componentName: "Description.jsx" });
-
+  { textAlign, margin, color, text, fontSize }: Props
+): ReactElement {
   const css = { 
     textAlign: textAlign, 
     margin: margin ?? "auto", 

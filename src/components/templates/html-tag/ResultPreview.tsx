@@ -1,8 +1,9 @@
+import { ReactElement } from "react";
 import STYLES_CONFIG from "../../../../styles.config";
-import { Figure, Img, Div, Blockquote, Figcaption, H1, Small } from "../../../../styles/MameStyled/core/HtmlTag.ts";
+import { Figure, Img, Div, Blockquote, Figcaption, H1, Small } from "../../../../styles/MameStyled/core/HtmlTag";
 import Preview from "../../organisms/Preview";
 
-export default function ResultPreview() {
+export default function ResultPreview(): ReactElement {
   const { color } = STYLES_CONFIG;
 
   return (
@@ -25,7 +26,7 @@ export default function ResultPreview() {
           </Blockquote>
           <Figcaption cssXs={{ display: "flex", flexDirection: "column", gap: 5 }}>
             <H1 cssXs={{ color: "#90E0EF", fontWeight: 500 }} fontSize={{ xs: 14, md: 16, lg: 18 }}>Sabiq Muhammad</H1>
-            <Small cssX={{ color: "rgba(255, 255, 255, 0.5)", fontWeight: 600, letterSpacing: 0.4 }} fontSize={{ xs: 10, md: 12, lg: 14 }}>Fullstack Developer, Jakarta</Small>
+            <Small cssXs={{ color: "rgba(255, 255, 255, 0.5)", fontWeight: 600, letterSpacing: 0.4 }} fontSize={{ xs: 10, md: 12, lg: 14 }}>Fullstack Developer, Jakarta</Small>
           </Figcaption>
         </Div>
       </Figure>

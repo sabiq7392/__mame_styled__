@@ -46,10 +46,6 @@ const link: Link = {
       href: "/display/flex",
     },
     {
-      title: "Typography",
-      href: "/typography",
-    },
-    {
       title: "HTML Tag",
       href: "/html-tag",
     },

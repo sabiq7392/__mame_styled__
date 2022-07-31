@@ -1,7 +1,6 @@
 import STYLES_CONFIG from "../../../styles.config";
 import { Div } from "../../../styles/MameStyled/core/HtmlTag";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
-import { ReactNode } from "react";
+import { ReactElement, ReactNode } from "react";
 
 type Props = {
   children: ReactNode, 
@@ -16,7 +15,7 @@ type Props = {
 
 const { color, spacing } = STYLES_CONFIG;
 
-function Container({ 
+export default function Container({ 
   children, 
   as, 
   radius, 
@@ -25,10 +24,7 @@ function Container({
   display, 
   gap, 
   id, 
-  ...props 
-}: Props) {
-  ErrorUnexpectedProps({ props, component: "CodePreview.jsx" });
-
+}: Props): ReactElement {
   const css = { 
     display: display ?? "grid", 
     gap: standard ? gap || spacing.sm : spacing.md ,
@@ -45,5 +41,3 @@ function Container({
     <Div id={id} as={as} cssXs={css} cssLg={cssLg}>{children}</Div>
   );
 }
-
-export default Container;

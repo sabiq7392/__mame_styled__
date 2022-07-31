@@ -1,7 +1,9 @@
 import STYLES_CONFIG from "../../../styles.config";
 import { Table, Thead, Tbody, Tr, Th, Td } from "../../../styles/MameStyled/core/HtmlTag";
-import propTypes from "prop-types";
 import type { ReactElement } from "react";
+import { CSSProperties } from "styled-components";
+
+const { spacing, color, radius } = STYLES_CONFIG;
 
 interface Props {
   data: {
@@ -14,13 +16,12 @@ interface Props {
 }
 
 export default function TableProperties({ data }: Props): ReactElement {
-  const { spacing, color, radius } = STYLES_CONFIG;
-  const cssThThead = {
+  const cssThThead: CSSProperties = {
     textAlign: "left", 
     padding: `${spacing.xs}px ${spacing.sm}px`,
   };
 
-  const cssTdTbody = { 
+  const cssTdTbody: CSSProperties = { 
     textAlign: "left", 
     padding: `${spacing.xs}px ${spacing.sm}px`, 
     color: color.white, 
@@ -53,18 +54,4 @@ export default function TableProperties({ data }: Props): ReactElement {
     </Table>
   );
 }
-
-const { string, arrayOf, shape, any } = propTypes;
-
-TableProperties.propTypes = {
-  data: arrayOf(
-    shape({
-      name: string.isRequired,
-      default: string.isRequired,
-      type: any.isRequired,
-      description: any.isRequired
-    }),
-  ).isRequired,
-};
-
 

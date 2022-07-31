@@ -1,11 +1,12 @@
-import { Footer as MameFooter } from "../../../styles/MameStyled/core/HtmlTag.ts";
+import { Footer as MameFooter } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
 import { Grid } from "../../../styles/MameStyled/core/display/Grid";
 import Author from "../molecules/Author";
 import Brand from "../molecules/Brand";
 import SocialMedia from "../molecules/SocialMedia";
+import { ReactElement } from "react";
 
-export default function Footer() {
+export default function Footer(): ReactElement {
   const { color, spacing } = STYLES_CONFIG;
 
   return (

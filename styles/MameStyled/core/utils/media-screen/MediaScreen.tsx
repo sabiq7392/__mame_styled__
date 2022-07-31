@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 type Option = ">=" | ">" | "===" | "<=" | "<";
 type ScreenWidth = "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | number
 
-export default function MediaScreen(_option: Option, _screenWidth: ScreenWidth) {
+export default function useMediaScreen(_option: Option, _screenWidth: ScreenWidth) {
   const [screenWidth, setScreenWidth] = useState(true);
 
   useEffect(() => {

@@ -1,10 +1,8 @@
+import { ReactElement } from "react";
 import STYLES_CONFIG from "../../../styles.config";
-import { Div } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
+import { Div } from "../../../styles/MameStyled/core/HtmlTag";
 
-export default function LineSeperator({ ...props }) {
-  ErrorUnexpectedProps({ props, component: "LineSeperator" });
-
+export default function LineSeperator(): ReactElement {
   const { color } = STYLES_CONFIG;
 
   return (

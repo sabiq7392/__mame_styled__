@@ -1,17 +1,13 @@
 import { Strong } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
-import PropTypes from "prop-types";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
-import { CSSProperties } from "react";
+import { CSSProperties, ReactElement } from "react";
 
 type Props = {
   text: string,
   css?: CSSProperties,
 };
 
-export default function Appeal({ text, css, ...props }: Props) {
-  ErrorUnexpectedProps({ props, component: "Appeal.jsx" });
-
+export default function Appeal({ text, css }: Props): ReactElement {
   const { color } = STYLES_CONFIG;
 
   const cssDefault = { 
@@ -24,11 +20,3 @@ export default function Appeal({ text, css, ...props }: Props) {
     <Strong cssXs={css ?? cssDefault}>{text}</Strong>
   );
 }
-
-const { string, object } = PropTypes;
-
-Appeal.propTypes = {
-  text: string.isRequired,
-  css: object,
-};
-

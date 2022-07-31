@@ -6,6 +6,8 @@ import Landfield from "../atoms/Landfield";
 import { ReactElement, useId } from "react";
 import type { ReactNode } from "react";
 
+const { spacing } = STYLES_CONFIG;
+
 interface Props {
   children: ReactNode | ReactNode[];
   member?: string;
@@ -25,7 +27,6 @@ export default function Preview({
   noLandfield, 
   background, 
 }: Props): ReactElement {
-  const { spacing } = STYLES_CONFIG;
 
   const id = useId();
 

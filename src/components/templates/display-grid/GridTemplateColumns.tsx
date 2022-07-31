@@ -5,8 +5,9 @@ import ItemExample from "../../molecules/ItemExample";
 import { Grid } from "../../../../styles/MameStyled/core/display/Grid";
 import STYLES_CONFIG from "../../../../styles.config";
 import CodePreview from "../../organisms/CodePreview";
+import { ReactElement } from "react";
 
-export default function GridTemplateColumns() {
+export default function GridTemplateColumns(): ReactElement {
   const { spacing } = STYLES_CONFIG;
 
   return (

@@ -1,27 +1,26 @@
 import { Flex } from "../../../styles/MameStyled/core/display/Flex";
-import { A } from "../../../styles/MameStyled/core/HtmlTag.ts";
+import { A } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps.tsx";
 import Linkedin from "../atoms/icons/Linkedin";
 import Github from "../atoms/icons/Github";
 import Instagram from "../atoms/icons/Instagram";
 import link from "../../../link.config";
+import { ReactElement } from "react";
+import { CSSProperties } from "styled-components";
 
 const { authors } = link;
 
-export default function SocialMedia({ ...props }) {
-  ErrorUnexpectedProps({ props, component: "SocialMedia.jsx" });
-
+export default function SocialMedia(): ReactElement {
   const { color, spacing, timing } = STYLES_CONFIG;
 
-  const css = {
+  const css: CSSProperties = {
     display: "flex",
     alignItems: "center", 
     transition: timing.fast,
     color: "white",
   };
 
-  const hover = { color: color.primary };
+  const hover: CSSProperties = { color: color.primary };
 
   return (
     <Flex gap={spacing.sm}>

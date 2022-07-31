@@ -1,9 +1,14 @@
-import { any, node } from "prop-types";
-import { Div } from "../../HtmlTag.ts";
-import { createElement } from "react";
-import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import { Div } from "../../HtmlTag";
+import { createElement, ReactNode, ReactElement, Ref } from "react";
+import { requiredProps } from "../../../utils/constants/requiredProps";
+import { HTMLTag } from "../../utils/types";
 
-export default function CarouselItemsContainer({ children, _ref, ...props }) {
+interface Props extends HTMLTag {
+  children: ReactNode | ReactNode[];
+  _ref: Ref<any>;
+}
+
+export default function CarouselItemsContainer({ children, _ref, ...props }: Props): ReactElement {
   return createElement(
     Div,
     {
@@ -22,9 +27,3 @@ export default function CarouselItemsContainer({ children, _ref, ...props }) {
     children,
   );
 }
-
-CarouselItemsContainer.propTypes = {
-  children: node.isRequired,
-  _ref: any.isRequired,
-  ...requiredPropTypes,
-};

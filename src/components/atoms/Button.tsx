@@ -1,12 +1,14 @@
 import Link from "next/link";
-import propTypes from "prop-types";
+import { ReactElement } from "react";
 import STYLES_CONFIG from "../../../styles.config";
-import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag.ts";
-import ErrorUnexpectedProps from "../../utils/ErrorUnexpectedProps";
+import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag";
 
-export default function Button({ text, href, ...props }) {
-  ErrorUnexpectedProps({ props, component: "Button" });
-  
+interface Props {
+  text: string,
+  href: string,
+}
+
+export default function Button({ text, href }: Props): ReactElement {
   const { color, radius, timing } = STYLES_CONFIG;
 
   const css = {
@@ -43,10 +45,3 @@ export default function Button({ text, href, ...props }) {
     </>
   );
 }
-
-const { string } = propTypes;
-
-Button.propTypes = {
-  text: string.isRequired,
-  href: string,
-};

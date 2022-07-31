@@ -1,4 +1,4 @@
-import { useState, useRef, memo } from "react";
+import { useState, useRef, memo, ReactElement } from "react";
 import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
 import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
 import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
@@ -7,7 +7,7 @@ import NavbarContentWrapper from "../../../../../styles/MameStyled/core/componen
 import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
 import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
 
-const MameNavbar = memo(function MameNavbar() {
+const MameNavbar = memo(function MameNavbar(): ReactElement {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
   const navbar = useRef();
 

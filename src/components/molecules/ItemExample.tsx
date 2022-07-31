@@ -1,15 +1,17 @@
 import { Grid, Flex } from "../../../styles/MameStyled/core/display/_display";
-import PropTypes from "prop-types";
 import STYLES_CONFIG from "../../../styles.config";
 import { A, H2, P, Div } from "../../../styles/MameStyled/core/HtmlTag";
-import ErrorUnexpectedProps from "../../../styles/MameStyled/core/utils/handle-error/ErrorUnexpectedProps";
+import { ReactElement } from "react";
+import { CSSProperties } from "styled-components";
 
-export default function ItemExample({  item, title, href, description, ...props }) {
-  ErrorUnexpectedProps({ props, component: "ItemExample.jsx" });
-  
+interface Props extends PropsItem {
+  item: "grid" | "flex",
+}
+
+export default function ItemExample({  item, title, href, description }: Props): ReactElement {
   const { radius, spacing, color, timing } = STYLES_CONFIG;
 
-  const css = {
+  const css: CSSProperties = {
     padding: spacing.md, 
     borderRadius: radius.sm, 
     transition: timing.fast,
@@ -17,7 +19,7 @@ export default function ItemExample({  item, title, href, description, ...props 
     height: "100%",
   };
 
-  const hover = { background: color.base.secondary.hover };
+  const hover: CSSProperties = { background: color.base.secondary.hover };
 
   return (
     <Div>
@@ -36,8 +38,13 @@ export default function ItemExample({  item, title, href, description, ...props 
   );
 }
 
-// eslint-disable-next-line react/prop-types
-function Item({ href, title, description }) {
+interface PropsItem {
+  title: string,
+  href: string,
+  description: string,
+}
+
+function Item({ href, title, description }: PropsItem): ReactElement {
   const { spacing, color } = STYLES_CONFIG;
 
   return (
@@ -47,13 +54,3 @@ function Item({ href, title, description }) {
     </A>
   );
 }
-
-const { oneOf, string } = PropTypes;
-
-
-ItemExample.propTypes = {
-  item: oneOf(["grid", "flex"]).isRequired,
-  title: string.isRequired,
-  href: string.isRequired,
-  description: string.isRequired,
-};

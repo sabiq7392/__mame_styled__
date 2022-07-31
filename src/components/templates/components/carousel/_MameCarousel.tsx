@@ -1,11 +1,11 @@
-import { useState, useRef } from "react";
+import { useState, useRef, ReactElement } from "react";
 import Carousel from "../../../../../styles/MameStyled/core/components/carousel/Carousel";
 import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
 import CarouselIndicatorButtons from "../../../../../styles/MameStyled/core/components/carousel/CarouselIndicatorButtons";
 import CarouselItemsContainer from "../../../../../styles/MameStyled/core/components/carousel/CarouselItemsContainer";
 import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag";
 
-export default function MameCarousel() {
+export default function MameCarousel(): ReactElement {
   // const carouselContainer = useRef();
   // const [carouselItems, setCarouselItems] = useState([]);
   // const [isActive, setIsActive] = useState(0);

@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Div, Button } from "../../HtmlTag";
-import { ReactElement, useRef, useState } from "react";
-import type { MouseEventHandler, MouseEvent } from "react";
+import { ReactElement, useRef } from "react";
+import type { MouseEventHandler } from "react";
 import { createElement } from "react";
 import { requiredProps } from "../../../utils/constants/requiredProps";
 import { useEffect } from "react";
 
 interface Props {
-  onClick: MouseEventHandler<HTMLElement> | undefined;
+  onClick: MouseEventHandler;
   totalIndicatorButtons: number;
   carouselItemsContainer: any;
   currentSlide: number;
@@ -35,7 +35,6 @@ export default function CarouselIndicatorButtons({
           key={index} 
           dataIndexSlide={index} 
           currentSlide={currentSlide}
-          // currentSlide={currentSlide} 
           carouselItemsContainer={carouselItemsContainer}
           {...props}
         />
@@ -45,7 +44,7 @@ export default function CarouselIndicatorButtons({
 }
 
 interface IndicatorButtonsProps {
-  onClick: MouseEventHandler<HTMLButtonElement> | undefined;
+  onClick: MouseEventHandler;
   dataIndexSlide: number;
   currentSlide: number;
   carouselItemsContainer: any;
@@ -55,34 +54,13 @@ function IndicatorButtons({
   onClick,
   dataIndexSlide,
   currentSlide,
-  carouselItemsContainer,
   ...props 
 }: IndicatorButtonsProps) {
-  // const [currentSlide, setCurrentSlide] = useState<number>(0);
   const button = useRef<HTMLElement>();
-
-  // console.log({ currentSlide, dataIndexSlide });
 
   useEffect(() => {
     (button.current as HTMLElement).setAttribute("data-index-slide", dataIndexSlide.toString());
   }, [dataIndexSlide]);
-
-  // const changeCurrentSlide = (e: MouseEvent<HTMLButtonElement>): void => {
-  //   /** @progress */
-  //   const positionCurrentSlide = (
-  //     ((carouselItemsContainer.current as HTMLElement).children[currentSlide] as HTMLElement).offsetWidth * currentSlide
-  //   );
-
-  //   (carouselItemsContainer.current as HTMLElement).scrollTo({
-  //     left: positionCurrentSlide,
-  //     behavior: "smooth",
-  //   });
-  // };
-
-  // const onButtonClickHandler = (e: MouseEvent<HTMLButtonElement>): void => {
-  //   // setCurrentSlide(Number(e.currentTarget.getAttribute("data-index-slide")));
-  //   changeCurrentSlide(e);
-  // };
 
   return createElement(
     Button,

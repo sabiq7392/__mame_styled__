@@ -1,6 +1,6 @@
 import { requiredProps } from "../../../utils/constants/requiredProps";
 import { Div } from "../../HtmlTag";
-import { createElement, MouseEvent, useEffect, useRef, useState } from "react";
+import { createElement, MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import type { ReactElement, ReactNode } from "react";
 import CarouselIndicatorButtons from "./CarouselIndicatorButtons";
 import CarouselItemsContainer from "../carousel/CarouselItemsContainer";
@@ -23,14 +23,7 @@ export default function Carousel({
     });
   };
 
-
-  useEffect(() => {
-    setTotalIndicatorButtons((carouselItemsContainer.current as HTMLElement).children.length);
-    setDataIndexSlideToCarouselItems();
-  }, []);
-
-
-  const changeCurrentSlide = (e: MouseEvent<HTMLButtonElement>): void => {
+  const changeCurrentSlidePosition = useCallback((): void => {
     /** @progress */
     const positionCurrentSlide = (
       ((carouselItemsContainer.current as HTMLElement).children[currentSlide] as HTMLElement).offsetWidth * currentSlide
@@ -40,12 +33,19 @@ export default function Carousel({
       left: positionCurrentSlide,
       behavior: "smooth",
     });
-  };
+  }, [currentSlide]);
 
   const onIndicatorButtonsClickHandler = (e: MouseEvent<HTMLButtonElement>): void => {
     setCurrentSlide(Number(e.currentTarget.getAttribute("data-index-slide")));
-    changeCurrentSlide(e);
   };
+
+  useEffect(() => {
+    setTotalIndicatorButtons((carouselItemsContainer.current as HTMLElement).children.length);
+    setDataIndexSlideToCarouselItems();
+    changeCurrentSlidePosition();
+  }, [changeCurrentSlidePosition]);
+
+  console.log({ outside: currentSlide });
 
   return createElement(
     Div,
@@ -60,7 +60,6 @@ export default function Carousel({
     <>
       <CarouselItemsContainer _ref={carouselItemsContainer} cssXs={{ borderRadius: 10 }}>
         {children}
-        {/* <button onClick={onClick}></button> */}
       </CarouselItemsContainer>
       <CarouselIndicatorButtons 
         currentSlide={currentSlide}

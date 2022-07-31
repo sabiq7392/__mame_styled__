@@ -9,9 +9,9 @@ interface Props {
   data: {
     name: string;
     default: string;
-    type: any;
+    type: string;
     value: string;
-    description: any;
+    description: string;
   }[]
 }
 

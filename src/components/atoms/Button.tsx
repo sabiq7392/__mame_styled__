@@ -38,9 +38,9 @@ export default function Button({ text, href }: Props): ReactElement {
             {text}
           </A>
         </Link>
-      :
+        :
         <MameButton cssXs={css} cssLg={cssLg} hover={hover}>
-        {text}
+          {text}
         </MameButton>
       }
     </>

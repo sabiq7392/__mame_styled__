@@ -12,7 +12,7 @@ const MameAccordion = memo(function MameAccordion({ isAlwaysOpen = false }: Prop
   const [isContentOpen, setIsContentOpen] = useState<boolean>(isAlwaysOpen);
 
   /** @in_milisecond */
-  const transitionSpeed: number = 400;
+  const transitionSpeed = 400;
 
   return <>
     <Accordion>

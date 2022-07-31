@@ -1,11 +1,12 @@
+import { NextPage } from "next";
 import dynamic from "next/dynamic";
+import { ReactElement } from "react";
 import CodePreview from "../../src/components/organisms/CodePreview";
 import Preview from "../../src/components/organisms/Preview";
 import MameAccordion from "../../src/components/organisms/_MameAccordion";
 
 const Harbor = dynamic(() => import("../../src/components/organisms/Harbor"));
-
-export default function Accordion() {
+const Accordion: NextPage = (): ReactElement => {
   return <>
     <Harbor title="Accordion">
       <Preview member="Accordion" noLandfield>
@@ -61,5 +62,7 @@ export default function Accordion() {
       </CodePreview>
     </Harbor>
   </>;
-}
+};
+
+export default Accordion;
 

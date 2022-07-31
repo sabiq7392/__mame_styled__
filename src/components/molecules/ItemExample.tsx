@@ -28,11 +28,11 @@ export default function ItemExample({  item, title, href, description }: Props):
           <Item href={href} title={title} description={description} />
         </Grid>
         : item === "flex" ?
-        <Flex item cssXs={css} hover={hover}>
-          <Item href={href} title={title} description={description} />
-        </Flex>
-        : 
-        <></>
+          <Flex item cssXs={css} hover={hover}>
+            <Item href={href} title={title} description={description} />
+          </Flex>
+          : 
+          <></>
       }
     </Div>
   );

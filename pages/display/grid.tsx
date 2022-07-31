@@ -6,10 +6,11 @@ import ItemExample from "../../src/components/molecules/ItemExample";
 import STYLES_CONFIG from "../../styles.config";
 import nextJsExample from "../../src/data/nextJsExample";
 import type { ReactElement } from "react";
+import { NextPage } from "next";
 
 const { spacing } = STYLES_CONFIG;
 
-export default function DisplayGrid() {
+const DisplayGrid: NextPage = (): ReactElement => {
   return (
     <Harbor title="Display Grid" appeal="The default tag of Grid is '<div>'">
       <GridTemplateColumns />
@@ -18,7 +19,8 @@ export default function DisplayGrid() {
       <Properties />
     </Harbor>
   );
-}
+};
+export default DisplayGrid;
 
 function GridTemplateAreas(): ReactElement {
   return (

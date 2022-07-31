@@ -7,7 +7,7 @@ type Props = {
   as: "article" | "section" | "div",
   radius?: number,
   border?: string,
-  standard?: any,
+  standard?: true,
   display?: "grid" | "flex",
   gap?: number,
   id?: string,

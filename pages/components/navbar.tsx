@@ -1,11 +1,13 @@
+import { NextPage } from "next";
 import dynamic from "next/dynamic";
+import { ReactElement } from "react";
 import CodePreview from "../../src/components/organisms/CodePreview";
 import Preview from "../../src/components/organisms/Preview";
 import MameNavbar from "../../src/components/organisms/_MameNavbar";
 
 const Harbor = dynamic(() => import("../../src/components/organisms/Harbor"));
 
-export default function Appbar() {
+const Appbar: NextPage = (): ReactElement => {
   return <>
     <Harbor title="Navbar" appeal="" description="">
       <Preview member="Navbar" noLandfield>
@@ -60,5 +62,7 @@ export default function Appbar() {
       </CodePreview>
     </Harbor>
   </>;
-}
+};
+
+export default Appbar;
 

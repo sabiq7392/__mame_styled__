@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import Head from "next/head";
 import { GlobalStyles } from "../styles/GlobalStyles";
 import { Main } from "../styles/MameStyled/core/HtmlTag";
@@ -33,7 +32,7 @@ export default function MyApp({ Component, pageProps }: AppProps): ReactElement 
 
           </Main>
         </>
-      :
+        :
         <> 
           {/* <Appbar  /> */}
           <Grid 

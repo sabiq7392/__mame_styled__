@@ -52,4 +52,4 @@
 //   );
 // }
 
-export const doNothing = () => "do";
+export const doNothing = (): string => "do";

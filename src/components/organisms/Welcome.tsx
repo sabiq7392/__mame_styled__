@@ -21,10 +21,7 @@ export default function Welcome() {
       cssSm={{ padding: `${spacing.sxxl}px ${spacing.md}px` }}
       cssLg={{ padding: `${spacing.sxxl}px ${spacing.sxxl}px` }}
     >
-      <H1 bold center 
-        fontSize={{ xs: "2rem", md: "3rem",  lg: "4rem" }}
-        cssXs={{ margin: 0, lineHeight: 1.15, color: color.white }}
-      >
+      <H1 fontSize={{ xs: "2rem", md: "3rem",  lg: "4rem" }} cssXs={{ margin: 0, lineHeight: 1.15, color: color.white }}>
         Welcome to <A href="#" cssXs={{ color: color.primary }}>Mame Styled</A>
       </H1>
       <Description 

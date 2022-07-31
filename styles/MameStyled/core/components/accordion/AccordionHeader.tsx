@@ -1,6 +1,6 @@
 import { H2, Button, Div, H1, H3, H4, H5, H6 } from "../../HtmlTag";
 // import { any, func, bool, number, oneOfType, string, node, element } from "prop-types";
-import { createElement, ReactNode, Ref } from "react";
+import { createElement, ReactElement, ReactNode, Ref } from "react";
 import { requiredProps } from "../../../utils/constants/requiredProps";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import { HTMLTag } from "../../utils/types";
@@ -11,7 +11,7 @@ interface Props extends HTMLTag {
   setIsContentOpen(arg0: boolean): void;
   title: string;
   as?: typeof H1 | typeof H2 | typeof H3 | typeof H4 | typeof H5 | typeof H6;
-  icon?: Element | ReactNode;
+  icon?: ReactNode;
   transitionSpeed?: number;
   _ref?: Ref<HTMLElement>;
   iconColor?: string;
@@ -27,7 +27,7 @@ export default function AccordionHeader({
   as = H2,
   iconColor,
   ...props
-}: Props) {
+}: Props): ReactElement {
   return createElement(
     as, 
     {},

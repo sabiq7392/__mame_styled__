@@ -8,8 +8,7 @@
     "start": "next start",
     "export": "next build && next export",
     "audit": "lighthouse http://localhost:3000/typography --view",
-    "lint": "next lint",
-    "doc": "jsdoc -c jsdoc.json"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.8",

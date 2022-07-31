@@ -1,28 +1,32 @@
-import { bool, node } from "prop-types";
-import { Div } from "../../HtmlTag.ts";
-import { createElement, memo, useEffect, useState } from "react";
-import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import { Div } from "../../HtmlTag";
+import { createElement, memo, ReactNode, useEffect, useState, ReactElement } from "react";
+import { requiredProps } from "../../../utils/constants/requiredProps";
+import { HTMLTag } from "../../utils/types";
 
-const NavbarNav = memo(function NavbarNav({ 
-  children, 
-  refNavbar, 
-  isMenuOpen, 
-  ...props 
-}) {
+interface Props extends HTMLTag {
+  children: ReactNode | ReactNode[],
+  refNavbar: any,
+  isMenuOpen: boolean,
+}
+
+const NavbarNav = memo(function NavbarNav({ children, refNavbar, isMenuOpen, ...props }: Props): ReactElement {
   const [navbarHeight, setNavbarHeight] = useState(0);
 
   useEffect(() => {
-    const getNavbarHeight = () => {
-      const observer = new ResizeObserver((entries) => {
-        const navbarHeight = entries[0].target.offsetHeight;
-  
-        return setNavbarHeight(navbarHeight);
-      });
-  
-      observer.observe(refNavbar.current);
-    };
+    const _refNavbar =  refNavbar.current;
 
-    getNavbarHeight();
+    const getNavbarHeight = () => new ResizeObserver((entries) => {
+      const navbarHeight = (entries[0].target as HTMLElement).offsetHeight;
+
+      return setNavbarHeight(navbarHeight);
+    });
+
+
+    getNavbarHeight().observe(_refNavbar);
+
+    return (): void => {
+      getNavbarHeight().unobserve(_refNavbar);
+    };
   }, [refNavbar]);
 
   return createElement(
@@ -71,11 +75,5 @@ const NavbarNav = memo(function NavbarNav({
     children,
   );
 });
-
-NavbarNav.propTypes = {
-  children: node.isRequired,
-  isMenuOpen: bool.isRequired,
-  ...requiredPropTypes,
-};
 
 export default NavbarNav;

@@ -1,16 +1,18 @@
-import { Button } from "../../HtmlTag.ts";
-import { bool, func, node } from "prop-types";
-import { createElement, memo, useRef } from "react";
-import { requiredProps, requiredPropTypes } from "../../../utils/constants/requiredProps";
+import { Button } from "../../HtmlTag";
+import { createElement, memo, ReactElement, ReactNode, SetStateAction, useRef } from "react";
+import { requiredProps } from "../../../utils/constants/requiredProps";
 import MenuIcon from "../icons/MenuIcon";
 import CloseIcon from "../icons/CloseIcon";
+import { HTMLTag } from "../../utils/types";
 
-const NavbarToggleMenu = memo(function NavbarToggleMenu({ 
-  isMenuOpen, 
-  setIsMenuOpen, 
-  icon,
-  ...props
-}) {
+interface Props extends HTMLTag {
+  isMenuOpen: boolean,
+  // eslint-disable-next-line no-unused-vars
+  setIsMenuOpen: (value: SetStateAction<boolean>) => void,
+  icon?: ReactNode,
+}
+
+const NavbarToggleMenu = memo(function NavbarToggleMenu({ isMenuOpen, setIsMenuOpen, icon, ...props }: Props): ReactElement {
   const menuButton = useRef();
 
   return createElement(
@@ -38,12 +40,5 @@ const NavbarToggleMenu = memo(function NavbarToggleMenu({
     icon || isMenuOpen ? <CloseIcon /> : <MenuIcon />,
   );
 });
-
-NavbarToggleMenu.propTypes = {
-  isMenuOpen: bool.isRequired,
-  setIsMenuOpen: func.isRequired,
-  icon: node,
-  ...requiredPropTypes,
-};
 
 export default NavbarToggleMenu;

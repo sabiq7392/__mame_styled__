@@ -2,7 +2,7 @@ import { ResponsiveCss, Attributes } from "../utils/types";
 import styled from "styled-components";
 import screen from "../../config/screen.config";
 import attributes from "../../utils/constants/attributes";
-import { gap } from "../../utils/styling/responsiveProp";
+import { gap } from "../../utils/constants/globalResponsiveProps";
 
 // /**
 //  * Set Grid Template

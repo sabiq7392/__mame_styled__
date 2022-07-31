@@ -51,3 +51,5 @@
 //     </ErrorUnexpectedProps>
 //   );
 // }
+
+export const doNothing = () => "do";

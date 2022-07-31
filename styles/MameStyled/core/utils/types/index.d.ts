@@ -1,6 +1,6 @@
 import { CSSProp } from "styled-components";
 import { H1, H2, H3, H4, H5, H6 } from "../../HtmlTag";
-import type { AriaAttributes, HTMLAttributes, MutableRefObject } from "react";
+import type { AriaAttributes, ChangeEventHandler, HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
 export type THead = typeof H1 | typeof H2 |  typeof H3 | typeof H4 |  typeof H5 |  typeof H6;
 
@@ -53,8 +53,6 @@ export type FlexDirection = (
   undefined
 );
 
-export type Ref = MutableRefObject<HTMLElement | undefined>
-
 export interface HTMLTag extends 
 HTMLAttributes<HTMLElement>, 
 AriaAttributes<HTMLElement> {
@@ -80,9 +78,10 @@ AriaAttributes<HTMLElement> {
   display?: ResponsiveCss | number;
   background?: ResponsiveCss | number;
   className?: string;
-  onClick?: any;
-  children?: any;
+  onClick?: MouseEventHandler;
+  children?: ReactNode | ReactNode[];
   ref?: any;
+  onChange?: ChangeEventHandler;
 }
 
 export interface IconProps {

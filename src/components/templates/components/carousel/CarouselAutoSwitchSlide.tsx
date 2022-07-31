@@ -8,7 +8,7 @@ export default function CarouselAutoSwitchSlide(): ReactElement {
   return <>
     <Harbor title="Carousel Auto Switch Slide">
       <Preview member="Carousel" noLandfield>
-        <MameCarousel />  
+        <MameCarousel timing={3000} />  
       </Preview>
       <CodePreview member="Carousel">
         {`

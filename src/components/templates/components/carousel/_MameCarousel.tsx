@@ -3,9 +3,13 @@ import Carousel from "../../../../../styles/MameStyled/core/components/carousel/
 import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
 import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag";
 
-export default function MameCarousel(): ReactElement {
+interface Props {
+  timing?: number,
+}
+
+export default function MameCarousel({ timing }: Props): ReactElement {
   return <>
-    <Carousel>
+    <Carousel timing={timing}>
       <CarouselItem>
         <Figure cssXs={{ display: "grid" }}>
           <Img 

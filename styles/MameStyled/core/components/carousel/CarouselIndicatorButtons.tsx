@@ -9,20 +9,21 @@ import { useEffect } from "react";
 interface Props {
   onClick: MouseEventHandler;
   totalIndicatorButtons: number;
-  carouselItemsContainer: any;
   currentSlide: number;
+  _ref: any,
 }
 
 export default function CarouselIndicatorButtons({ 
   onClick,
   totalIndicatorButtons,
-  carouselItemsContainer,
   currentSlide,
+  _ref,
   ...props 
 }: Props): ReactElement {
   return createElement(
     Div,
     {
+      ref: _ref,
       cssXs: {
         display: "flex",
         gap: 3,
@@ -35,7 +36,6 @@ export default function CarouselIndicatorButtons({
           key={index} 
           dataIndexSlide={index} 
           currentSlide={currentSlide}
-          carouselItemsContainer={carouselItemsContainer}
           {...props}
         />
       )}
@@ -47,7 +47,6 @@ interface IndicatorButtonsProps {
   onClick: MouseEventHandler;
   dataIndexSlide: number;
   currentSlide: number;
-  carouselItemsContainer: any;
 }
 
 function IndicatorButtons({ 

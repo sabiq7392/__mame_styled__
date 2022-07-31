@@ -23,29 +23,44 @@ export default function Carousel({
     });
   };
 
-  const changeCurrentSlidePosition = useCallback((): void => {
-    /** @progress */
-    const positionCurrentSlide = (
-      ((carouselItemsContainer.current as HTMLElement).children[currentSlide] as HTMLElement).offsetWidth * currentSlide
-    );
-
-    (carouselItemsContainer.current as HTMLElement).scrollTo({
-      left: positionCurrentSlide,
-      behavior: "smooth",
-    });
+  const currentSlidePosition = useCallback((): void => {
+    if (carouselItemsContainer.current) {
+      const positionCurrentSlide = (
+        ((carouselItemsContainer.current as HTMLElement).children[currentSlide as number] as HTMLElement).offsetWidth * (currentSlide as number)
+      );
+  
+      (carouselItemsContainer.current as HTMLElement).scrollTo({
+        left: positionCurrentSlide,
+        behavior: "smooth",
+      });
+    } 
   }, [currentSlide]);
 
   const onIndicatorButtonsClickHandler = (e: MouseEvent<HTMLButtonElement>): void => {
     setCurrentSlide(Number(e.currentTarget.getAttribute("data-index-slide")));
   };
 
+  const repositionCarouselItemsWhenResize = useCallback(() => new ResizeObserver(() => currentSlidePosition()), [currentSlidePosition]);
+
   useEffect(() => {
-    setTotalIndicatorButtons((carouselItemsContainer.current as HTMLElement).children.length);
-    setDataIndexSlideToCarouselItems();
-    changeCurrentSlidePosition();
-  }, [changeCurrentSlidePosition]);
+    let isObserve: boolean = true;
+
+    if (isObserve && carouselItemsContainer.current) {
+      setTotalIndicatorButtons((carouselItemsContainer.current as HTMLElement).children.length);
+      setDataIndexSlideToCarouselItems();
+      currentSlidePosition();
+      repositionCarouselItemsWhenResize().observe(document.body);
+    }
+
+    return (): void => {
+      isObserve = false;
+      repositionCarouselItemsWhenResize().unobserve(document.body);
+    };
+  }, [currentSlide, currentSlidePosition, repositionCarouselItemsWhenResize]);
 
   console.log({ outside: currentSlide });
+
+  console.log({ carouselItemsContainer })
 
   return createElement(
     Div,
@@ -71,4 +86,59 @@ export default function Carousel({
   );
 }
 
+  /** @masih_bermasalah */
+  // const repositionCarouselItemsWhenResize = useCallback(() => {
+  //   const observer = new ResizeObserver(() => (
+  //     document
+  //       // .querySelectorAll(`${props.id} .mame-carousel-item`)[isActive]
+  //       .getElementsByClassName("mame-carousel-item")[isActive]
+  //       .scrollTo({
+  //         top: 0,
+  //         left: document.getElementsByClassName("mame-carousel-item")[isActive].getBoundingClientRect().width,
+  //         behavior: "smooth",
+  //       })
+  //       // ?.scrollIntoView({ behavior: "smooth", block: "center", inline: "center" })
+  //   ));
 
+  //   if (document.getElementsByClassName("mame-carousel-item")) {
+  //     observer.observe(document.querySelector("body") as Element);
+  //   }
+  // }, []);
+
+  // const autoSwitchSlide = useCallback((timing: number) => {
+  //   const setTiming = setTimeout(() => {
+  //     const carouselItemsProgrammingLength = carouselItems.length - 1;
+  
+  //     if (isActive < carouselItemsProgrammingLength) {
+  //       setIsActive(isActive + 1);
+  //     }
+  
+  //     if (isActive === carouselItemsProgrammingLength) {
+  //       setIsActive(0);
+  //     }
+  //   }, timing);
+
+  //   const clearTimingWhenClickedIndicatorButtons = () => {
+  //     const carouselIndicatorsContainer: number = 1;
+  //     (_ref.current as HTMLElement).children[carouselIndicatorsContainer].children
+  //       .forEach((indicatorButton: HTMLElement) => {
+  //         indicatorButton.onclick = () => {
+  //           clearTimeout(setTiming);
+  //         };
+  //       });
+  //   };
+
+  //   clearTimingWhenClickedIndicatorButtons();
+
+  // }, [_ref, carouselItems.length, isActive, setIsActive]);
+
+  // useEffect(() => {
+  //   console.log(document.querySelectorAll(`#${props.id} .mame-carousel-item`))
+
+  //   setCarouselItems([...(carouselContainer.current as any).children]);
+  //   repositionCarouselItemsWhenResize();
+  //   if (timingAutoSwitchSlide || timingAutoSwitchSlide === 0) {
+  //     autoSwitchSlide(timingAutoSwitchSlide);
+  //   }
+
+  // }, [autoSwitchSlide, carouselContainer, repositionCarouselItemsWhenResize, setCarouselItems, timingAutoSwitchSlide]);

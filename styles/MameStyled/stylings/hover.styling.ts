@@ -1,4 +1,4 @@
-import screen from "../../config/screen.config";
+import screen from "../config/screen.config";
 
 interface Props {
   hover?: any,

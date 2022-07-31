@@ -1,5 +1,5 @@
 import { A, Img } from "../../HtmlTag";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import { createElement, ReactElement, ReactNode } from "react";
 import { HTMLTag } from "../../utils/types";
 

@@ -1,6 +1,6 @@
 import { Div } from "../../HtmlTag";
 import { createElement } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import { node } from "prop-types";
 import type { ReactElement, ReactNode } from "react";
 

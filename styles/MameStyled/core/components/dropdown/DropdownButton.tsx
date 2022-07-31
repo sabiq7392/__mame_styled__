@@ -1,7 +1,7 @@
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import { createElement } from "react";
 import { Button, Span } from "../../HtmlTag";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import type { ReactNode, ReactElement, SetStateAction,  MutableRefObject } from "react";
 
 // eslint-disable-next-line no-unused-vars

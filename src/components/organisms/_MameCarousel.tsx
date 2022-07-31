@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import Carousel from "../../../../../styles/MameStyled/core/components/carousel/Carousel";
-import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
-import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag";
+import Carousel from "../../../styles/MameStyled/core/components/carousel/Carousel";
+import CarouselItem from "../../../styles/MameStyled/core/components/carousel/CarouselItem";
+import { Figure, Img, Figcaption, H2, P } from "../../../styles/MameStyled/core/HtmlTag";
 
 interface Props {
   timing?: number,

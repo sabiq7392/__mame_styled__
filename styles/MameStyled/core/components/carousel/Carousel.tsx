@@ -1,4 +1,4 @@
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import { Div } from "../../HtmlTag";
 import { createElement, MouseEvent, useCallback, useEffect, useRef, useState } from "react";
 import type { ReactElement, ReactNode } from "react";

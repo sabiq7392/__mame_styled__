@@ -1,6 +1,6 @@
 import { Nav } from "../../HtmlTag";
 import { createElement, ReactNode, Ref, ReactElement } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import { HTMLTag } from "../../utils/types";
 
 interface Props extends HTMLTag {

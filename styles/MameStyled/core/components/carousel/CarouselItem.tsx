@@ -1,6 +1,6 @@
 import { Div } from "../../HtmlTag";
 import { createElement, ReactElement, ReactNode } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 
 interface Props {
   children: ReactNode | ReactNode[];

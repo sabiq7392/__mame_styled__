@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import attributes from "../utils/constants/attributes";
+import attributes from "../constants/attributes.constant";
 import { HTMLTag } from "./utils/types";
 
 export const A = styled.a<HTMLTag>(...attributes);

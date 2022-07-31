@@ -3,7 +3,7 @@ import { Div, Button } from "../../HtmlTag";
 import { ReactElement, useRef } from "react";
 import type { MouseEventHandler } from "react";
 import { createElement } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import { useEffect } from "react";
 
 interface Props {

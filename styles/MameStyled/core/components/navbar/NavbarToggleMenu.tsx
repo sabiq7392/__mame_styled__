@@ -1,6 +1,6 @@
 import { Button } from "../../HtmlTag";
 import { createElement, memo, ReactElement, ReactNode, SetStateAction, useRef } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import MenuIcon from "../icons/MenuIcon";
 import CloseIcon from "../icons/CloseIcon";
 import { HTMLTag } from "../../utils/types";

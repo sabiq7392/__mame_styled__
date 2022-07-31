@@ -54,21 +54,10 @@ export type FlexDirection = (
 );
 
 export interface HTMLTag extends 
+MameCss, 
+MameHover,
 HTMLAttributes<HTMLElement>, 
 AriaAttributes<HTMLElement> {
-  cssXs?: CSSAllIn;
-  cssSm?: CSSAllIn; 
-  cssMd?: CSSAllIn;
-  cssLg?: CSSAllIn;
-  cssXl?: CSSAllIn;
-  cssXxl?: CSSAllIn;
-  hover?: CSSAllIn;
-  hoverXs?: CSSAllIn;
-  hoverSm?: CSSAllIn;
-  hoverMd?: CSSAllIn;
-  hoverLg?: CSSAllIn;
-  hoverXl?: CSSAllIn;
-  hoverXxl?: CSSAllIn;
   as?: any;
   debug?: true;
   fontSize?: ResponsiveCss | number | string; 

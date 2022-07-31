@@ -1,7 +1,7 @@
 import { useState, memo } from "react";
-import Accordion from "../../../../../styles/MameStyled/core/components/accordion/Accordion";
-import AccordionHeader from "../../../../../styles/MameStyled/core/components/accordion/AccordionHeader";
-import AccordionBody from "../../../../../styles/MameStyled/core/components/accordion/AccordionBody";
+import Accordion from "../../../styles/MameStyled/core/components/accordion/Accordion";
+import AccordionHeader from "../../../styles/MameStyled/core/components/accordion/AccordionHeader";
+import AccordionBody from "../../../styles/MameStyled/core/components/accordion/AccordionBody";
 import type { ReactElement } from "react";
 
 interface Props {

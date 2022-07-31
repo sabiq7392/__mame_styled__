@@ -1,11 +1,11 @@
 import { useState, useRef, memo, ReactElement } from "react";
-import Navbar from "../../../../../styles/MameStyled/core/components/navbar/Navbar";
-import NavbarBrand from "../../../../../styles/MameStyled/core/components/navbar/NavbarBrand";
-import NavbarToggleMenu from "../../../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
-import NavbarNav from "../../../../../styles/MameStyled/core/components/navbar/NavbarNav";
-import NavbarContentWrapper from "../../../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
-import NavLink from "../../../../../styles/MameStyled/core/components/navbar/NavbarLink";
-import { Flex } from "../../../../../styles/MameStyled/core/display/Flex";
+import Navbar from "../../../styles/MameStyled/core/components/navbar/Navbar";
+import NavbarBrand from "../../../styles/MameStyled/core/components/navbar/NavbarBrand";
+import NavbarToggleMenu from "../../../styles/MameStyled/core/components/navbar/NavbarToggleMenu";
+import NavbarNav from "../../../styles/MameStyled/core/components/navbar/NavbarNav";
+import NavbarContentWrapper from "../../../styles/MameStyled/core/components/navbar/NavbarContentWrapper";
+import NavLink from "../../../styles/MameStyled/core/components/navbar/NavbarLink";
+import { Flex } from "../../../styles/MameStyled/core/display/Flex";
 
 const MameNavbar = memo(function MameNavbar(): ReactElement {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 

@@ -1,6 +1,6 @@
 import { Div } from "../../HtmlTag";
 import { createElement, ReactNode } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import { HTMLTag } from "../../utils/types";
 
 interface Props extends HTMLTag {

@@ -1,7 +1,7 @@
 import { H2, Button, Div, H1, H3, H4, H5, H6 } from "../../HtmlTag";
 // import { any, func, bool, number, oneOfType, string, node, element } from "prop-types";
 import { createElement, ReactElement, ReactNode, Ref } from "react";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 import ChevronDownIcon from "../icons/ChevronDownIcon";
 import { HTMLTag } from "../../utils/types";
 

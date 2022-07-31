@@ -1,10 +1,10 @@
 import STYLES_CONFIG from "../../../styles.config";
 import { H1, Section } from "../../../styles/MameStyled/core/HtmlTag";
-import SetAutoHead from "../../utils/SetAutoHead";
 import Heading from "../molecules/Heading";
 import Landfield from "../atoms/Landfield";
 import { ReactElement, useId } from "react";
 import type { ReactNode } from "react";
+import useSetAutoHead from "../../hooks/useSetAutoHead";
 
 const { spacing } = STYLES_CONFIG;
 
@@ -27,12 +27,12 @@ export default function Preview({
   noLandfield, 
   background, 
 }: Props): ReactElement {
-
   const id = useId();
+  const setAutoHead = useSetAutoHead({ id });
 
   return (
     <Section id={id} cssXs={{ display: "grid", gap: spacing.sm }}>
-      <Heading head={SetAutoHead({ id }) || H1} member={member} title={title} appeal={appeal} description={description} /> 
+      <Heading head={setAutoHead || H1} member={member} title={title} appeal={appeal} description={description} /> 
       {noLandfield ? children : <Landfield background={background}>{children}</Landfield>}
     </Section>
   );

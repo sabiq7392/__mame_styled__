@@ -1,7 +1,7 @@
 import { CSSProperties } from "react";
 import { CSSProp } from "styled-components";
 import { object, string } from "prop-types";
-import { HTMLTag } from "../../core/utils/types";
+import { HTMLTag } from "../core/utils/types";
 
 type IsCssProps = CSSProp | CSSProperties;
 

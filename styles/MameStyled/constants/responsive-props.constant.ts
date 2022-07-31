@@ -1,4 +1,4 @@
-import screen from "../../config/screen.config";
+import screen from "../config/screen.config";
 
 function setResponsiveProp(props: any , NamePropCss: string) {
   const value  = props[NamePropCss];

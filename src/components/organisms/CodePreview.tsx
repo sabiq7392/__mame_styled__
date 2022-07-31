@@ -3,8 +3,8 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import Heading from "../molecules/Heading";
 import STYLES_CONFIG from "../../../styles.config";
-import SetAutoHead from "../../utils/SetAutoHead";
 import { ReactElement, useId } from "react";
+import useSetAutoHead from "../../hooks/useSetAutoHead";
 
 const { spacing } = STYLES_CONFIG;
 
@@ -16,10 +16,11 @@ interface Props {
 
 export default function CodePreview({ title = "Result Code Preview", member, children }: Props): ReactElement {
   const id = useId();
+  const setAutoHead = useSetAutoHead({ id });
 
   return (
     <Section id={id} cssXs={{ display: "grid", gap: `calc(${spacing.sm}px - .5em)` }}>
-      <Heading head={SetAutoHead({ id }) || H1} member={member} title={title}  />
+      <Heading head={setAutoHead || H1} member={member} title={title}  />
       <SyntaxHighlighter language="html" style={vscDarkPlus}>
         {children}
       </SyntaxHighlighter>

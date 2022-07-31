@@ -1,7 +1,7 @@
 import type { ReactElement, ReactNode } from "react";
 import { createElement, useRef, useState, useEffect } from "react";
 import { Div } from "../../HtmlTag";
-import { requiredProps } from "../../../utils/constants/requiredProps";
+import { requiredProps } from "../../../constants/required-props.constant";
 
 interface Props {
   isOpen: boolean;

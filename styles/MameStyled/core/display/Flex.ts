@@ -1,6 +1,6 @@
 import { Attributes } from "../utils/types";
 import styled from "styled-components";
-import attributes from "../../utils/constants/attributes";
+import attributes from "../../constants/attributes.constant";
 import { FlexDirection } from "../utils/types";
 
 interface Props extends Attributes {

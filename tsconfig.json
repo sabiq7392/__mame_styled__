@@ -7,7 +7,7 @@
       "esnext",
     ],
     "downlevelIteration": true,
-    "allowJs": true,
+    "allowJs": false,
     "skipLibCheck": true,
     "strict": true,
     "alwaysStrict": true,

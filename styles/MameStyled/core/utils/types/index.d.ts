@@ -1,4 +1,4 @@
-import { CSSProp } from "styled-components";
+import { CSSProp, CSSProperties } from "styled-components";
 import { H1, H2, H3, H4, H5, H6 } from "../../HtmlTag";
 import type { AriaAttributes, ChangeEventHandler, HTMLAttributes, MouseEventHandler, ReactNode } from "react";
 
@@ -13,7 +13,7 @@ export type ResponsiveCss = {
   xxl?: string | number,
 };
 
-type CSSAllIn = CSSProp | object;
+type CSSAllIn = CSSProperties | CSSProp | object;
 
 export interface MameCss {
   css?: CSSAllIn,
@@ -71,12 +71,12 @@ AriaAttributes<HTMLElement> {
   hoverXxl?: CSSAllIn;
   as?: any;
   debug?: true;
-  fontSize?: ResponsiveCss | number; 
-  padding?: ResponsiveCss | number;
-  width?: ResponsiveCss | number;
-  height?: ResponsiveCss | number;
-  display?: ResponsiveCss | number;
-  background?: ResponsiveCss | number;
+  fontSize?: ResponsiveCss | number | string; 
+  padding?: ResponsiveCss | number | string;
+  width?: ResponsiveCss | number | string;
+  height?: ResponsiveCss | number | string;
+  display?: ResponsiveCss | number | string;
+  background?: ResponsiveCss | number | string;
   className?: string;
   onClick?: MouseEventHandler;
   children?: ReactNode | ReactNode[];

@@ -1,6 +1,7 @@
 import STYLES_CONFIG from "../styles.config";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import type { NextPage } from "next";
 
 const HtmlTag = dynamic(() => import("./html-tag"));
 const Welcome = dynamic(() => import("../src/components/organisms/Welcome"));
@@ -8,10 +9,11 @@ import { H2, Figure } from "../styles/MameStyled/core/HtmlTag";
 import Description from "../src/components/atoms/Description";
 import Container from "../src/components/atoms/Container";
 import { Grid } from "../styles/MameStyled/core/display/Grid";
+import { ReactElement } from "react";
 
-export default function Home() {
-  const { spacing } = STYLES_CONFIG;
+const { spacing } = STYLES_CONFIG;
 
+const Home: NextPage = (): ReactElement => {
   return (
     <Grid>
       <Container as="article">
@@ -53,21 +55,6 @@ export default function Home() {
       </Container>
     </Grid>
   );
-}
+};
 
-// const Test = {
-//   Mame: () => {
-//     return <h1>Mame</h1>
-//   },
-//   Sabiq: () => <h1>Sabiq</h1>
-// };
-
-// function Test() {
-//   return {
-//     Mame: () => {
-//       return <>
-//         <h1>Sabiq</h1>
-//       </>;
-//     },
-//   };
-// }
+export default Home;

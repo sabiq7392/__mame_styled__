@@ -1,8 +1,10 @@
 import ResultCodePreview from "../src/components/templates/html-tag/ResultCodePreview";
 import ResultPreview from "../src/components/templates/html-tag/ResultPreview";
 import Harbor from "../src/components/organisms/Harbor";
+import { NextPage } from "next";
+import { ReactElement } from "react";
 
-export default function HtmlTag() {
+const HtmlTag: NextPage = (): ReactElement => {
   return (
     <Harbor title="HTML Tag" appeal="The HTML tag is superset!"
       description="
@@ -15,4 +17,6 @@ export default function HtmlTag() {
       <ResultCodePreview />
     </Harbor>
   );
-}
+};
+
+export default HtmlTag;

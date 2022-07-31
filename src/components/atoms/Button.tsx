@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ReactElement } from "react";
+import { CSSProperties } from "styled-components";
 import STYLES_CONFIG from "../../../styles.config";
 import { A, Button as MameButton } from "../../../styles/MameStyled/core/HtmlTag";
 
@@ -11,7 +12,7 @@ interface Props {
 export default function Button({ text, href }: Props): ReactElement {
   const { color, radius, timing } = STYLES_CONFIG;
 
-  const css = {
+  const css: CSSProperties = {
     background: color.base.secondary.default,
     border: "none",
     padding: 5, 
@@ -25,9 +26,9 @@ export default function Button({ text, href }: Props): ReactElement {
     textAlign: "center"
   };
 
-  const cssLg = { padding: 10 };
+  const cssLg: CSSProperties = { padding: 10 };
 
-  const hover = { filter: "brightness(80%)" };
+  const hover: CSSProperties = { filter: "brightness(80%)" };
 
   return (
     <>

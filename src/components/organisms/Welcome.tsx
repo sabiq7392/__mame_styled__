@@ -1,11 +1,13 @@
 import { Header, H1, A } from "../../../styles/MameStyled/core/HtmlTag";
 import STYLES_CONFIG from "../../../styles.config";
 import Description from "../atoms/Description";
+import { CSSProperties } from "styled-components";
+import { ReactElement } from "react";
 
-export default function Welcome() {
+export default function Welcome(): ReactElement {
   const { color, spacing, radius, timing } = STYLES_CONFIG;
   
-  const cssHeader = { 
+  const cssHeader: CSSProperties = { 
     padding: `${spacing.sxxl}px ${spacing.sm}px`, 
     margin: "auto", 
     display: "grid", 

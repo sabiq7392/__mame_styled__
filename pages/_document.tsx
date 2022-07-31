@@ -1,7 +1,8 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import { ReactElement } from "react";
 import STYLES_CONFIG from "../styles.config";
 
-export default function Document() {
+export default function Document(): ReactElement {
   const { color } = STYLES_CONFIG;
   
   return (

@@ -1,7 +1,9 @@
+import { NextPage } from "next";
+import { ReactElement } from "react";
 import Heading from "../src/components/molecules/Heading";
 import { Div, H2 } from "../styles/MameStyled/core/HtmlTag";
 
-export default function GettingStarted() {
+const GettingStarted: NextPage = (): ReactElement => {
   return (
     <>
       <Heading head={H2} title="Getting Started" />
@@ -12,10 +14,12 @@ export default function GettingStarted() {
           height={{ xs: 500, lg: 200 }} 
           debug
         >
-          <Div height={400} debug>
-
+          <Div fontSize={{ xs: 30, lg: 60 }} background={"red"} debug>
+            BEGO
           </Div>
         </Div>
     </>
   );
-}
+};
+
+export default GettingStarted;

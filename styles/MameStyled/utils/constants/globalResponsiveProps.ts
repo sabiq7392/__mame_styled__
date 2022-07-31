@@ -1,32 +1,32 @@
 import screen from "../../config/screen.config";
 
-function setResponsiveProp(props: any , originalNameProp: string, customNameProp?: string) {
-  const value  = props[customNameProp || originalNameProp];
+function setResponsiveProp(props: any , NamePropCss: string) {
+  const value  = props[NamePropCss];
 
   return (
     value && (
       typeof value  === "number" || typeof value  === "string" ? {
-        [originalNameProp]: value,
+        [NamePropCss]: value,
       }
       :
       {
         [`@media (${screen.xs})`]: { 
-          [originalNameProp]: value.xs,
+          [NamePropCss]: value.xs,
         },
         [`@media (${screen.sm})`]: {
-          [originalNameProp]: value.sm,
+          [NamePropCss]: value.sm,
         },
         [`@media (${screen.md})`]: {
-          [originalNameProp]: value.md,
+          [NamePropCss]: value.md,
         },
         [`@media (${screen.lg})`]: {
-          [originalNameProp]: value.lg,
+          [NamePropCss]: value.lg,
         },
         [`@media (${screen.xl})`]: {
-          [originalNameProp]: value.xl,
+          [NamePropCss]: value.xl,
         },
         [`@media (${screen.xxl})`]: {
-          [originalNameProp]: value.xxl,
+          [NamePropCss]: value.xxl,
         },
       }
     )

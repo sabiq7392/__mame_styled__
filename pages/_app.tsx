@@ -10,10 +10,11 @@ import STYLES_CONFIG from "../styles.config";
 import { useRouter } from "next/router";
 import "@fontsource/poppins"; // Defaults to weight 400.
 import { AppProps } from "next/app";
+import { ReactElement } from "react";
 
 const { spacing, color } = STYLES_CONFIG;
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }: AppProps): ReactElement {
   const router = useRouter();
 
   return (

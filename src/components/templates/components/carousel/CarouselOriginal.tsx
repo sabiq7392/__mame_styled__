@@ -15,7 +15,7 @@ export default function CarouselOriginal(): ReactElement {
         import Carousel from "../../../../../styles/MameStyled/core/components/carousel/Carousel";
         import CarouselItem from "../../../../../styles/MameStyled/core/components/carousel/CarouselItem";
         import { Figure, Img, Figcaption, H2, P } from "../../../../../styles/MameStyled/core/HtmlTag";
-        
+
         export default function MameCarousel(): ReactElement {
           return <>
             <Carousel>

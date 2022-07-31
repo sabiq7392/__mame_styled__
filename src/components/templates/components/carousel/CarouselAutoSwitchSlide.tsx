@@ -14,7 +14,7 @@ export default function CarouselAutoSwitchSlide(): ReactElement {
         {`
           <Carousel
             ...
-            timingAutoSwitchSlide={3000}
+            timing={3000}
           >
           ...
           </Carousel>

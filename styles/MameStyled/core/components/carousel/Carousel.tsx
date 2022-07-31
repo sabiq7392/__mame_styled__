@@ -39,12 +39,11 @@ export default function Carousel({
     } 
   }, [currentSlide]);
 
-
   const repositionCarouselItemsWhenResize = useCallback(() => new ResizeObserver(() => currentSlidePosition()), [currentSlidePosition]);
 
   const autoSwitchSlide = useCallback(() => {
     const setTiming = setTimeout(() => {
-      if (currentSlide < ((carouselItemsContainer.current as HTMLElement).children.length) - 1) {
+      if (carouselItemsContainer.current && currentSlide < ((carouselItemsContainer.current as HTMLElement).children.length) - 1) {
         setCurrentSlide(currentSlide + 1);
       } else {
         setCurrentSlide(0);
@@ -60,19 +59,15 @@ export default function Carousel({
     clearTimingAutoSwitchSlide();
   }, [currentSlide]);
 
-
-
   const onIndicatorButtonsClickHandler = (e: MouseEvent<HTMLButtonElement>): void => {
     const _currentSlide = Number(e.currentTarget.getAttribute("data-index-slide"));
     setCurrentSlide(_currentSlide);
   };
 
-  console.log({ currentSlide });
-
   useEffect(() => {
     let isObserve: boolean = true;
 
-    if (isObserve && carouselItemsContainer.current) {
+    if (isObserve) {
       setTotalIndicatorButtons((carouselItemsContainer.current as HTMLElement).children.length);
       setDataIndexSlideToCarouselItems();
       currentSlidePosition();
@@ -85,6 +80,7 @@ export default function Carousel({
       repositionCarouselItemsWhenResize().unobserve(document.body);
     };
   }, [autoSwitchSlide, currentSlide, currentSlidePosition, repositionCarouselItemsWhenResize, timing]);
+
 
   return createElement(
     Div,

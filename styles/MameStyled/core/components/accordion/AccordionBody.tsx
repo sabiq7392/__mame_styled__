@@ -40,7 +40,7 @@ export default function AccordionBody({
       ref: _ref,
       ...requiredProps(props, {
         cssXs: { 
-          display: (isContentOpen as any) && "grid",
+          display: isContentOpen ? "grid" : "block",
           background: "#222", 
           color: "white", 
           overflow: "hidden", 
@@ -51,7 +51,7 @@ export default function AccordionBody({
     },
     <Div
       ref={content}
-      cssXs={{ paddingTop: ".8rem" }}
+      cssXs={{ padding: ".8rem" }}
     >
       {children}
     </Div>

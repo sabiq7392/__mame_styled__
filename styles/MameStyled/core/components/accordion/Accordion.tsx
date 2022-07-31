@@ -1,11 +1,11 @@
 import { Div } from "../../HtmlTag";
-import { createElement } from "react";
+import { createElement, ReactNode, Ref } from "react";
 import { requiredProps } from "../../../utils/constants/requiredProps";
 import { HTMLTag } from "../../utils/types";
 
 interface Props extends HTMLTag {
-  children: any;
-  _ref?: any;
+  children: ReactNode | ReactNode[];
+  _ref?: Ref<HTMLElement>;
 }
 
 export default function Accordion({ 

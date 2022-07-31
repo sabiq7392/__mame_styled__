@@ -21,6 +21,7 @@ const MameAccordion = memo(function MameAccordion({ isAlwaysOpen = false }: Prop
         setIsContentOpen={setIsContentOpen} 
         isContentOpen={isContentOpen} 
         transitionSpeed={transitionSpeed}
+        cssXs={{ color: "white" }}
       />
       <AccordionBody 
         isContentOpen={isContentOpen} 

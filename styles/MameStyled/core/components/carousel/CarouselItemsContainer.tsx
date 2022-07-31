@@ -19,7 +19,6 @@ export default function CarouselItemsContainer({ children, _ref, ...props }: Pro
           display: "flex",
           background: "#222",
           width: "100%",
-          // height: 400,
           overflowX: "hidden",
         },
       }),
